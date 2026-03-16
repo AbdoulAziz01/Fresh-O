@@ -6996,6 +6996,16 @@ ul   { list-style: none; padding: 0; }
     0%, 100% { transform: scale(1); opacity: 1; }
     50%       { transform: scale(1.5); opacity: .6; }
 }
+@keyframes flotter {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-9px); }
+}
+@keyframes descend {
+    0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+    50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+    51%  { transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
 
 /* ================================================
    16. RESPONSIVE — TABLETTE (≤1024px)
