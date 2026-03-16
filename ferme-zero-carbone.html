@@ -352,7 +352,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand-col">
-                    <img src="Fresh_o_logo.png" alt="Fresh'O Vitroplants" class="footer-logo">
+                    <img src="images/Fresh'o_logo.png" alt="Fresh'O Vitroplants" class="footer-logo">
                     <p>Première ferme zéro carbone de production de vitroplants de banane au Sénégal.</p>
                     <div class="footer-socials">
                         <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
@@ -400,9 +400,12 @@
     </footer>
 
     <script>
+        // Effet de curseur lumineux et particules animées
     const cursor = document.getElementById('cursorGlow');
     document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
 
+    // Génération de particules aléatoires dans le hero
+    // C'est a dire des petites sphères lumineuses qui flottent doucement pour donner de la vie à l'arrière-plan
     const pContainer = document.getElementById('particles');
     for (let i = 0; i < 18; i++) {
         const p = document.createElement('div');
@@ -411,6 +414,8 @@
         pContainer.appendChild(p);
     }
 
+    // Barre de navigation qui change au scrollx
+    // On ajoute une classe 'scrolled' à la navbar lorsque l'utilisateur fait défiler la page de plus de 50 pixels, ce qui permet de changer son apparence (ex: fond, ombre) pour améliorer la lisibilité et le contraste avec le contenu.
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
@@ -419,6 +424,8 @@
         this.classList.toggle('active');
     });
 
+    // Revelation des éléments au scroll
+    // On utilise IntersectionObserver pour détecter quand les éléments avec l'attribut data-reveal entrent dans le viewport. Lorsqu'ils sont visibles à au moins 8%, on ajoute la classe 'revealed' après un délai optionnel défini par data-delay, ce qui déclenche les animations CSS associées.
     const revObs = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) setTimeout(() => e.target.classList.add('revealed'), parseInt(e.target.dataset.delay) || 0);
@@ -426,7 +433,7 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('[data-reveal]').forEach(el => { el.classList.add('will-reveal'); revObs.observe(el); });
 
-    // Animate progress bars
+    // Animation des barres de progression dans les piliers
     const barObs = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) {
@@ -436,7 +443,8 @@
     }, { threshold: 0.3 });
     document.querySelectorAll('.pilier-card').forEach(el => barObs.observe(el));
 
-    // Map zone hover
+    // Interaction sur la carte de la ferme
+    // Lorsque l'utilisateur survole une zone de la carte (ex: labo, serres), on ajoute la classe 'active' à cette zone pour la mettre en évidence, tout en retirant cette classe des autres zones. Cela permet de faire ressortir visuellement la section correspondante sur la carte et d'améliorer l'expérience utilisateur lors de l'exploration du plan de la ferme.
     document.querySelectorAll('.map-zone').forEach(zone => {
         zone.addEventListener('mouseenter', function() {
             document.querySelectorAll('.map-zone').forEach(z => z.classList.remove('active'));
