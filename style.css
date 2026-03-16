@@ -425,6 +425,48 @@ ul  { list-style: none; padding: 0; }
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,.1);
 }
+
+/* Version compacte en une ligne pour mobile */
+.hero-chiffres-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255,255,255,.1);
+    gap: 0.5rem;
+}
+
+.hero-chiffres-compact .chiffre-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.hero-chiffres-compact .chiffre-val {
+    font-family: var(--fonte-titre);
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--blanc);
+    letter-spacing: -.03em;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.hero-chiffres-compact .chiffre-val span {
+    color: var(--banane);
+    font-size: 1rem;
+}
+
+.hero-chiffres-compact .chiffre-label {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,.7);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+}
+
 .chiffre-val {
     font-family: var(--fonte-titre);
     font-size: 2.2rem;
@@ -1125,7 +1167,19 @@ ul  { list-style: none; padding: 0; }
     .hero-sous-titre { font-size: 1rem; }
     .hero-actions  { flex-direction: column; align-items: stretch; }
     .hero-actions .btn { width: 100%; justify-content: center; }
-    .hero-chiffres { gap: 1.5rem; flex-wrap: wrap; }
+    .hero-chiffres { 
+        display: none; /* Cacher la version normale sur tablettes */
+    }
+    
+    /* Afficher la version compacte sur tablettes */
+    .hero-chiffres-compact {
+        display: flex !important;
+        margin: 1rem 0;
+        padding: 1rem 0;
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
     .chiffre-val   { font-size: 1.8rem; }
     .hero-visuel   { display: none; }
     .scroll-indicateur { display: none; }
@@ -1193,7 +1247,19 @@ ul  { list-style: none; padding: 0; }
 
     .hero-titre      { font-size: 1.9rem; }
     .hero-sous-titre { font-size: .95rem; }
-    .hero-chiffres   { flex-direction: column; gap: 1rem; border-top: none; padding-top: 1.5rem; }
+    .hero-chiffres   { 
+        display: none; /* Cacher la version normale */
+    }
+    
+    /* Afficher la version compacte sur mobile */
+    .hero-chiffres-compact {
+        display: flex !important;
+        margin: 1rem 0;
+        padding: 0.8rem 0;
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
     .hero-actions    { gap: .75rem; }
 
     .ruban-grille { grid-template-columns: 1fr; }
