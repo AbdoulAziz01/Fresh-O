@@ -1360,7 +1360,7 @@ em {
 /* --- Header Ressources --- */
 .ressources-header {
     min-height: 80vh;
-    background: linear-gradient(140deg, #1A1033 0%, #2D1B69 40%, #4A148C 75%, #7B1FA2 100%);
+    background: linear-gradient(140deg, #006400 0%, #808000 75%, #006400 100%);
     display: flex; align-items: center;
     padding-top: 80px; position: relative; overflow: hidden;
 }
