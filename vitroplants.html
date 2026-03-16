@@ -8,6 +8,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles1.css">
+<style>
+/* ================================================
+   STATS — blanc partout + hover vert
+   ================================================ */
+.section-stats .stat-number,
+.section-stats .stat-sup,
+.section-stats .stat-label,
+.stat-number,
+.stat-sup,
+.stat-label {
+  color: #ffffff !important;
+}
+
+.section-stats .stat-item {
+  transition: all 0.3s ease;
+}
+
+.section-stats .stat-item:hover .stat-number,
+.section-stats .stat-item:hover .stat-sup,
+.section-stats .stat-item:hover .stat-label {
+  color: var(--green-light, #66bb6a) !important;
+  transition: color 0.3s ease;
+}
+
+/* ================================================
+   RESPONSIVE — TABLETTE (≤1024px)
+   ================================================ */
+@media (max-width: 1024px) {
+  .vp-header-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  .vp-kpi-row { grid-template-columns: 1fr 1fr !important; }
+  .vp-science-grid { grid-template-columns: 1fr 1fr !important; }
+  .varietes-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .variete-featured { transform: none !important; }
+  .qualite-grid { grid-template-columns: 1fr 1fr !important; }
+  .qualite-featured { grid-column: span 1 !important; }
+  .vp-process-steps { flex-direction: column !important; align-items: center !important; gap: 2rem !important; }
+  .vp-step-arrow { transform: rotate(90deg) !important; }
+  .temoignages-grid { grid-template-columns: 1fr 1fr !important; }
+  .temoignage-featured { transform: none !important; }
+  .stat-number, .stat-sup, .stat-label { color: #ffffff !important; }
+}
+
+/* ================================================
+   RESPONSIVE — MOBILE (≤768px)
+   ================================================ */
+@media (max-width: 768px) {
+  /* Header */
+  .vp-header { min-height: auto !important; padding-top: 80px !important; padding-bottom: 3rem !important; }
+  .vp-header-grid { grid-template-columns: 1fr !important; padding: 2rem 0 !important; gap: 2rem !important; }
+  .vp-header-right { display: none !important; }
+  .vp-title { font-size: clamp(1.8rem, 7vw, 2.8rem) !important; }
+  .vp-header-actions { flex-direction: column !important; }
+  .vp-header-actions .btn { width: 100% !important; justify-content: center !important; }
+
+  /* Ribbon */
+  .vp-ribbon { overflow-x: auto !important; }
+  .vp-ribbon-inner { justify-content: flex-start !important; padding: 0 1rem !important; }
+
+  /* Grilles */
+  .vp-science-grid { grid-template-columns: 1fr !important; }
+  .varietes-grid { grid-template-columns: 1fr !important; }
+  .variete-header { height: 180px !important; }
+  .qualite-grid { grid-template-columns: 1fr !important; }
+  .qualite-featured { grid-column: span 1 !important; }
+  .temoignages-grid { grid-template-columns: 1fr !important; }
+
+  /* Processus */
+  .vp-process-steps { flex-direction: column !important; gap: 1.5rem !important; overflow-x: visible !important; padding: 0 !important; }
+  .vp-step { min-width: unset !important; width: 100% !important; flex-direction: row !important; align-items: flex-start !important; text-align: left !important; gap: 1rem !important; }
+  .vp-step-visual { width: 70px !important; height: 70px !important; flex-shrink: 0 !important; margin-bottom: 0 !important; }
+  .vp-step-arrow { display: none !important; }
+
+  /* Stats */
+  .stats-grid { flex-direction: column !important; align-items: center !important; }
+  .stat-sep { width: 40px !important; height: 1px !important; }
+  .stat-number, .stat-sup, .stat-label { color: #ffffff !important; }
+  .section-stats .stat-item:hover .stat-number,
+  .section-stats .stat-item:hover .stat-sup,
+  .section-stats .stat-item:hover .stat-label { color: var(--green-light, #66bb6a) !important; }
+
+  /* CTA */
+  .cta-inner { flex-direction: column !important; }
+  .cta-actions { flex-direction: column !important; width: 100% !important; }
+  .cta-actions .btn { width: 100% !important; justify-content: center !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .footer-bottom { flex-direction: column !important; gap: 0.75rem !important; }
+}
+
+/* ================================================
+   RESPONSIVE — TRÈS PETIT (≤480px)
+   ================================================ */
+@media (max-width: 480px) {
+  .section-title { font-size: 1.7rem !important; }
+  .vp-title { font-size: 1.8rem !important; }
+  .variete-header { height: 160px !important; }
+  .stat-number, .stat-sup, .stat-label { color: #ffffff !important; }
+  .section-stats .stat-item:hover .stat-number,
+  .section-stats .stat-item:hover .stat-sup,
+  .section-stats .stat-item:hover .stat-label { color: var(--green-light, #66bb6a) !important; }
+}
+</style>
 </head>
 <body>
 

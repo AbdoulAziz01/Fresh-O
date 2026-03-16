@@ -6193,7 +6193,7 @@ ul {
 }
 
 .marque-logo {
-  height: 38px;
+  height: 100px;
   width: auto;
 }
 
@@ -16753,4 +16753,46 @@ ul {
   .footer {
     padding: 3rem 0 1.5rem;
   }
+  /* ================================================
+   BURGER MENU — navbar-nav (impact, faq, temoignages)
+   ================================================ */
+@media (max-width: 768px) {
+  .navbar-nav.open {
+    display: flex !important;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.99);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 0;
+    border-bottom: 3px solid var(--green-pale);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .navbar-nav.open li { width: 100%; }
+
+  .navbar-nav.open .nav-link {
+    display: block;
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    border-bottom: 1px solid var(--green-pale);
+  }
+
+  .navbar-nav.open li:last-child .nav-link { border-bottom: none; }
+
+  .navbar-nav.open .nav-link:hover,
+  .navbar-nav.open .nav-link.active {
+    background: var(--green-pale);
+    color: var(--green-dark);
+    border-radius: var(--radius-sm);
+  }
+}
 }
