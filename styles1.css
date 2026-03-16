@@ -5754,6 +5754,33 @@ blockquote::before {
   .opportunites-grid {
     grid-template-columns: 1fr;
   }
+  
+  /* VITROPLANTS - Science cards mobile optimisation */
+  .vp-science-grid {
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vp-science-card {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    min-height: 180px;
+  }
+  .vp-science-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .vp-science-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .vsc-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .vsc-stat {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
 }
 
 /* ================================================
