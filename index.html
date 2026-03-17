@@ -1,559 +1,693 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fresh'O Vitroplants - Agriculture Durable au Sénégal</title>
-  <meta name="description" content="Leader sénégalais en vitroplants zéro carbone. Solutions agricoles durables pour l'avenir de l'Afrique.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="container navbar-inner">
-    <a href="index.html" class="marque">
-      <img src="images/Fresh'o_logo.png" alt="Fresh'O Logo" class="marque-logo" onerror="this.style.display='none'">
-    </a>
-    <ul class="nav-liens">
-      <li><a href="index.html"               class="nav-lien actif">Accueil</a></li>
-      <li><a href="apropos.html"             class="nav-lien">À propos</a></li>
-      <li><a href="ferme-zero-carbone.html"  class="nav-lien">Ferme</a></li>
-      <li><a href="vitroplants.html"         class="nav-lien">Vitroplants</a></li>
-      <li><a href="impact-partenariats.html" class="nav-lien">Impact</a></li>
-      <li><a href="ressources-medias.html"   class="nav-lien">Ressources</a></li>
-      <li><a href="contact-partenaires.html" class="nav-lien">Contact</a></li>
-    </ul>
-    <a href="contact-partenaires.html" class="btn-nav">Devenir partenaire →</a>
-  </div>
-</nav>
-
-
-<!-- HÉROS -->
-<header class="hero">
-  <div class="hero-grille">
-
-    <!-- COLONNE GAUCHE : contenu texte -->
-    <div class="hero-contenu">
-      <h1 class="hero-titre">
-        L'avenir de la<br>
-        <em>banane africaine</em>
-        <span class="ligne-verte">commence ici.</span>
-      </h1>
-      <p class="hero-sous-titre">
-        Des vitroplants de banane sains, homogènes et performants — issus de la première ferme zéro carbone du Sénégal. Biotechnologie, solaire, impact social.
-      </p>
-      <div class="hero-actions">
-        <a href="ferme-zero-carbone.html" class="btn btn-banane">Découvrir la ferme <span class="fleche">→</span></a>
-        <a href="contact-partenaires.html" class="btn btn-fantome">Collaborer avec nous</a>
-      </div>
-      <div class="hero-chiffres">
-        <div>
-          <div class="chiffre-val">500K<span>+</span></div>
-          <div class="chiffre-label">plants / an</div>
-        </div>
-        <div>
-          <div class="chiffre-val">95<span>%</span></div>
-          <div class="chiffre-label">taux de survie</div>
-        </div>
-        <div>
-          <div class="chiffre-val">−40<span>%</span></div>
-          <div class="chiffre-label">émissions CO₂</div>
-        </div>
-      </div>
-    </div>
-    <!-- FIN COLONNE GAUCHE -->
-
-    <!-- COLONNE DROITE : visuel -->
-    <div class="hero-visuel">
-      <div class="carte-principale">
-        <div class="carte-fond-svg">
-          <svg viewBox="0 0 100 100" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 5 C60 5 80 20 80 40 C80 60 65 80 50 90 C35 80 20 60 20 40 C20 20 40 5 50 5Z" opacity=".4"/>
-            <circle cx="50" cy="38" r="14" opacity=".3"/>
-            <rect x="44" y="52" width="12" height="28" rx="4" opacity=".35"/>
-            <path d="M30 75 Q50 65 70 75" stroke="white" stroke-width="2" fill="none" opacity=".25"/>
-          </svg>
-        </div>
-        <div class="carte-statut">Production active</div>
-        <div class="carte-libelle">Laboratoire méristèmes</div>
-        <div class="carte-titre">Culture in vitro<br>de haute précision</div>
-      </div>
-      <div class="carte-flottante haut-droite">
-        <div class="flottante-icone jaune">
-          <svg height="24px" width="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#C9960A">
-            <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm0 80a80 80 0 11-80 80 80.09 80.09 0 0180-80zm0 320a160 160 0 01-119.12-53.22C159.31 355.39 204.26 336 256 336s96.69 19.39 119.12 58.78A160 160 0 01256 448z"/>
-          </svg>
-        </div>
-        <div>
-          <div class="flottante-val">100 % Solaire</div>
-          <div class="flottante-lab">Énergie propre</div>
-        </div>
-      </div>
-      <div class="carte-flottante bas-gauche">
-        <div class="flottante-icone verte">
-          <svg height="24px" width="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#2E8B4A">
-            <path d="M400 32H112A48.05 48.05 0 0064 80v352a48.05 48.05 0 0048 48h288a48.05 48.05 0 0048-48V80a48.05 48.05 0 00-48-48zm-48 180h-83v196h-26V212h-83l96-100 96 100z"/>
-          </svg>
-        </div>
-        <div>
-          <div class="flottante-val">3–5 variétés</div>
-          <div class="flottante-lab">Disponibles maintenant</div>
-        </div>
-      </div>
-    </div>
-    <!-- FIN COLONNE DROITE -->
-
-  </div>
-
-  <div class="scroll-indicateur">
-    <div class="scroll-trait"></div>
-    <span>Scroll</span>
-  </div>
-</header>
-
-
-<!-- RUBAN CHIFFRES -->
-<section class="ruban-chiffres">
-  <div class="container">
-    <div class="ruban-grille">
-      <div class="ruban-col">
-        <div class="ruban-nombre">500K<sup>+</sup></div>
-        <div class="ruban-label">Vitroplants produits par an</div>
-      </div>
-      <div class="ruban-col">
-        <div class="ruban-nombre">95<sup>%</sup></div>
-        <div class="ruban-label">Taux de survie</div>
-      </div>
-      <div class="ruban-col">
-        <div class="ruban-nombre">−40<sup>%</sup></div>
-        <div class="ruban-label">Émissions CO₂</div>
-      </div>
-      <div class="ruban-col">
-        <div class="ruban-nombre">3–5</div>
-        <div class="ruban-label">Variétés certifiées</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- TROIS PILIERS -->
-<section class="section section-piliers">
-  <div class="container">
-    <div class="entete-section centre">
-      <span class="etiquette">Notre ADN</span>
-      <h2 class="titre-section">Trois piliers,<br><em>un seul engagement</em></h2>
-      <p class="desc-section">FRESH'O combine biotechnologie avancée, énergie propre et impact social mesurable pour une agriculture d'avenir, fabriquée au Sénégal.</p>
-    </div>
-    <div class="grille-piliers">
-      <div class="carte-pilier pilier-1">
-        <div class="pilier-num">01</div>
-        <div class="pilier-icone">
-          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-            <path d="M704 469.333333h-200.533333L640 106.666667H405.333333l-128 448h183.466667L362.666667 960z" fill="#FFC107"/>
-          </svg>
-        </div>
-        <h3 class="pilier-titre">Excellence Technique</h3>
-        <p class="pilier-desc">Protocoles stricts, équipements de pointe. Chaque plant certifié exempt de maladies, génétiquement homogène et adapté aux conditions africaines.</p>
-        <a href="vitroplants.html" class="pilier-lien">Voir les vitroplants →</a>
-      </div>
-      <div class="carte-pilier pilier-2">
-        <div class="pilier-num">02</div>
-        <div class="pilier-icone">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <circle cx="32" cy="32" r="28" fill="#17a1f3"/>
-            <path d="M20 32 Q32 16 44 32 Q32 48 20 32z" fill="#7add8a"/>
-          </svg>
-        </div>
-        <h3 class="pilier-titre">Durabilité Environnementale</h3>
-        <p class="pilier-desc">Zéro carbone net : énergie solaire intégrale, biogaz, optimisation hydrique et monitoring en temps réel de toutes les émissions.</p>
-        <a href="ferme-zero-carbone.html" class="pilier-lien">La ferme zéro carbone →</a>
-      </div>
-      <div class="carte-pilier pilier-3">
-        <div class="pilier-num">03</div>
-        <div class="pilier-icone">
-          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="30" r="14" fill="#FFCB4B"/>
-            <path d="M10 70 Q40 50 70 70" stroke="#FFCB4B" stroke-width="4" fill="none"/>
-          </svg>
-        </div>
-        <h3 class="pilier-titre">Impact Social Positif</h3>
-        <p class="pilier-desc">Formation, emplois qualifiés, inclusion des femmes et jeunes. Chaque plant vendu renforce une communauté agricole sénégalaise.</p>
-        <a href="impact-partenariats.html" class="pilier-lien">Voir notre impact →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- POURQUOI FRESH'O -->
-<section class="section section-atouts">
-  <div class="container">
-    <div class="atouts-layout">
-      <div class="atouts-gauche">
-        <span class="etiquette">Nos Atouts</span>
-        <h2 class="titre-section">Pourquoi choisir<br><em>FRESH'O ?</em></h2>
-        <p class="desc-section">Chaque avantage est le fruit d'un processus rigoureux, conçu pour garantir votre satisfaction et la performance de vos cultures saison après saison.</p>
-        <a href="vitroplants.html" class="btn btn-primaire">Voir nos produits <span class="fleche">→</span></a>
-      </div>
-      <div class="liste-atouts">
-        <div class="item-atout">
-          <div class="atout-num">01</div>
-          <div class="atout-corps">
-            <h4>Qualité Sanitaire Garantie</h4>
-            <p>Plants certifiés exempts de virus, champignons et nématodes. Chaque lot analysé en laboratoire avant livraison.</p>
-          </div>
-        </div>
-        <div class="item-atout">
-          <div class="atout-num">02</div>
-          <div class="atout-corps">
-            <h4>Rendements +30 %</h4>
-            <p>Homogénéité variétale totale pour une production régulière, prévisible et rentable.</p>
-          </div>
-        </div>
-        <div class="item-atout">
-          <div class="atout-num">03</div>
-          <div class="atout-corps">
-            <h4>Production Bas Carbone</h4>
-            <p>Énergie solaire, biogaz et optimisation des ressources. Premier modèle zéro carbone du Sénégal.</p>
-          </div>
-        </div>
-        <div class="item-atout">
-          <div class="atout-num">04</div>
-          <div class="atout-corps">
-            <h4>Traçabilité Complète</h4>
-            <p>Suivi numérique de chaque lot, du laboratoire au champ. Certificat d'origine inclus.</p>
-          </div>
-        </div>
-        <div class="item-atout">
-          <div class="atout-num">05</div>
-          <div class="atout-corps">
-            <h4>Partenariats Durables</h4>
-            <p>Accompagnement technique et commercial sur le long terme, bien au-delà de la livraison.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- À QUI S'ADRESSENT NOS VITROPLANTS -->
-<section class="section section-cibles">
-  <div class="cibles-fond"></div>
-  <div class="cibles-motif"></div>
-  <div class="container">
-    <div class="entete-section centre">
-      <span class="etiquette blanc">Nos Clients</span>
-      <h2 class="titre-section">À qui s'adressent<br><em>nos vitroplants ?</em></h2>
-      <p class="desc-section">Des solutions adaptées à chaque acteur de la filière bananière — du producteur individuel au partenaire institutionnel international.</p>
-    </div>
-    <div class="grille-cibles">
-      <div class="carte-cible">
-        <div class="cible-entete">
-          <span class="cible-emoji">🌱</span>
-          <h3 class="cible-nom">Producteurs<br>& Coopératives</h3>
-        </div>
-        <div class="cible-corps">
-          <ul class="liste-cible">
-            <li>Plants homogènes, calendrier maîtrisé</li>
-            <li>Accompagnement technique personnalisé</li>
-            <li>Réduction des pertes en champ</li>
-            <li>Financement adapté disponible</li>
-          </ul>
-          <a href="contact-partenaires.html" class="cta-cible">Commander →</a>
-        </div>
-      </div>
-      <div class="carte-cible vedette">
-        <div class="badge-vedette">Le plus populaire</div>
-        <div class="cible-entete">
-          <span class="cible-emoji">🏭</span>
-          <h3 class="cible-nom">Industriels<br>& Exportateurs</h3>
-        </div>
-        <div class="cible-corps">
-          <ul class="liste-cible">
-            <li>Volumes sécurisés et garantis</li>
-            <li>Conformité aux standards internationaux</li>
-            <li>Qualité constante, lot après lot</li>
-            <li>Supply chain transparente</li>
-          </ul>
-          <a href="contact-partenaires.html" class="cta-cible">Nous contacter →</a>
-        </div>
-      </div>
-      <div class="carte-cible">
-        <div class="cible-entete">
-          <span class="cible-emoji">🏛️</span>
-          <h3 class="cible-nom">Institutions<br>& Bailleurs</h3>
-        </div>
-        <div class="cible-corps">
-          <ul class="liste-cible">
-            <li>Projet à impact environnemental positif</li>
-            <li>Création d'emplois locaux qualifiés</li>
-            <li>Modèle viable et réplicable</li>
-            <li>Aligné sur les ODD et CDN Sénégal</li>
-          </ul>
-          <a href="contact-partenaires.html" class="cta-cible">Dossier complet →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- PROCESSUS -->
-<section class="section section-processus">
-  <div class="container">
-    <div class="entete-section centre">
-      <span class="etiquette">Notre Process</span>
-      <h2 class="titre-section">De la sélection <em>au champ</em></h2>
-      <p class="desc-section">Un protocole rigoureux en 5 étapes pour garantir des plants prêts à performer dès leur mise en terre.</p>
-    </div>
-    <div class="grille-processus">
-      <div class="etape-item">
-        <div class="etape-bulle">🔬</div>
-        <div class="etape-num">Étape 01</div>
-        <div class="etape-titre">Sélection</div>
-        <p class="etape-desc">Identification de pieds-mères sains et performants.</p>
-      </div>
-      <div class="etape-item">
-        <div class="etape-bulle">🧫</div>
-        <div class="etape-num">Étape 02</div>
-        <div class="etape-titre">Multiplication</div>
-        <p class="etape-desc">Culture stérile in vitro — des milliers de plants identiques.</p>
-      </div>
-      <div class="etape-item">
-        <div class="etape-bulle">🌿</div>
-        <div class="etape-num">Étape 03</div>
-        <div class="etape-titre">Acclimatation</div>
-        <p class="etape-desc">Adaptation progressive aux conditions réelles du terrain.</p>
-      </div>
-      <div class="etape-item">
-        <div class="etape-bulle">💪</div>
-        <div class="etape-num">Étape 04</div>
-        <div class="etape-titre">Renforcement</div>
-        <p class="etape-desc">Développement du système racinaire pour une reprise optimale.</p>
-      </div>
-      <div class="etape-item">
-        <div class="etape-bulle">🚜</div>
-        <div class="etape-num">Étape 05</div>
-        <div class="etape-titre">Livraison</div>
-        <p class="etape-desc">Livraison selon votre calendrier, avec appui technique.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:3rem;">
-      <a href="vitroplants.html" class="btn btn-primaire">Voir le processus complet <span class="fleche">→</span></a>
-    </div>
-  </div>
-</section>
-
-
-<!-- IMPACT -->
-<section class="section section-impact">
-  <div class="impact-fond"></div>
-  <div class="container">
-    <div class="entete-section centre">
-      <span class="etiquette blanc">Impact Mesurable</span>
-      <h2 class="titre-section">Un modèle qui <em>transforme</em><br>les territoires</h2>
-      <p class="desc-section">Chaque vitroplant livré contribue à trois dimensions d'impact réel et quantifié.</p>
-    </div>
-    <div class="grille-impact">
-      <div class="carte-impact impact-eco">
-        <div class="impact-emoji">💰</div>
-        <div class="impact-nombre">+30<span>%</span></div>
-        <div class="impact-titre">Rendement économique</div>
-        <p class="impact-desc">En moyenne 30 % de revenus supplémentaires pour nos producteurs partenaires grâce à la performance de nos plants.</p>
-      </div>
-      <div class="carte-impact impact-social">
-        <div class="impact-emoji">👥</div>
-        <div class="impact-nombre">120<span>+</span></div>
-        <div class="impact-titre">Emplois créés et formés</div>
-        <p class="impact-desc">Techniciens de laboratoire, agents terrain, formateurs — un écosystème d'emplois qualifiés au service de l'agriculture locale.</p>
-      </div>
-      <div class="carte-impact impact-env">
-        <div class="impact-emoji">🌍</div>
-        <div class="impact-nombre">−40<span>%</span></div>
-        <div class="impact-titre">Réduction CO₂</div>
-        <p class="impact-desc">Notre ferme zéro carbone réduit de 40 % les émissions liées à la production bananière conventionnelle grâce au solaire et au biogaz.</p>
-      </div>
-    </div>
-    <div class="centre-impact">
-      <a href="impact-partenariats.html" class="btn btn-blanc">Voir l'impact complet <span class="fleche">→</span></a>
-    </div>
-  </div>
-</section>
-
-
-<!-- TÉMOIGNAGES -->
-<section class="section section-temoignages">
-  <div class="container">
-    <div class="temos-layout">
-      <div class="temos-intro">
-        <span class="etiquette">Témoignages</span>
-        <h2 class="titre-section">Ils nous font<br><em>confiance</em></h2>
-        <p class="desc-section">Producteurs, institutions et partenaires témoignent de la transformation que FRESH'O apporte à leurs activités.</p>
-        <a href="temoignages.html" class="btn btn-contour">Tous les témoignages <span class="fleche">→</span></a>
-      </div>
-      <div class="grille-temos">
-        <div class="carte-temo">
-          <span class="guillemetq">"</span>
-          <p class="temo-texte">Depuis que j'utilise les vitroplants de FRESH'O, mes rendements ont augmenté de façon remarquable. Les plants sont homogènes, robustes, et le suivi technique est vraiment excellent.</p>
-          <div class="temo-auteur">
-            <div class="auteur-avatar">AM</div>
-            <div>
-              <div class="auteur-nom">Amadou Mbaye</div>
-              <div class="auteur-role">Producteur bananier, Casamance</div>
-            </div>
-          </div>
-        </div>
-        <div class="carte-temo">
-          <span class="guillemetq">"</span>
-          <p class="temo-texte">FRESH'O représente le modèle d'innovation que nous cherchons à soutenir — zéro carbone, impact social fort et technologie de pointe.</p>
-          <div class="temo-auteur">
-            <div class="auteur-avatar" style="background:linear-gradient(135deg,#1A7BA3,#0E4D6E)">FD</div>
-            <div>
-              <div class="auteur-nom">Fatou Diallo</div>
-              <div class="auteur-role">Directrice, ONG Agriculture Durable</div>
-            </div>
-          </div>
-        </div>
-        <div class="carte-temo">
-          <span class="guillemetq">"</span>
-          <p class="temo-texte">La traçabilité et la qualité constante des lots nous permettent de sécuriser nos contrats d'exportation. Un partenaire stratégique incontournable.</p>
-          <div class="temo-auteur">
-            <div class="auteur-avatar" style="background:linear-gradient(135deg,#C9960A,#8B4513)">CS</div>
-            <div>
-              <div class="auteur-nom">Cheikh Sarr</div>
-              <div class="auteur-role">Directeur Export, AgroSenegal SA</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- CTA FINAL -->
-<section class="section-cta">
-  <div class="container cta-inner">
-    <div class="cta-texte">
-      <h2>Prêt à transformer<br><em>votre production ?</em></h2>
-      <p>Rejoignez les producteurs et partenaires qui font confiance à FRESH'O pour des plants performants et un accompagnement de premier ordre.</p>
-    </div>
-    <div class="cta-actions">
-      <a href="contact-partenaires.html" class="btn btn-primaire">Devenir partenaire <span class="fleche">→</span></a>
-      <a href="ressources-medias.html" class="btn btn-contour" style="border-color:rgba(13,61,31,.45);">Télécharger le catalogue</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand-col">
-        <img src="images/Fresh'o_logo.png" alt="Fresh'O Vitroplants" class="footer-logo">
-        <p>Première ferme zéro carbone de production de vitroplants de banane au Sénégal.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-          <a href="#" class="social-btn" aria-label="Facebook">f</a>
-          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
-          <a href="#" class="social-btn" aria-label="X">𝕏</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="apropos.html">À propos</a></li>
-          <li><a href="ferme-zero-carbone.html">Ferme zéro carbone</a></li>
-          <li><a href="vitroplants.html">Vitroplants</a></li>
-          <li><a href="impact-partenariats.html">Impact</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh'O Vitroplants - Agriculture Durable au Sénégal</title>
+    <meta
+      name="description"
+      content="Leader sénégalais en vitroplants zéro carbone. Solutions agricoles durables pour l'avenir de l'Afrique."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="marque">
+          <img
+            src="images/Fresh'o_logo.png"
+            class="logo-header"
+            onerror="this.style.display = 'none'"
+          />
+        </a>
+        <ul class="nav-liens">
+          <li><a href="index.html" class="nav-lien actif">Accueil</a></li>
+          <li><a href="apropos.html" class="nav-lien">À propos</a></li>
+          <li><a href="ferme-zero-carbone.html" class="nav-lien">Ferme</a></li>
+          <li><a href="vitroplants.html" class="nav-lien">Vitroplants</a></li>
+          <li>
+            <a href="impact-partenariats.html" class="nav-lien">Impact</a>
+          </li>
+          <li>
+            <a href="ressources-medias.html" class="nav-lien">Ressources</a>
+          </li>
+          <li>
+            <a href="contact-partenaires.html" class="nav-lien">Contact</a>
+          </li>
         </ul>
+        <a href="contact-partenaires.html" class="btn-nav"
+          >Devenir partenaire →</a
+        >
       </div>
-      <div class="footer-col">
-        <h4>Ressources</h4>
-        <ul>
-          <li><a href="ressources-medias.html">Médias</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="temoignages.html">Témoignages</a></li>
-          <li><a href="carrieres.html">Carrières</a></li>
-          <li><a href="contact-partenaires.html">Contact</a></li>
-        </ul>
+    </nav>
+
+    <!-- HÉROS -->
+    <header class="hero">
+      <div class="hero-grille">
+        <!-- COLONNE GAUCHE : contenu texte -->
+        <div class="hero-contenu">
+          <h1 class="hero-titre">
+            L'avenir de la<br />
+            <em>banane africaine</em>
+            <span class="ligne-verte">commence ici.</span>
+          </h1>
+          <p class="hero-sous-titre">
+            Des vitroplants de banane sains, homogènes et performants — issus de
+            la première ferme zéro carbone du Sénégal. Biotechnologie, solaire,
+            impact social.
+          </p>
+          <div class="hero-actions">
+            <a href="ferme-zero-carbone.html" class="btn btn-banane"
+              >Découvrir la ferme <span class="fleche">→</span></a
+            >
+            <a href="contact-partenaires.html" class="btn btn-fantome"
+              >Collaborer avec nous</a
+            >
+          </div>
+        </div>
+        <!-- FIN COLONNE GAUCHE -->
+        <div class="hero-visuel">
+          <div class="hero-decor">
+            <svg
+              width="320"
+              height="320"
+              viewBox="0 0 320 320"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="leafGradient"
+                  x1="0"
+                  y1="0"
+                  x2="320"
+                  y2="320"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#52B86A" />
+                  <stop offset="1" stop-color="#1A5C32" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M160 20 C220 60 300 120 260 220 C220 320 100 300 60 220 C20 120 100 60 160 20Z"
+                fill="url(#leafGradient)"
+                opacity="0.18"
+              />
+              <ellipse
+                cx="160"
+                cy="160"
+                rx="80"
+                ry="120"
+                fill="#E8F5EC"
+                opacity="0.12"
+              />
+              <path
+                d="M160 60 Q200 120 160 180 Q120 120 160 60Z"
+                fill="#F2C12E"
+                opacity="0.12"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- FIN COLONNE DROITE -->
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Route de Thiès, KM 25<br>Dakar, Sénégal</p>
-        <p>+221 33 123 45 67</p>
-        <p>contact@fresho-vitroplants.sn</p>
-        <a href="contact-partenaires.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.85rem;padding:0.6rem 1.2rem;">Nous contacter →</a>
+
+      <div class="scroll-indicateur">
+        <div class="scroll-trait"></div>
+        <span>Scroll</span>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 FRESH'O VITROPLANTS. Tous droits réservés.</p>
-      <div class="footer-legal">
-        <a href="#">Mentions légales</a>
-        <a href="#">Confidentialité</a>
+    </header>
+
+    <!-- RUBAN CHIFFRES -->
+    <section class="ruban-chiffres">
+      <div class="container">
+        <div class="ruban-grille">
+          <div class="ruban-col">
+            <div class="ruban-nombre">500K<sup>+</sup></div>
+            <div class="ruban-label">Vitroplants produits par an</div>
+          </div>
+          <div class="ruban-col">
+            <div class="ruban-nombre">95<sup>%</sup></div>
+            <div class="ruban-label">Taux de survie</div>
+          </div>
+          <div class="ruban-col">
+            <div class="ruban-nombre">−40<sup>%</sup></div>
+            <div class="ruban-label">Émissions CO₂</div>
+          </div>
+          <div class="ruban-col">
+            <div class="ruban-nombre">3–5</div>
+            <div class="ruban-label">Variétés certifiées</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const navbar   = document.querySelector('.navbar');
-  const navInner = document.querySelector('.navbar-inner');
-  const navLiens = document.querySelector('.nav-liens');
+    <!-- TROIS PILIERS -->
+    <section class="section section-piliers">
+      <div class="container">
+        <div class="entete-section centre">
+          <span class="etiquette">Notre ADN</span>
+          <h2 class="titre-section">
+            Trois piliers,<br /><em>un seul engagement</em>
+          </h2>
+          <p class="desc-section">
+            FRESH'O combine biotechnologie avancée, énergie propre et impact
+            social mesurable pour une agriculture d'avenir, fabriquée au
+            Sénégal.
+          </p>
+        </div>
+        <div class="grille-piliers">
+          <div class="carte-pilier pilier-1">
+            <div class="pilier-img">
+              <img src="images/img12.avif" alt="Excellence Technique" />
+            </div>
+            <h3 class="pilier-titre">Excellence Technique</h3>
+            <p class="pilier-desc">
+              Protocoles stricts, équipements de pointe. Chaque plant certifié
+              exempt de maladies, génétiquement homogène et adapté aux
+              conditions africaines.
+            </p>
+            <a href="vitroplants.html" class="pilier-lien"
+              >Voir les vitroplants →</a
+            >
+          </div>
+          <div class="carte-pilier pilier-2">
+            <div class="pilier-img">
+              <img src="images/img13.avif" alt="Durabilité Environnementale" />
+            </div>
+            <h3 class="pilier-titre">Durabilité Environnementale</h3>
+            <p class="pilier-desc">
+              Zéro carbone net : énergie solaire intégrale, biogaz, optimisation
+              hydrique et monitoring en temps réel de toutes les émissions.
+            </p>
+            <a href="ferme-zero-carbone.html" class="pilier-lien"
+              >La ferme zéro carbone →</a
+            >
+          </div>
+          <div class="carte-pilier pilier-3">
+            <div class="pilier-img">
+              <img src="images/img14.avif" alt="Impact Social Positif" />
+            </div>
+            <h3 class="pilier-titre">Impact Social Positif</h3>
+            <p class="pilier-desc">
+              Formation, emplois qualifiés, inclusion des femmes et jeunes.
+              Chaque plant vendu renforce une communauté agricole sénégalaise.
+            </p>
+            <a href="impact-partenariats.html" class="pilier-lien"
+              >Voir notre impact →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-  if (!navInner || !navLiens) return;
+    <!-- POURQUOI FRESH'O -->
+    <section class="section section-atouts">
+      <div class="container">
+        <div class="atouts-layout">
+          <div class="atouts-gauche">
+            <span class="etiquette">Nos Atouts</span>
+            <h2 class="titre-section">
+              Pourquoi choisir<br /><em>FRESH'O ?</em>
+            </h2>
+            <p class="desc-section">
+              Chaque avantage est le fruit d'un processus rigoureux, conçu pour
+              garantir votre satisfaction et la performance de vos cultures
+              saison après saison.
+            </p>
+            <a href="vitroplants.html" class="btn btn-primaire"
+              >Voir nos produits <span class="fleche">→</span></a
+            >
+          </div>
+          <div class="liste-atouts">
+            <div class="item-atout">
+              <div class="atout-num">01</div>
+              <div class="atout-corps">
+                <h4>Qualité Sanitaire Garantie</h4>
+                <p>
+                  Plants certifiés exempts de virus, champignons et nématodes.
+                  Chaque lot analysé en laboratoire avant livraison.
+                </p>
+              </div>
+            </div>
+            <div class="item-atout">
+              <div class="atout-num">02</div>
+              <div class="atout-corps">
+                <h4>Rendements +30 %</h4>
+                <p>
+                  Homogénéité variétale totale pour une production régulière,
+                  prévisible et rentable.
+                </p>
+              </div>
+            </div>
+            <div class="item-atout">
+              <div class="atout-num">03</div>
+              <div class="atout-corps">
+                <h4>Production Bas Carbone</h4>
+                <p>
+                  Énergie solaire, biogaz et optimisation des ressources.
+                  Premier modèle zéro carbone du Sénégal.
+                </p>
+              </div>
+            </div>
+            <div class="item-atout">
+              <div class="atout-num">04</div>
+              <div class="atout-corps">
+                <h4>Traçabilité Complète</h4>
+                <p>
+                  Suivi numérique de chaque lot, du laboratoire au champ.
+                  Certificat d'origine inclus.
+                </p>
+              </div>
+            </div>
+            <div class="item-atout">
+              <div class="atout-num">05</div>
+              <div class="atout-corps">
+                <h4>Partenariats Durables</h4>
+                <p>
+                  Accompagnement technique et commercial sur le long terme, bien
+                  au-delà de la livraison.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  const toggle = document.createElement('button');
-  toggle.className = 'nav-toggle';
-  toggle.setAttribute('aria-label', 'Ouvrir le menu');
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.innerHTML = '<span></span><span></span><span></span>';
-  navInner.appendChild(toggle);
+    <!-- À QUI S'ADRESSENT NOS VITROPLANTS -->
+    <section class="section section-cibles">
+      <div class="cibles-fond"></div>
+      <div class="cibles-motif"></div>
+      <div class="container">
+        <div class="entete-section centre">
+          <span class="etiquette blanc">Nos Clients</span>
+          <h2 class="titre-section">
+            À qui s'adressent<br /><em>nos vitroplants ?</em>
+          </h2>
+          <p class="desc-section">
+            Des solutions adaptées à chaque acteur de la filière bananière — du
+            producteur individuel au partenaire institutionnel international.
+          </p>
+        </div>
+        <div class="grille-cibles">
+          <div class="carte-cible">
+            <div class="cible-entete">
+              <span class="cible-emoji">🌱</span>
+              <h3 class="cible-nom">Producteurs<br />& Coopératives</h3>
+            </div>
+            <div class="cible-corps">
+              <ul class="liste-cible">
+                <li>Plants homogènes, calendrier maîtrisé</li>
+                <li>Accompagnement technique personnalisé</li>
+                <li>Réduction des pertes en champ</li>
+                <li>Financement adapté disponible</li>
+              </ul>
+              <a href="contact-partenaires.html" class="cta-cible"
+                >Commander →</a
+              >
+            </div>
+          </div>
+          <div class="carte-cible vedette">
+            <div class="badge-vedette">Le plus populaire</div>
+            <div class="cible-entete">
+              <span class="cible-emoji">🏭</span>
+              <h3 class="cible-nom">Industriels<br />& Exportateurs</h3>
+            </div>
+            <div class="cible-corps">
+              <ul class="liste-cible">
+                <li>Volumes sécurisés et garantis</li>
+                <li>Conformité aux standards internationaux</li>
+                <li>Qualité constante, lot après lot</li>
+                <li>Supply chain transparente</li>
+              </ul>
+              <a href="contact-partenaires.html" class="cta-cible"
+                >Nous contacter →</a
+              >
+            </div>
+          </div>
+          <div class="carte-cible">
+            <div class="cible-entete">
+              <span class="cible-emoji">🏛️</span>
+              <h3 class="cible-nom">Institutions<br />& Bailleurs</h3>
+            </div>
+            <div class="cible-corps">
+              <ul class="liste-cible">
+                <li>Projet à impact environnemental positif</li>
+                <li>Création d'emplois locaux qualifiés</li>
+                <li>Modèle viable et réplicable</li>
+                <li>Aligné sur les ODD et CDN Sénégal</li>
+              </ul>
+              <a href="contact-partenaires.html" class="cta-cible"
+                >Dossier complet →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  function openMenu() {
-    navLiens.classList.add('open');
-    toggle.classList.add('active');
-    toggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
+    <!-- PROCESSUS -->
+    <section class="section section-processus">
+      <div class="container">
+        <div class="entete-section centre">
+          <span class="etiquette">Notre Process</span>
+          <h2 class="titre-section">De la sélection <em>au champ</em></h2>
+          <p class="desc-section">
+            Un protocole rigoureux en 5 étapes pour garantir des plants prêts à
+            performer dès leur mise en terre.
+          </p>
+        </div>
+        <div class="grille-processus">
+          <div class="etape-item">
+            <div class="etape-bulle">🔬</div>
+            <div class="etape-num">Étape 01</div>
+            <div class="etape-titre">Sélection</div>
+            <p class="etape-desc">
+              Identification de pieds-mères sains et performants.
+            </p>
+          </div>
+          <div class="etape-item">
+            <div class="etape-bulle">🧫</div>
+            <div class="etape-num">Étape 02</div>
+            <div class="etape-titre">Multiplication</div>
+            <p class="etape-desc">
+              Culture stérile in vitro — des milliers de plants identiques.
+            </p>
+          </div>
+          <div class="etape-item">
+            <div class="etape-bulle">🌿</div>
+            <div class="etape-num">Étape 03</div>
+            <div class="etape-titre">Acclimatation</div>
+            <p class="etape-desc">
+              Adaptation progressive aux conditions réelles du terrain.
+            </p>
+          </div>
+          <div class="etape-item">
+            <div class="etape-bulle">💪</div>
+            <div class="etape-num">Étape 04</div>
+            <div class="etape-titre">Renforcement</div>
+            <p class="etape-desc">
+              Développement du système racinaire pour une reprise optimale.
+            </p>
+          </div>
+          <div class="etape-item">
+            <div class="etape-bulle">🚜</div>
+            <div class="etape-num">Étape 05</div>
+            <div class="etape-titre">Livraison</div>
+            <p class="etape-desc">
+              Livraison selon votre calendrier, avec appui technique.
+            </p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="vitroplants.html" class="btn btn-primaire"
+            >Voir le processus complet <span class="fleche">→</span></a
+          >
+        </div>
+      </div>
+    </section>
 
-  function closeMenu() {
-    navLiens.classList.remove('open');
-    toggle.classList.remove('active');
-    toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
+    <!-- IMPACT -->
+    <section class="section section-impact">
+      <div class="impact-fond"></div>
+      <div class="container">
+        <div class="entete-section centre">
+          <span class="etiquette blanc">Impact Mesurable</span>
+          <h2 class="titre-section">
+            Un modèle qui <em>transforme</em><br />les territoires
+          </h2>
+          <p class="desc-section">
+            Chaque vitroplant livré contribue à trois dimensions d'impact réel
+            et quantifié.
+          </p>
+        </div>
+        <div class="grille-impact">
+          <div class="carte-impact impact-eco">
+            <div class="impact-emoji">💰</div>
+            <div class="impact-nombre">+30<span>%</span></div>
+            <div class="impact-titre">Rendement économique</div>
+            <p class="impact-desc">
+              En moyenne 30 % de revenus supplémentaires pour nos producteurs
+              partenaires grâce à la performance de nos plants.
+            </p>
+          </div>
+          <div class="carte-impact impact-social">
+            <div class="impact-emoji">👥</div>
+            <div class="impact-nombre">120<span>+</span></div>
+            <div class="impact-titre">Emplois créés et formés</div>
+            <p class="impact-desc">
+              Techniciens de laboratoire, agents terrain, formateurs — un
+              écosystème d'emplois qualifiés au service de l'agriculture locale.
+            </p>
+          </div>
+          <div class="carte-impact impact-env">
+            <div class="impact-emoji">🌍</div>
+            <div class="impact-nombre">−40<span>%</span></div>
+            <div class="impact-titre">Réduction CO₂</div>
+            <p class="impact-desc">
+              Notre ferme zéro carbone réduit de 40 % les émissions liées à la
+              production bananière conventionnelle grâce au solaire et au
+              biogaz.
+            </p>
+          </div>
+        </div>
+        <div class="centre-impact">
+          <a href="impact-partenariats.html" class="btn btn-blanc"
+            >Voir l'impact complet <span class="fleche">→</span></a
+          >
+        </div>
+      </div>
+    </section>
 
-  toggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    navLiens.classList.contains('open') ? closeMenu() : openMenu();
-  });
+    <!-- TÉMOIGNAGES -->
+    <section class="section section-temoignages">
+      <div class="container">
+        <div class="temos-layout">
+          <div class="temos-intro">
+            <span class="etiquette">Témoignages</span>
+            <h2 class="titre-section">Ils nous font<br /><em>confiance</em></h2>
+            <p class="desc-section">
+              Producteurs, institutions et partenaires témoignent de la
+              transformation que FRESH'O apporte à leurs activités.
+            </p>
+            <a href="temoignages.html" class="btn btn-contour"
+              >Tous les témoignages <span class="fleche">→</span></a
+            >
+          </div>
+          <div class="grille-temos">
+            <div class="carte-temo">
+              <span class="guillemetq">"</span>
+              <p class="temo-texte">
+                Depuis que j'utilise les vitroplants de FRESH'O, mes rendements
+                ont augmenté de façon remarquable. Les plants sont homogènes,
+                robustes, et le suivi technique est vraiment excellent.
+              </p>
+              <div class="temo-auteur">
+                <div class="auteur-avatar">AM</div>
+                <div>
+                  <div class="auteur-nom">Amadou Mbaye</div>
+                  <div class="auteur-role">Producteur bananier, Casamance</div>
+                </div>
+              </div>
+            </div>
+            <div class="carte-temo">
+              <span class="guillemetq">"</span>
+              <p class="temo-texte">
+                FRESH'O représente le modèle d'innovation que nous cherchons à
+                soutenir — zéro carbone, impact social fort et technologie de
+                pointe.
+              </p>
+              <div class="temo-auteur">
+                <div
+                  class="auteur-avatar"
+                  style="background: linear-gradient(135deg, #1a7ba3, #0e4d6e)"
+                >
+                  FD
+                </div>
+                <div>
+                  <div class="auteur-nom">Fatou Diallo</div>
+                  <div class="auteur-role">
+                    Directrice, ONG Agriculture Durable
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carte-temo">
+              <span class="guillemetq">"</span>
+              <p class="temo-texte">
+                La traçabilité et la qualité constante des lots nous permettent
+                de sécuriser nos contrats d'exportation. Un partenaire
+                stratégique.
+              </p>
+              <div class="temo-auteur">
+                <div
+                  class="auteur-avatar"
+                  style="background: linear-gradient(135deg, #c9960a, #8b4513)"
+                >
+                  CS
+                </div>
+                <div>
+                  <div class="auteur-nom">Cheikh Sarr</div>
+                  <div class="auteur-role">
+                    Directeur Export, AgroSenegal SA
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  navLiens.querySelectorAll('.nav-lien').forEach(function (link) {
-    link.addEventListener('click', closeMenu);
-  });
+    <!--FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <img
+              src="images/Fresh'o_logo.svg"
+              alt="Fresh'O Vitroplants"
+              class="footer-logo"
+            />
+            <p>
+              Première ferme zéro carbone de production de vitroplants de banane
+              au Sénégal.
+            </p>
+            <div class="footer-socials">
+              <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+              <a href="#" class="social-btn" aria-label="Facebook">f</a>
+              <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+              <a href="#" class="social-btn" aria-label="X">𝕏</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="apropos.html">À propos</a></li>
+              <li><a href="ferme-zero-carbone.html">Ferme zéro carbone</a></li>
+              <li><a href="vitroplants.html">Vitroplants</a></li>
+              <li><a href="impact-partenariats.html">Impact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Ressources</h4>
+            <ul>
+              <li><a href="ressources-medias.html">Médias</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="temoignages.html">Témoignages</a></li>
+              <li><a href="carrieres.html">Carrières</a></li>
+              <li><a href="contact-partenaires.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p>Route de Thiès, KM 25<br />Dakar, Sénégal</p>
+            <p>+221 33 123 45 67</p>
+            <p>contact@fresho-vitroplants.sn</p>
+            <a
+              href="contact-partenaires.html"
+              class="btn btn-primary"
+              style="
+                margin-top: 1rem;
+                font-size: 0.85rem;
+                padding: 0.6rem 1.2rem;
+              "
+              >Nous contacter →</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 FRESH'O VITROPLANTS. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="#">Mentions légales</a>
+            <a href="#">Confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    -->
 
-  document.addEventListener('click', function (e) {
-    if (!navbar.contains(e.target)) closeMenu();
-  });
+    <script>
+      // Slider simple pour les témoignages
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".slide-temo");
+        const prevBtn = document.querySelector(".temo-prev");
+        const nextBtn = document.querySelector(".temo-next");
+        let current = 0;
+        function showSlide(idx) {
+          slides.forEach((slide, i) => {
+            slide.style.display = i === idx ? "block" : "none";
+          });
+        }
+        if (slides.length) {
+          showSlide(current);
+          prevBtn.addEventListener("click", function () {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+          });
+          nextBtn.addEventListener("click", function () {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+          });
+        }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar");
+        const navInner = document.querySelector(".navbar-inner");
+        const navLiens = document.querySelector(".nav-liens");
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
-  });
+        if (!navInner || !navLiens) return;
 
-  window.addEventListener('scroll', function () {
-    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
-});
-</script>
-</body>
+        const toggle = document.createElement("button");
+        toggle.className = "nav-toggle";
+        toggle.setAttribute("aria-label", "Ouvrir le menu");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.innerHTML = "<span></span><span></span><span></span>";
+        navInner.appendChild(toggle);
+
+        function openMenu() {
+          navLiens.classList.add("open");
+          toggle.classList.add("active");
+          toggle.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          navLiens.classList.remove("open");
+          toggle.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        }
+
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          navLiens.classList.contains("open") ? closeMenu() : openMenu();
+        });
+
+        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!navbar.contains(e.target)) closeMenu();
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeMenu();
+        });
+
+        window.addEventListener("scroll", function () {
+          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+      });
+    </script>
+  </body>
 </html>

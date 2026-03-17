@@ -6217,16 +6217,7 @@ ul {
   gap: 1.5rem;
 }
 
-.marque {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
 
-.marque-logo {
-  height: 100px;
-  width: auto;
-}
 
 .nav-liens {
   display: flex;
@@ -9499,7 +9490,9 @@ h2.text-center::after {
   flex-shrink: 0;
 }
 .marque-logo {
-  height: 45px;
+  height: 64px !important;
+  max-height: none !important;
+  max-width: none !important;
   width: auto;
 }
 .marque-texte {
@@ -11150,7 +11143,9 @@ ul {
   flex-shrink: 0;
 }
 .marque-logo {
-  height: 42px;
+  height: 64px !important;
+  max-height: none !important;
+  max-width: none !important;
   width: auto;
 }
 
@@ -14991,7 +14986,9 @@ ul {
 }
 
 .marque-logo {
-  height: 42px;
+  height: 64px !important;
+  max-height: none !important;
+  max-width: none !important;
   width: auto;
 }
 
