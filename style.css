@@ -346,12 +346,12 @@ ul {
 
 /* Nouveau style pour le logo header */
 img.logo-header {
-  height: 640px !important;
+  height: 200px !important;
   width: auto !important;
-  max-height: 100px !important;
+  max-height: 64px !important;
   max-width: none !important;
   display: block !important;
-  min-height: 100px !important;
+  min-height: 64px !important;
 }
 
 .nav-liens {

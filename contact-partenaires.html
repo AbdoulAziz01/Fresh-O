@@ -1,567 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact et Devenir Partenaire — FRESH'O VITROPLANTS</title>
-    <meta name="description" content="Contactez FRESH'O VITROPLANTS pour commander des vitroplants, devenir partenaire ou demander notre dossier complet.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles1.css">
-</head>
-<body>
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="container navbar-inner">
-    <a href="index.html" class="marque">
-          <img src="images/Fresh'o_logo.png" alt="Fresh'O Logo" class="marque-logo" onerror="this.style.display='none'">
-    </a>
-    <ul class="nav-liens">
-      <li><a href="index.html"               class="nav-lien">Accueil</a></li>
-      <li><a href="apropos.html"             class="nav-lien">À propos</a></li>
-      <li><a href="ferme-zero-carbone.html"  class="nav-lien">Ferme</a></li>
-      <li><a href="vitroplants.html"         class="nav-lien">Vitroplants</a></li>
-      <li><a href="impact-partenariats.html" class="nav-lien">Impact</a></li>
-      <li><a href="ressources-medias.html"   class="nav-lien">Ressources</a></li>
-      <li><a href="contact-partenaires.html" class="nav-lien actif  ">Contact</a></li>
-    </ul>
-    <a href="contact-partenaires.html" class="btn-nav">Devenir partenaire →</a>
-  </div>
-</nav>
+    <meta
+      name="description"
+      content="Contactez FRESH'O VITROPLANTS pour commander des vitroplants, devenir partenaire ou demander notre dossier complet."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles1.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="marque">
+          <img
+            src="images/Fresh'o_logo.png"
+            alt="Fresh'O Logo"
+            class="marque-logo"
+            onerror="this.style.display = 'none'"
+          />
+        </a>
+        <ul class="nav-liens">
+          <li><a href="index.html" class="nav-lien">Accueil</a></li>
+          <li><a href="apropos.html" class="nav-lien">À propos</a></li>
+          <li><a href="ferme-zero-carbone.html" class="nav-lien">Ferme</a></li>
+          <li><a href="vitroplants.html" class="nav-lien">Vitroplants</a></li>
+          <li>
+            <a href="impact-partenariats.html" class="nav-lien">Impact</a>
+          </li>
+          <li>
+            <a href="contact-partenaires.html" class="nav-lien actif"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <a href="contact-partenaires.html" class="btn-nav"
+          >Devenir partenaire →</a
+        >
+      </div>
+    </nav>
     <!-- ===== FORMULAIRE + SIDEBAR ===== -->
     <section class="section section-contact-form" id="formulaire">
-        <div class="container">
-            <div class="contact-layout">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Formulaire principal -->
+          <div class="contact-form-col">
+            <div class="section-tag">Formulaire de contact</div>
+            <h2 class="section-title">
+              Envoyez-nous<br /><em>votre message</em>
+            </h2>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                margin: 0.75rem 0 2rem;
+                line-height: 1.7;
+              "
+            >
+              Remplissez ce formulaire et notre équipe vous répondra dans les 24
+              heures ouvrées.
+            </p>
 
-                <!-- Formulaire principal -->
-                <div class="contact-form-col">
-                    <div class="section-tag">Formulaire de contact</div>
-                    <h2 class="section-title">Envoyez-nous<br><em>votre message</em></h2>
-                    <p style="color:var(--text-muted);font-size:0.95rem;margin:0.75rem 0 2rem;line-height:1.7;">
-                        Remplissez ce formulaire et notre équipe vous répondra dans les 24 heures ouvrées.
-                    </p>
-
-                    <form class="contact-form" id="contact-form">
-
-                        <!-- Sélection du type en haut -->
-                        <div class="form-type-selector">
-                            <p class="form-type-label">Je suis…</p>
-                            <div class="form-type-btns">
-                                <label class="form-type-btn">
-                                    <input type="radio" name="profil" value="producteur" checked>
-                                    <span> Producteur</span>
-                                </label>
-                                <label class="form-type-btn">
-                                    <input type="radio" name="profil" value="institution">
-                                    <span> Institution</span>
-                                </label>
-                                <label class="form-type-btn">
-                                    <input type="radio" name="profil" value="investisseur">
-                                    <span> Investisseur</span>
-                                </label>
-                                <label class="form-type-btn">
-                                    <input type="radio" name="profil" value="autre">
-                                    <span> Autre</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nom" class="form-label">Nom complet <span class="form-required">*</span></label>
-                                <input type="text" id="nom" class="form-control" placeholder="Mamadou Diallo" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="organisation" class="form-label">Organisation <span class="form-required">*</span></label>
-                                <input type="text" id="organisation" class="form-control" placeholder="Coopérative de Fatick" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email <span class="form-required">*</span></label>
-                                <input type="email" id="email" class="form-control" placeholder="m.diallo@email.sn" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telephone" class="form-label">Téléphone <span class="form-required">*</span></label>
-                                <input type="tel" id="telephone" class="form-control" placeholder="+221 77 000 00 00" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="type_demande" class="form-label">Type de demande <span class="form-required">*</span></label>
-                                <select id="type_demande" class="form-select" required>
-                                    <option value="">Sélectionnez…</option>
-                                    <option value="commande"> Commande de vitroplants</option>
-                                    <option value="partenariat"> Proposition de partenariat</option>
-                                    <option value="dossier"> Demande de dossier complet</option>
-                                    <option value="visite"> Planifier une visite</option>
-                                    <option value="formation"> Demande de formation</option>
-                                    <option value="presse"> Demande presse/médias</option>
-                                    <option value="autre"> Autre</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="volume" class="form-label">Volume estimé</label>
-                                <select id="volume" class="form-select">
-                                    <option value="1000">Moins de 1 000 plants</option>
-                                    <option value="1000-5000">1 000 – 5 000 plants</option>
-                                    <option value="5000-10000">5 000 – 10 000 plants</option>
-                                    <option value="10000-50000">10 000 – 50 000 plants</option>
-                                    <option value="50000+">Plus de 50 000 plants</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message <span class="form-required">*</span></label>
-                            <textarea id="message" class="form-control form-textarea" required
-                                placeholder="Décrivez votre projet, vos besoins ou votre proposition de collaboration…"></textarea>
-                        </div>
-
-                        <div class="form-group form-consent">
-                            <label class="form-check">
-                                <input type="checkbox" required>
-                                <span>J'accepte de recevoir des communications de FRESH'O VITROPLANTS. Pas de spam — désabonnement en 1 clic.</span>
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary form-submit">
-                            Envoyer ma demande <span class="btn-icon">→</span>
-                        </button>
-
-                    </form>
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xlgpagke" method="POST">
+              <!-- Sélection du type en haut -->
+              <div class="form-type-selector">
+                <p class="form-type-label">Je suis…</p>
+                <div class="form-type-btns">
+                  <label class="form-type-btn">
+                    <input
+                      type="radio"
+                      name="profil"
+                      value="Producteur"
+                      checked
+                    />
+                    <span> Producteur</span>
+                  </label>
+                  <label class="form-type-btn">
+                    <input type="radio" name="profil" value="Institution" />
+                    <span> Institution</span>
+                  </label>
+                  <label class="form-type-btn">
+                    <input type="radio" name="profil" value="Investisseur" />
+                    <span> Investisseur</span>
+                  </label>
+                  <label class="form-type-btn">
+                    <input type="radio" name="profil" value="Autre" />
+                    <span> Autre</span>
+                  </label>
                 </div>
+              </div>
 
-                <!-- Sidebar coordonnées -->
-                <div class="contact-sidebar">
-
-                    <div class="contact-info-card">
-                        <div class="cic-header cic-green">
-                            <span class="cic-icon"></span>
-                            <h3>Siège Social</h3>
-                        </div>
-                        <div class="cic-body">
-                            <p><strong>FRESH'O VITROPLANTS</strong><br>
-                            Route de Thiès, KM 25<br>
-                            11000 Dakar, Sénégal</p>
-                            <div class="cic-detail">
-                                <span class="cic-label"> Horaires</span>
-                                <span>Lun-Ven 8h–18h · Sam 9h–13h</span>
-                            </div>
-                            <div class="cic-detail">
-                                <span class="cic-label"> Téléphone</span>
-                                <a href="tel:+221331234567">+221 33 123 45 67</a>
-                            </div>
-                            <div class="cic-detail">
-                                <span class="cic-label"> Email</span>
-                                <a href="mailto:contact@fresho-vitroplants.sn">contact@fresho-vitroplants.sn</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-card contact-info-featured">
-                        <div class="cic-badge-top">Visites sur réservation</div>
-                        <div class="cic-header cic-dark">
-                            <span class="cic-icon"></span>
-                            <h3>Site de Production</h3>
-                        </div>
-                        <div class="cic-body">
-                            <p><strong>Ferme Pilote — Thiès</strong><br>
-                            Zone Industrielle de Thiès<br>
-                            BP 456, Thiès, Sénégal</p>
-                            <div class="cic-detail">
-                                <span class="cic-label"> Visites</span>
-                                <span>Mer & Ven : 10h et 15h</span>
-                            </div>
-                            <div class="cic-detail">
-                                <span class="cic-label">Réservation</span>
-                                <a href="mailto:visites@fresho-vitroplants.sn">visites@fresho-vitroplants.sn</a>
-                            </div>
-                            <a href="mailto:visites@fresho-vitroplants.sn" class="btn btn-white" style="margin-top:1rem;font-size:0.85rem;padding:0.6rem 1.2rem;justify-content:center;">
-                                Réserver une visite →
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-depts">
-                        <h4 class="contact-depts-title">Contacts par département</h4>
-                        <div class="dept-item">
-                            <div class="dept-icon dept-commercial">💼</div>
-                            <div class="dept-body">
-                                <strong>Commercial & Partenariats</strong>
-                                <span>Mme Aïssa Touré</span>
-                                <a href="tel:+221772345678">+221 77 234 56 78</a>
-                                <a href="mailto:partenaires@fresho-vitroplants.sn">partenaires@fresho-vitroplants.sn</a>
-                            </div>
-                        </div>
-                        <div class="dept-item">
-                            <div class="dept-icon dept-technique">🔬</div>
-                            <div class="dept-body">
-                                <strong>Support Technique</strong>
-                                <span>M. Moussa Konaté</span>
-                                <a href="tel:+221773456789">+221 77 345 67 89</a>
-                                <a href="mailto:technique@fresho-vitroplants.sn">technique@fresho-vitroplants.sn</a>
-                            </div>
-                        </div>
-                        <div class="dept-item">
-                            <div class="dept-icon dept-presse">📰</div>
-                            <div class="dept-body">
-                                <strong>Presse & Communication</strong>
-                                <span>Service communication</span>
-                                <a href="mailto:presse@fresho-vitroplants.sn">presse@fresho-vitroplants.sn</a>
-                            </div>
-                        </div>
-                    </div>
-
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nom" class="form-label"
+                    >Nom complet <span class="form-required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    class="form-control"
+                    placeholder="Mamadou Diallo"
+                    required
+                  />
                 </div>
+                <div class="form-group">
+                  <label for="organisation" class="form-label"
+                    >Organisation <span class="form-required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="organisation"
+                    name="organisation"
+                    class="form-control"
+                    placeholder="Coopérative de Fatick"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" class="form-label"
+                    >Email <span class="form-required">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="m.diallo@email.sn"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="telephone" class="form-label"
+                    >Téléphone <span class="form-required">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    class="form-control"
+                    placeholder="+221 77 000 00 00"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="type_demande" class="form-label"
+                    >Type de demande <span class="form-required">*</span></label
+                  >
+                  <select id="type_demande" name="type_demande" class="form-select" required>
+                    <option value="">Sélectionnez…</option>
+                    <option value="Commande de vitroplants">Commande de vitroplants</option>
+                    <option value="Proposition de partenariat">Proposition de partenariat</option>
+                    <option value="Demande de dossier complet">Demande de dossier complet</option>
+                    <option value="Planifier une visite">Planifier une visite</option>
+                    <option value="Demande de formation">Demande de formation</option>
+                    <option value="Demande presse/médias">Demande presse/médias</option>
+                    <option value="Autre">Autre</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="volume" class="form-label">Volume estimé</label>
+                  <select id="volume" name="volume" class="form-select">
+                    <option value="Moins de 1 000 plants">Moins de 1 000 plants</option>
+                    <option value="1 000 – 5 000 plants">1 000 – 5 000 plants</option>
+                    <option value="5 000 – 10 000 plants">5 000 – 10 000 plants</option>
+                    <option value="10 000 – 50 000 plants">10 000 – 50 000 plants</option>
+                    <option value="Plus de 50 000 plants">Plus de 50 000 plants</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label"
+                  >Message <span class="form-required">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control form-textarea"
+                  required
+                  placeholder="Décrivez votre projet, vos besoins ou votre proposition de collaboration…"
+                ></textarea>
+              </div>
+
+              <div class="form-group form-consent">
+                <label class="form-check">
+                  <input type="checkbox" name="consent" required />
+                  <span
+                    >J'accepte de recevoir des communications de FRESH'O
+                    VITROPLANTS. Pas de spam — désabonnement en 1 clic.</span
+                  >
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit">
+                Envoyer ma demande <span class="btn-icon">→</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Sidebar coordonnées -->
+          <div class="contact-sidebar">
             </div>
+          </div>
         </div>
+      </div>
     </section>
-
-    <!-- ===== PROFILS COLLABORATION ===== -->
-    <section class="section section-profils">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Comment collaborer</span>
-                <h2 class="section-title">Un parcours adapté<br><em>à votre profil</em></h2>
-                <p class="section-desc">Chaque type de partenaire bénéficie d'un accompagnement sur mesure.</p>
-            </div>
-            <div class="profils-grid">
-
-                <div class="profil-card profil-green">
-                    <div class="profil-icon-wrap">🌱</div>
-                    <div class="profil-num">01</div>
-                    <h3>Producteur / Coopérative</h3>
-                    <p>Commandez des vitroplants certifiés et bénéficiez d'un suivi agronomique personnalisé pendant 6 mois.</p>
-                    <ul class="profil-list">
-                        <li>Devis personnalisé sous 24h</li>
-                        <li>Formation sur site incluse</li>
-                        <li>Garantie 90% de reprise</li>
-                        <li>Support technique continu</li>
-                    </ul>
-                    <a href="#formulaire" class="btn btn-primary" style="font-size:0.88rem;padding:0.7rem 1.5rem;">Commander →</a>
-                </div>
-
-                <div class="profil-card profil-blue">
-                    <div class="profil-icon-wrap">🏛️</div>
-                    <div class="profil-num">02</div>
-                    <h3>Institution / Investisseur</h3>
-                    <p>Devenez partenaire stratégique pour amplifier notre impact et co-développer l'agriculture durable en Afrique.</p>
-                    <ul class="profil-list">
-                        <li>Dossier d'investissement complet</li>
-                        <li>Projections financières 5 ans</li>
-                        <li>Visite exclusive de la ferme</li>
-                        <li>Reporting impact régulier</li>
-                    </ul>
-                    <a href="#formulaire" class="btn btn-primary" style="font-size:0.88rem;padding:0.7rem 1.5rem;">Devenir partenaire →</a>
-                </div>
-
-                <div class="profil-card profil-orange">
-                    <div class="profil-icon-wrap">🤝</div>
-                    <div class="profil-num">03</div>
-                    <h3>ONG / Organisation</h3>
-                    <p>Collaborez sur des projets à fort impact social et environnemental pour les communautés rurales.</p>
-                    <ul class="profil-list">
-                        <li>Projets d'impact communautaire</li>
-                        <li>Partage des ressources R&D</li>
-                        <li>Formation des bénéficiaires</li>
-                        <li>Co-financement possible</li>
-                    </ul>
-                    <a href="#formulaire" class="btn btn-primary" style="font-size:0.88rem;padding:0.7rem 1.5rem;">Collaborer →</a>
-                </div>
-
-                <div class="profil-card profil-purple">
-                    <div class="profil-icon-wrap">🎓</div>
-                    <div class="profil-num">04</div>
-                    <h3>Centre de Recherche</h3>
-                    <p>Partenariats R&D pour l'innovation variétale, les protocoles in vitro et la recherche en agriculture durable.</p>
-                    <ul class="profil-list">
-                        <li>Accès aux données de recherche</li>
-                        <li>Parcelles expérimentales dédiées</li>
-                        <li>Publications conjointes</li>
-                        <li>Stages et thèses encadrés</li>
-                    </ul>
-                    <a href="#formulaire" class="btn btn-primary" style="font-size:0.88rem;padding:0.7rem 1.5rem;">Proposer un partenariat →</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FAQ ===== -->
-    <section class="section section-faq-contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Questions fréquentes</span>
-                <h2 class="section-title">Vos questions,<br><em>nos réponses</em></h2>
-            </div>
-            <div class="faq-grid">
-
-                <div class="faq-card">
-                    <div class="faq-q">
-                        <div class="faq-icon"></div>
-                        <h4>Comment commander des vitroplants ?</h4>
-                    </div>
-                    <p>Remplissez notre formulaire en sélectionnant "Commande de vitroplants". Notre équipe commerciale vous contactera dans les 24h pour analyser vos besoins et établir un devis personnalisé.</p>
-                </div>
-
-                <div class="faq-card">
-                    <div class="faq-q">
-                        <div class="faq-icon"></div>
-                        <h4>Quels sont les délais de livraison ?</h4>
-                    </div>
-                    <div class="faq-table">
-                        <div class="faq-row"><span>&lt; 5 000 plants</span><strong>2–4 semaines</strong></div>
-                        <div class="faq-row"><span>5 000 – 20 000 plants</span><strong>4–8 semaines</strong></div>
-                        <div class="faq-row"><span>&gt; 20 000 plants</span><strong>8–12 semaines</strong></div>
-                    </div>
-                </div>
-
-                <div class="faq-card">
-                    <div class="faq-q">
-                        <div class="faq-icon"></div>
-                        <h4>Proposez-vous des formations ?</h4>
-                    </div>
-                    <p>Oui. La formation initiale est <strong>incluse gratuitement</strong> pour toute commande de plus de 5 000 plants. Des ateliers mensuels et un support technique sur site sont disponibles pour tous nos clients.</p>
-                </div>
-
-                <div class="faq-card">
-                    <div class="faq-q">
-                        <div class="faq-icon"></div>
-                        <h4>Quelle est la garantie qualité ?</h4>
-                    </div>
-                    <p>Nous garantissons <strong>90% de reprise minimum</strong> et 6 mois de suivi agronomique. En cas de problème certifié, les plants défectueux sont remplacés gratuitement sans délai.</p>
-                </div>
-
-                <div class="faq-card">
-                    <div class="faq-q">
-                        <div class="faq-icon"></div>
-                        <h4>Quelles sont les conditions de paiement ?</h4>
-                    </div>
-                    <div class="faq-list">
-                        <span>Virement bancaire (30% acompte + 70% livraison)</span>
-                        <span>Chèque certifié</span>
-                        <span>Financement via partenaires bancaires</span>
-                        <span>Paiement échelonné pour gros volumes</span>
-                    </div>
-                </div>
-
-                <div class="faq-card">
-                    <div class="faq-q">
-                        <div class="faq-icon"></div>
-                        <h4>Comment devenir distributeur ?</h4>
-                    </div>
-                    <p>Contactez-nous pour recevoir notre kit distributeur, discuter des conditions commerciales et évaluer les opportunités dans votre région. Une formation distributeur est incluse.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CARTE LOCALISATION ===== -->
-    <section class="section section-localisation">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Localisation</span>
-                <h2 class="section-title">Ou nous <br><em>Trouver</em></h2>
-                <p class="section-desc">Siège à Dakar, ferme pilote à Thiès — et bientôt au Mali et en Guinée.</p>
-            </div>
-            <div class="localisation-layout">
-
-                <div class="localisation-map">
-                    <div class="map-visual">
-                        <div class="map-pin map-dakar">
-                            <div class="map-pin-dot"></div>
-                            <div class="map-pin-label">
-                                <strong>📍 Dakar</strong>
-                                <span>Siège social</span>
-                            </div>
-                        </div>
-                        <div class="map-pin map-thies">
-                            <div class="map-pin-dot map-pin-green"></div>
-                S            <div class="map-pin-label">
-                                <strong>🌱 Thiès</strong>
-                                <span>Ferme pilote</span>
-                            </div>
-                        </div>
-                        <div class="map-pin map-mali">
-                            <div class="map-pin-dot map-pin-yellow"></div>
-                            <div class="map-pin-label">
-                                <strong>🌍 Mali</strong>
-                                <span>Expansion 2026</span>
-                            </div>
-                        </div>
-                        <div class="map-bg-label">SÉNÉGAL</div>
-                    </div>
-                </div>
-
-                <div class="localisation-infos">
-                    <div class="loc-item">
-                        <div class="loc-dot dot-blue"></div>
-                        <div class="loc-body">
-                            <h4>Siège Social — Dakar</h4>
-                            <p>Route de Thiès, KM 25 — 11000 Dakar</p>
-                            <p class="loc-sub"> 45 min depuis le centre de Dakar<br>
-                             Autoroute Dakar-Thiès, sortie 25<br>
-                             Parking visiteurs disponible</p>
-                            <span class="infra-tag">Administration</span>
-                        </div>
-                    </div>
-                    <div class="loc-item">
-                        <div class="loc-dot dot-green"></div>
-                        <div class="loc-body">
-                            <h4>Ferme Pilote — Thiès</h4>
-                            <p>Zone Industrielle — BP 456, Thiès</p>
-                            <p class="loc-sub"> Visites mer & ven : 10h et 15h<br>
-                             Réservation obligatoire 48h avant<br>
-                             Laboratoire, serres, pépinières</p>
-                            <span class="infra-tag infra-tag-yellow">Visites sur réservation</span>
-                        </div>
-                    </div>
-                    <div class="loc-item">
-                        <div class="loc-dot dot-yellow"></div>
-                        <div class="loc-body">
-                            <h4>Expansion Régionale</h4>
-                            <p>Mali & Guinée — Ouverture prévue 2026</p>
-                            <p class="loc-sub"> Nouvelle unité de production Mali<br>
-                             Contact : expansion@fresho-vitroplants.sn</p>
-                            <span class="infra-tag infra-tag-blue">En développement</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CTA FINAL ===== -->
-    <section class="section-cta">
-        <div class="container cta-inner">
-            <div class="cta-text">
-                <h2>Prêt à démarrer<br>votre projet ?</h2>
-                <p>Notre équipe est disponible pour analyser vos besoins et vous accompagner à chaque étape.</p>
-            </div>
-            <div class="cta-actions">
-                <a href="#formulaire" class="btn btn-white">Envoyer un message →</a>
-                <a href="tel:+221331234567" class="btn btn-outline-white">Appeler maintenant</a>
-            </div>
-        </div>
-    </section>
-
-   <!-- FOOTER -->
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand-col">
-                    <img src="images/Fresh'o_logo.svg" alt="Fresh'O Vitroplants" class="footer-logo">
-                    <p>Première ferme zéro carbone de production de vitroplants de banane au Sénégal.</p>
-                    <div class="footer-socials">
-                        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-btn" aria-label="Facebook">f</a>
-                        <a href="#" class="social-btn" aria-label="Instagram">ig</a>
-                        <a href="#" class="social-btn" aria-label="X">𝕏</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
-                        <li><a href="ferme-zero-carbone.html">Ferme zéro carbone</a></li>
-                        <li><a href="vitroplants.html">Vitroplants</a></li>
-                        <li><a href="impact-partenariats.html">Impact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Ressources</h4>
-                    <ul>
-                        <li><a href="ressources-medias.html">Médias</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="temoignages.html">Témoignages</a></li>
-                        <li><a href="carrieres.html">Carrières</a></li>
-                        <li><a href="contact-partenaires.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Route de Thiès, KM 25<br>Dakar, Sénégal</p>
-                    <p>+221 33 123 45 67</p>
-                    <p>contact@fresho-vitroplants.sn</p>
-                    <a href="contact-partenaires.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.85rem;padding:0.6rem 1.2rem;">Nous contacter →</a>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <img
+              src="images/Fresh'o_logo.svg"
+              alt="Fresh'O Vitroplants"
+              class="footer-logo"
+            />
+            <p>
+              Première ferme zéro carbone de production de vitroplants de banane
+              au Sénégal.
+            </p>
+            <div class="footer-socials">
+              <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+              <a href="#" class="social-btn" aria-label="Facebook">f</a>
+              <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+              <a href="#" class="social-btn" aria-label="X">𝕏</a>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 FRESH'O VITROPLANTS. Tous droits réservés.</p>
-                <div class="footer-legal">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Confidentialité</a>
-                </div>
-            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="apropos.html">À propos</a></li>
+              <li><a href="ferme-zero-carbone.html">Ferme zéro carbone</a></li>
+              <li><a href="vitroplants.html">Vitroplants</a></li>
+              <li><a href="impact-partenariats.html">Impact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Ressources</h4>
+            <ul>
+              <li><a href="ressources-medias.html">Médias</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="temoignages.html">Témoignages</a></li>
+              <li><a href="carrieres.html">Carrières</a></li>
+              <li><a href="contact-partenaires.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p>Route de Thiès, KM 25<br />Dakar, Sénégal</p>
+            <p>+221 33 123 45 67</p>
+            <p>contact@fresho-vitroplants.sn</p>
+            <a
+              href="contact-partenaires.html"
+              class="btn btn-primary"
+              style="
+                margin-top: 1rem;
+                font-size: 0.85rem;
+                padding: 0.6rem 1.2rem;
+              "
+              >Nous contacter →</a
+            >
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>© 2026 FRESH'O VITROPLANTS. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="#">Mentions légales</a>
+            <a href="#">Confidentialité</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- RESPONSIVE -->
-        <script>
-        /* nav-mobile.js — Burger menu robuste pour index.html */
-document.addEventListener('DOMContentLoaded', function () {
+    <script>
+      /* nav-mobile.js — Burger menu robuste pour index.html */
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar");
+        const navInner = document.querySelector(".navbar-inner");
+        const navLiens = document.querySelector(".nav-liens");
 
-    const navbar   = document.querySelector('.navbar');
-    const navInner = document.querySelector('.navbar-inner');
-    const navLiens = document.querySelector('.nav-liens');
+        if (!navInner || !navLiens) return;
 
-    if (!navInner || !navLiens) return;
+        /* ---- Créer le bouton burger ---- */
+        const toggle = document.createElement("button");
+        toggle.className = "nav-toggle";
+        toggle.setAttribute("aria-label", "Ouvrir le menu");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.innerHTML = "<span></span><span></span><span></span>";
+        navInner.appendChild(toggle);
 
-    /* ---- Créer le bouton burger ---- */
-    const toggle = document.createElement('button');
-    toggle.className = 'nav-toggle';
-    toggle.setAttribute('aria-label', 'Ouvrir le menu');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.innerHTML = '<span></span><span></span><span></span>';
-    navInner.appendChild(toggle);
+        /* ---- Ouvrir / fermer ---- */
+        function openMenu() {
+          navLiens.classList.add("open");
+          toggle.classList.add("active");
+          toggle.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden";
+        }
 
-    /* ---- Ouvrir / fermer ---- */
-    function openMenu() {
-        navLiens.classList.add('open');
-        toggle.classList.add('active');
-        toggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-    }
+        function closeMenu() {
+          navLiens.classList.remove("open");
+          toggle.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        }
 
-    function closeMenu() {
-        navLiens.classList.remove('open');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-    }
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          navLiens.classList.contains("open") ? closeMenu() : openMenu();
+        });
 
-    toggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        navLiens.classList.contains('open') ? closeMenu() : openMenu();
-    });
+        /* ---- Fermer au clic sur un lien ---- */
+        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
 
-    /* ---- Fermer au clic sur un lien ---- */
-    navLiens.querySelectorAll('.nav-lien').forEach(function (link) {
-        link.addEventListener('click', closeMenu);
-    });
+        /* ---- Fermer au clic en dehors ---- */
+        document.addEventListener("click", function (e) {
+          if (!navbar.contains(e.target)) closeMenu();
+        });
 
-    /* ---- Fermer au clic en dehors ---- */
-    document.addEventListener('click', function (e) {
-        if (!navbar.contains(e.target)) closeMenu();
-    });
+        /* ---- Fermer avec Escape ---- */
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeMenu();
+        });
 
-    /* ---- Fermer avec Escape ---- */
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeMenu();
-    });
-
-    /* ---- Effet scroll navbar ---- */
-    window.addEventListener('scroll', function () {
-        if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
-});
+        /* ---- Effet scroll navbar ---- */
+        window.addEventListener("scroll", function () {
+          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+      });
     </script>
-</body>
+  </body>
+</html>
+        });
+      });
+    </script>
+  </body>
 </html>
