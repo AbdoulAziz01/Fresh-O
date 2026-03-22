@@ -2210,7 +2210,8 @@ img.logo-header {
 
   /* Processus */
   .grille-processus {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
   .grille-processus::before {
     display: none;
@@ -2434,8 +2435,8 @@ img.logo-header {
 
   /* ---- Processus ---- */
   .grille-processus {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .grille-processus::before {
     display: none;
@@ -2546,16 +2547,33 @@ img.logo-header {
 
   .grille-processus {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .etape-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     text-align: left;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(76, 175, 80, 0.1);
   }
   .etape-bulle {
     margin: 0;
     flex-shrink: 0;
+  }
+  .etape-num {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .etape-titre {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+  }
+  .etape-desc {
+    font-size: 0.85rem;
+    margin: 0;
   }
 
   .impact-nombre {
