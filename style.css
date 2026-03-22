@@ -534,7 +534,7 @@ img.logo-header {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1.4fr 0.8fr;
   gap: 4rem;
   align-items: center;
   padding: 5rem 1.5rem 4rem;
@@ -658,54 +658,110 @@ img.logo-header {
   margin-top: 0.3rem;
 }
 
-/* Visuel droite */
-.hero-visuel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carte-principale {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1.5px solid rgba(255, 255, 255, 0.13);
+/* Overlay droite - Production */
+.hero-overlay {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--rayon-xl);
   padding: 2.5rem;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
   width: 100%;
-  max-width: 340px;
+  max-width: 380px;
   position: relative;
+  margin-left: auto;
 }
 
-.carte-fond-svg {
-  margin: 0 auto 1.5rem;
-  opacity: 0.35;
-  width: 80px;
-  height: 80px;
-}
-.carte-fond-svg svg {
-  width: 100%;
-  height: 100%;
-}
-
-.carte-statut {
-  display: inline-flex;
+.overlay-header {
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.68rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.overlay-statut {
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--vert-clair);
-  margin-bottom: 1rem;
 }
-.carte-statut::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: var(--vert-clair);
-  border-radius: 50%;
-  animation: pulse-v 2s ease-in-out infinite;
+
+.overlay-ligne {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.overlay-titre {
+  font-family: var(--fonte-titre);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--blanc);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.overlay-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.overlay-chiffres {
+  margin-bottom: 2rem;
+}
+
+.overlay-chiffre {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.chiffre-valeur {
+  font-family: var(--fonte-titre);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--banane);
+  line-height: 1;
+}
+
+.chiffre-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: lowercase;
+}
+
+.overlay-chiffre-texte {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.overlay-energie {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.energie-icone {
+  font-size: 2rem;
+  color: var(--banane);
+}
+
+.energie-titre {
+  font-family: var(--fonte-titre);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blanc);
+  margin-bottom: 0.2rem;
+}
+
+.energie-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 .carte-libelle {
   font-size: 0.78rem;
@@ -815,17 +871,6 @@ img.logo-header {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
   animation: descend 1.8s ease-in-out infinite;
 }
-.hero-decor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 340px;
-  min-height: 320px;
-  margin: 0 auto;
-  position: relative;
-}
-
 /* ================================================
    8. RUBAN CHIFFRES
    ================================================ */
@@ -1119,6 +1164,63 @@ img.logo-header {
   color: rgba(255, 255, 255, 0.55);
 }
 
+.cibles-visuel {
+  margin: 4rem 0 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cibles-image {
+  display: inline-block;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  max-width: 90%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.cibles-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.cibles-image:hover::before {
+  opacity: 1;
+}
+
+.cibles-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.cibles-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 380px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cibles-image:hover .cibles-img {
+  transform: scale(1.05);
+}
+
 .grille-cibles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1284,31 +1386,315 @@ img.logo-header {
 }
 
 /* ================================================
-   13. SECTION IMPACT
+   13. SECTION PROGRAMMES
+   ================================================ */
+.section-programmes {
+  background: var(--blanc);
+  position: relative;
+}
+
+.section-programmes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--vert-foret),
+    var(--banane),
+    var(--vert-feuille)
+  );
+}
+
+/* Tabs de navigation */
+.programmes-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab-programme {
+  background: transparent;
+  border: 2px solid var(--gris-clair);
+  color: var(--gris-chaud);
+  padding: 0.8rem 2rem;
+  border-radius: var(--rayon-full);
+  font-family: var(--fonte-corps);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--tr);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tab-programme:hover {
+  border-color: var(--vert-jungle);
+  color: var(--vert-jungle);
+  background: var(--vert-pale);
+}
+
+.tab-programme.active {
+  background: var(--vert-foret);
+  color: var(--blanc);
+  border-color: var(--vert-foret);
+  box-shadow: 0 4px 20px rgba(13, 61, 31, 0.25);
+}
+
+/* Contenu des programmes */
+.programmes-contenu {
+  position: relative;
+}
+
+.programme-item {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.programme-item.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.programme-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background: var(--vert-foret);
+  border-radius: var(--rayon-xl);
+  padding: 3rem;
+  color: var(--blanc);
+  position: relative;
+  overflow: hidden;
+}
+
+.programme-grille::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+}
+
+.programme-texte {
+  position: relative;
+  z-index: 2;
+}
+
+.programme-titre {
+  font-family: var(--fonte-titre);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--blanc);
+}
+
+.programme-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.programme-benefices {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.programme-benefices li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.programme-benefices li::before {
+  content: "✓";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--banane);
+  color: var(--encre);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.programme-visuel {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.programme-image {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: var(--rayon-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.programme-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--tr);
+}
+
+.programme-image:hover img {
+  transform: scale(1.05);
+}
+
+.programme-stats {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.stat-programme {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--rayon-lg);
+  padding: 1.5rem 2rem;
+  min-width: 120px;
+}
+
+.stat-valeur {
+  font-family: var(--fonte-titre);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--banane);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-valeur span {
+  font-size: 1rem;
+  color: var(--blanc);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* Responsive pour les programmes */
+@media (max-width: 1024px) {
+  .programme-grille {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .programme-visuel {
+    order: -1;
+  }
+  
+  .programme-stats {
+    gap: 1rem;
+  }
+  
+  .stat-programme {
+    padding: 1rem 1.5rem;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .programmes-tabs {
+    gap: 0.5rem;
+  }
+  
+  .tab-programme {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .programme-titre {
+    font-size: 1.4rem;
+  }
+  
+  .programme-grille {
+    padding: 1.5rem;
+  }
+  
+  .programme-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .stat-programme {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* ================================================
+   14. SECTION IMPACT - DESIGN MODERNE
    ================================================ */
 .section-impact {
   background: linear-gradient(165deg, var(--vert-foret) 0%, #061b0a 100%);
   position: relative;
   overflow: hidden;
+  padding: 6rem 0;
 }
+
 .impact-fond {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(
-      ellipse at 20% 30%,
-      rgba(82, 184, 106, 0.08) 0%,
-      transparent 55%
+      ellipse at 85% 15%,
+      rgba(242, 193, 46, 0.08) 0%,
+      transparent 50%
     ),
     radial-gradient(
-      ellipse at 85% 75%,
-      rgba(242, 193, 46, 0.07) 0%,
-      transparent 55%
+      ellipse at 10% 85%,
+      rgba(82, 184, 106, 0.07) 0%,
+      transparent 50%
     );
-}
-.section-impact .entete-section {
-  position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .section-impact .titre-section {
   color: var(--blanc);
@@ -1770,7 +2156,7 @@ img.logo-header {
   .hero-titre {
     font-size: clamp(2.8rem, 7vw, 4rem);
   }
-  .hero-visuel {
+  .hero-overlay {
     max-width: 480px;
     margin: 0 auto;
   }
@@ -1808,6 +2194,18 @@ img.logo-header {
   /* Cibles */
   .grille-cibles {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cibles-visuel {
+    margin: 3rem 0 1.5rem;
+  }
+  
+  .cibles-image {
+    max-width: 95%;
+  }
+  
+  .cibles-img {
+    max-height: 320px;
   }
 
   /* Processus */
@@ -1853,6 +2251,13 @@ img.logo-header {
     display: none;
   }
 
+  /* Logo plus petit sur mobile pour ne pas être caché par le menu burger */
+  img.logo-header {
+    height: 48px !important;
+    width: auto !important;
+    max-height: 48px !important;
+  }
+
   .nav-toggle {
     display: flex !important;
     margin-left: auto;
@@ -1866,7 +2271,7 @@ img.logo-header {
   .nav-liens.open {
     display: flex !important;
     position: fixed;
-    top: 62px;
+    top: 80px;
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.99);
@@ -1879,6 +2284,10 @@ img.logo-header {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     z-index: 9999;
     list-style: none;
+  }
+  
+  .navbar.scrolled .nav-liens.open {
+    top: 70px;
   }
   .nav-liens.open li {
     width: 100%;
@@ -1949,7 +2358,7 @@ img.logo-header {
   .chiffre-val {
     font-size: 1.8rem;
   }
-  .hero-visuel {
+  .hero-overlay {
     display: none;
   }
   .scroll-indicateur {
@@ -1998,6 +2407,23 @@ img.logo-header {
   .grille-cibles {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+  
+  .cibles-visuel {
+    margin: 2rem 0 1rem;
+  }
+  
+  .cibles-image {
+    max-width: 98%;
+    border-radius: 16px;
+  }
+  
+  .cibles-image::before {
+    border-radius: 16px;
+  }
+  
+  .cibles-img {
+    max-height: 280px;
   }
   .cible-entete {
     padding: 1.5rem;

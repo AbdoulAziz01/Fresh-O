@@ -75,68 +75,44 @@
       </div>
     </nav>
 
-    <!-- ===== PAGE HEADER VITROPLANTS ===== -->
-    <header class="vp-header">
-      <div class="vp-header-bg">
-        <div class="vp-circle vp-c1"></div>
-        <div class="vp-circle vp-c2"></div>
-        <div class="vp-leaf vp-l1">
-          <i class="fa-solid fa-leaf" style="color: #f9e280; font-size: 48px; transform: rotate(15deg);"></i>
-        </div>
-        <div class="vp-leaf vp-l2">
-          <i class="fa-solid fa-seedling" style="color: #81c784; font-size: 36px; transform: rotate(-10deg);"></i>
-        </div>
-        <div class="vp-leaf vp-l3">
-          <i class="fa-solid fa-spa" style="color: #81c784; font-size: 42px; transform: rotate(25deg);"></i>
-        </div>
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <div class="ph-fond">
+        <div class="ph-forme-1"></div>
+        <div class="ph-texture"></div>
       </div>
-      <div class="container">
-        <div class="vp-header-grid">
-          <div class="vp-header-left">
-            <h1 class="vp-title">
-              La qualité supérieure<br />
-              <em class="title-em-yellow" style="color: #ffd600;">au service</em><br />
-              de votre récolte
+      <div class="container page-header-inner">
+        <div class="ph-grille">
+          <div>
+            <h1 class="ph-titre">
+              Qualité supérieure<em> pour vos récoltes</em>
             </h1>
-            <p class="vp-subtitle">
+            <p class="ph-intro">
               Des vitroplants de banane sains, homogènes et performants — issus
               de notre laboratoire in vitro certifié, adaptés aux conditions du
               Sénégal.
             </p>
-            <div class="vp-header-actions">
+            <div class="ph-actions">
               <a href="#varietes" class="btn btn-yellow">Voir nos variétés ↓</a>
-              <a href="contact-partenaires.html" class="btn btn-ghost"
-                >Commander maintenant</a
-              >
+              <a href="contact-partenaires.html" class="btn btn-glass">Commander maintenant</a>
             </div>
           </div>
-          <div class="vp-header-right">
-            <div class="vp-kpis">
-              <div class="vp-kpi-main">
-                <div class="vp-kpi-icon">
-                  <i class="fa-solid fa-chart-line" style="color: #FEC34E; font-size: 32px;"></i>
-                </div>
-                <div class="vp-kpi-val">+30%</div>
-                <div class="vp-kpi-label">
-                  de rendement vs. plants traditionnels
-                </div>
-              </div>
-              <div class="vp-kpi-row">
-                <div class="vp-kpi vp-kpi-sm">
-                  <div class="vp-kpi-icon">
-                    <i class="fa-solid fa-check-circle" style="color: #FEC34E; font-size: 24px;"></i>
-                  </div>
-                  <div class="vp-kpi-val">99%</div>
-                  <div class="vp-kpi-label">Conformité</div>
-                </div>
-                <div class="vp-kpi vp-kpi-sm">
-                  <div class="vp-kpi-icon">
-                    <i class="fa-solid fa-seedling" style="color: #81c784; font-size: 24px;"></i>
-                  </div>
-                  <div class="vp-kpi-val">95%</div>
-                  <div class="vp-kpi-label">Reprise</div>
-                </div>
-              </div>
+          <div class="ph-stats">
+            <div class="ph-stat">
+              <div class="ph-stat-num">99<span>%</span></div>
+              <div class="ph-stat-label">Conformité</div>
+            </div>
+            <div class="ph-stat">
+              <div class="ph-stat-num">95<span>%</span></div>
+              <div class="ph-stat-label">Taux de reprise</div>
+            </div>
+            <div class="ph-stat">
+              <div class="ph-stat-num">+30<span>%</span></div>
+              <div class="ph-stat-label">Rendement</div>
+            </div>
+            <div class="ph-stat">
+              <div class="ph-stat-num">6</div>
+              <div class="ph-stat-label">Variétés certifiées</div>
             </div>
           </div>
         </div>
@@ -207,37 +183,30 @@
     <section class="section section-varietes" id="varietes">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Notre Catalogue</span>
+          <span class="section-tag">Nos variétés</span>
           <h2 class="section-title">
-            6 variétés <em>adaptées</em><br />au marché africain
+            Nous produisons plusieurs <em style="color: #2E7D32;">variétés</em> adaptées aux besoins
           </h2>
-          <p class="section-desc">
-            6 variétés sélectionnées pour leurs performances exceptionnelles
-            dans les conditions africaines.
-          </p>
         </div>
         <div class="varietes-grid">
-          <div class="variete-card">
+          <div class="variete-card">    
             <div class="variete-header vh-blue">
-              <picture>
-                <source srcset="images/img2.avif" type="image/avif" />
+              <picture>                
                 <img
-                  src="images/img2.jpg"
-                  alt="Variété Williams"
+                  src="images/5.png"
                   class="variete-image"
                 />
               </picture>
               <div class="variete-type-badge badge-white">Dessert Export</div>
             </div>
             <div class="variete-body">
-              <h3>Williams</h3>
+              <h3>Dessert</h3>
               <p>
-                Fruit gros, excellente conservation post-récolte. La référence
-                pour l'export vers l'Europe.
+                Variété dessert exceptionnelle reconnue pour sa saveur sucrée et sa texture fondante. Idéale pour l'exportation grâce à sa longue durée de conservation et son rendement élevé par hectare.
               </p>
               <div class="variete-tags">
-                <span> Export EU</span>
-                <span> Premium</span>
+                <span> Goût supérieur</span>
+                <span> Productivité</span>
               </div>
             </div>
           </div>
@@ -245,9 +214,8 @@
           <div class="variete-card">
             <div class="variete-header vh-yellow">
               <picture>
-                <source srcset="images/img3.avif" type="image/avif" />
                 <img
-                  src="images/img3.jpg"
+                  src="images/6.png"
                   alt="Variété Pisang Awak"
                   class="variete-image"
                 />
@@ -255,14 +223,13 @@
               <div class="variete-type-badge badge-dark">Plantain</div>
             </div>
             <div class="variete-body">
-              <h3>Pisang Awak</h3>
+              <h3>Plantain</h3>
               <p>
-                Fruit gros et farineux, remarquablement résistant à la
-                sécheresse. Idéal pour la transformation locale.
+                Variété plantain très appréciée sur les marchés locaux africains. Résistante aux maladies et adaptée aux conditions climatiques difficiles, elle assure une production stable tout au long de l'année.
               </p>
               <div class="variete-tags">
-                <span> Transformation</span>
-                <span> Anti-sécheresse</span>
+                <span> Marché local</span>
+                <span> Résistance</span>
               </div>
             </div>
           </div>
@@ -270,80 +237,89 @@
           <div class="variete-card">
             <div class="variete-header vh-green">
               <picture>
-                <source srcset="images/img4.avif" type="image/avif" />
                 <img
-                  src="images/img4.jpg"
+                  src="images/img10.avif"
                   alt="Variété Fougamou"
                   class="variete-image"
                 />
               </picture>
-              <div class="variete-type-badge">Plantain</div>
+              <div class="variete-type-badge">Variété export</div>
             </div>
             <div class="variete-body">
-              <h3>Fougamou</h3>
+              <h3>Variétés export</h3>
               <p>
-                Rendement élevé, forte tolérance aux maladies foliaires.
-                Recommandé pour les grandes superficies.
+                Sélectionnée pour répondre aux exigences des marchés internationaux. Calibre uniforme, cycle de production rapide et excellente résistance aux maladies pour une exportation de qualité supérieure.
               </p>
               <div class="variete-tags">
-                <span> Tolérant maladies</span>
-                <span> Gros volume</span>
+                <span> Calibre optimal</span>
+                <span> Cycle rapide</span>
               </div>
             </div>
           </div>
-
-          <div class="variete-card">
-            <div class="variete-header vh-yellow">
-              <picture>
-                <source srcset="images/img5.avif" type="image/avif" />
-                <img
-                  src="images/img5.jpg"
-                  alt="Variété Lakatan"
-                  class="variete-image"
-                />
-              </picture>
-              <div class="variete-type-badge badge-dark">Export</div>
-            </div>
-            <div class="variete-body">
-              <h3>Lakatan</h3>
-              <p>
-                Qualité supérieure reconnue, arôme distinctif. Très demandé sur
-                les marchés d'export haut de gamme.
-              </p>
-              <div class="variete-tags">
-                <span> International</span>
-                <span> Haut de gamme</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="variete-card">
-            <div class="variete-header vh-bio">
-              <picture>
-                <source srcset="images/img6.avif" type="image/avif" />
-                <img
-                  src="images/img6.jpg"
-                  alt="Variété Bio-Select"
-                  class="variete-image"
-                />
-              </picture>
-              <div class="variete-type-badge badge-bio">Bio certifié</div>
-            </div>
-            <div class="variete-body">
-              <h3>Bio-Select</h3>
-              <p>
-                Certification biologique complète, production sans intrants
-                chimiques. Pour le marché bio en pleine croissance.
-              </p>
-              <div class="variete-tags">
-                <span> Bio certifié</span>
-                <span> Durable</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ===== NOS CLIENTS ===== -->
+    <section class="section section-clients">
+      <div class="container">
+        <div class="clients-header">
+          <span class="section-tag">Nos Clients</span>
+          <h2 class="section-title">
+            À qui s'adressent<br /><em>nos vitroplants</em> ?
+          </h2>
+          <p class="section-desc">
+            Des solutions adaptées à chaque acteur de la filière bananière — du producteur individuel au partenaire institutionnel international.
+          </p>
+        </div>
+        <div class="clients-content">
+          <div class="clients-text">
+            <div class="clients-grid">
+              <div class="client-type">
+                <div class="client-icon">
+                  <i class="fa-solid fa-user-tie" style="color: #2F4BFF; font-size: 24px;"></i>
+                </div>
+                <h4>Producteurs Individuels</h4>
+                <p>Petits et moyens exploitants cherchant l'excellence et la sécurité sanitaire</p>
+              </div>
+              <div class="client-type">
+                <div class="client-icon">
+                  <i class="fa-solid fa-building" style="color: #19d85c; font-size: 24px;"></i>
+                </div>
+                <h4>Entreprises Agricoles</h4>
+                <p>Grandes exploitations et sociétés de production intensive</p>
+              </div>
+              <div class="client-type">
+                <div class="client-icon">
+                  <i class="fa-solid fa-handshake" style="color: #eca33d; font-size: 24px;"></i>
+                </div>
+                <h4>Coopératives</h4>
+                <p>Groupements de producteurs et organisations paysannes</p>
+              </div>
+              <div class="client-type">
+                <div class="client-icon">
+                  <i class="fa-solid fa-globe" style="color: #ef5858; font-size: 24px;"></i>
+                </div>
+                <h4>Partenaires Institutionnels</h4>
+                <p>Projets de développement et programmes gouvernementaux</p>
+              </div>
+            </div>
+          </div>
+          <div class="clients-image">
+            <picture>
+              <source srcset="images/img12.avif" type="image/avif" />
+              <img
+                src="images/img12f"
+                alt="Nos clients partenaires"
+                class="clients-img"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== PROCESSUS VISUEL ===== -->
     <section class="section section-vp-process" id="processus">
       <div class="container">
@@ -374,7 +350,7 @@
           <div class="vp-step-arrow">→</div>
           <div class="vp-step">
             <div class="vp-step-visual vs-2">
-              <span class="vs-emoji"><i class="fa-solid fa-flask" style="color: #2F4BFF; font-size: 32px;"></i></span>
+              <span class="vs-emoji"><i class="fa-solid fa-flask" style="color: #eca33d; font-size: 32px;"></i></span>
               <div class="vs-num">02</div>
             </div>
             <div class="vp-step-body">
@@ -388,7 +364,7 @@
           <div class="vp-step-arrow">→</div>
           <div class="vp-step">
             <div class="vp-step-visual vs-3">
-              <span class="vs-emoji"><i class="fa-solid fa-sun" style="color: #ecba16; font-size: 32px;"></i></span>
+              <span class="vs-emoji"><i class="fa-solid fa-sun" style="color: #19d85c; font-size: 32px;"></i></span>
               <div class="vs-num">03</div>
             </div>
             <div class="vp-step-body">
@@ -402,7 +378,7 @@
           <div class="vp-step-arrow">→</div>
           <div class="vp-step">
             <div class="vp-step-visual vs-4">
-              <span class="vs-emoji"><i class="fa-solid fa-leaf" style="color: #81c784; font-size: 32px;"></i></span>
+              <span class="vs-emoji"><i class="fa-solid fa-leaf" style="color: #7a21e1; font-size: 32px;"></i></span>
               <div class="vs-num">04</div>
             </div>
             <div class="vp-step-body">
@@ -416,7 +392,7 @@
           <div class="vp-step-arrow">→</div>
           <div class="vp-step">
             <div class="vp-step-visual vs-5">
-              <span class="vs-emoji"><i class="fa-solid fa-truck" style="color: #2F4BFF; font-size: 32px;"></i></span>
+              <span class="vs-emoji"><i class="fa-solid fa-truck" style="color: #ef5858; font-size: 32px;"></i></span>
               <div class="vs-num">05</div>
             </div>
             <div class="vp-step-body">
