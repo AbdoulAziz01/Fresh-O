@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -14,48 +14,25 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&display=swap"
       rel="stylesheet"
     />
-        <link
+    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles1.css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        font-family: "Bricolage Grotesque", sans-serif !important;
+      }
+    </style>
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="container navbar-inner">
-        <a href="index.html" class="marque">
-          <img
-            src="images/Fresh'o_logo.svg"
-            alt="Fresh'O Logo"
-            class="marque-logo"
-            onerror="this.style.display = 'none'"
-          />
-        </a>
-        <ul class="nav-liens">
-          <li><a href="index.html" class="nav-lien">Accueil</a></li>
-          <li><a href="apropos.html" class="nav-lien actif">À propos</a></li>
-          <li><a href="ferme-zero-carbone.html" class="nav-lien">Ferme</a></li>
-          <li><a href="vitroplants.html" class="nav-lien">Vitroplants</a></li>
-          <li>
-            <a href="impact-partenariats.html" class="nav-lien">Impact</a>
-          </li>
-          <li>
-            <a href="contact-partenaires.html" class="nav-lien">Contact</a>
-          </li>
-        </ul>
-        <a href="contact-partenaires.html" class="btn-nav"
-          >Devenir partenaire →</a
-        >
-      </div>
-    </nav>
-
+    <div id="navbar-container">
+      <script src="components/navbar.js"></script>
+    </div>
     <!-- PAGE HEADER -->
     <header class="page-header">
-      <div class="ph-fond">
-        <div class="ph-forme-1"></div>
-        <div class="ph-texture"></div>
-      </div>
       <div class="container page-header-inner">
         <div class="ph-grille">
           <div>
@@ -222,7 +199,9 @@
             <div class="vm-label">Mission</div>
             <ul class="mission-liste">
               <li class="mission-item">
-                <div class="mission-icone"><i class="fa-solid fa-plant-wilt"></i></div>
+                <div class="mission-icone">
+                  <i class="fa-solid fa-plant-wilt"></i>
+                </div>
                 <div class="mission-corps">
                   <strong>Produire</strong>
                   <p>
@@ -232,7 +211,9 @@
                 </div>
               </li>
               <li class="mission-item">
-                <div class="mission-icone"><i class="fa-solid fa-link"></i></div>
+                <div class="mission-icone">
+                  <i class="fa-solid fa-link"></i>
+                </div>
                 <div class="mission-corps">
                   <strong>Réduire</strong>
                   <p>
@@ -242,7 +223,8 @@
                 </div>
               </li>
               <li class="mission-item">
-                <div class="mission-icone"><i class="fa-solid fa-building-lock"></i>
+                <div class="mission-icone">
+                  <i class="fa-solid fa-building-lock"></i>
                 </div>
                 <div class="mission-corps">
                   <strong>Sécuriser</strong>
@@ -253,7 +235,9 @@
                 </div>
               </li>
               <li class="mission-item">
-                <div class="mission-icone"><i class="fa-solid fa-handshake-angle"></i></div>
+                <div class="mission-icone">
+                  <i class="fa-solid fa-handshake-angle"></i>
+                </div>
                 <div class="mission-corps">
                   <strong>Accompagner</strong>
                   <p>
@@ -272,7 +256,10 @@
       <div class="container">
         <div class="entete-section">
           <span class="etiquette">Notre Parcours</span>
-          <h2 class="titre-section">De la vision<br /><em>à l'impact</em></h2>
+          <h2 class="titre-section">
+            De la vision<br />
+            <p style="color: #28a83b">à l'impact</p>
+          </h2>
         </div>
         <div class="timeline">
           <div class="tl-item">
@@ -335,8 +322,9 @@
         <div class="valeurs-layout">
           <div class="valeurs-gauche">
             <span class="etiquette">Nos Valeurs</span>
-            <h2 class="titre-section">
-              Ce qui guide<br /><em>chacun de nos actes</em>
+            <h2 class="titre-section" style="color: azure">
+              Ce qui guide<br />
+              <p style="color: #dfc12f">chacun de nos actes</p>
             </h2>
             <p class="desc-section">
               Chez FRESH'O, les valeurs ne sont pas des mots sur un mur. Ce sont
@@ -353,7 +341,9 @@
           </div>
           <div class="valeurs-grille">
             <div class="valeur-item">
-              <div class="valeur-icone v-vert"><i class="fa-solid fa-lightbulb" style="color: #14410a;"></i></div>
+              <div class="valeur-icone v-vert">
+                <i class="fa-solid fa-lightbulb" style="color: #14410a"></i>
+              </div>
               <div class="valeur-corps">
                 <h4>Innovation</h4>
                 <p>
@@ -363,7 +353,9 @@
               </div>
             </div>
             <div class="valeur-item">
-              <div class="valeur-icone v-bleu"><i class="fa-solid fa-hand-fist" style="color: #06b5d4;"></i></div>
+              <div class="valeur-icone v-bleu">
+                <i class="fa-solid fa-hand-fist" style="color: #06b5d4"></i>
+              </div>
               <div class="valeur-corps">
                 <h4>Durabilité</h4>
                 <p>
@@ -373,7 +365,12 @@
               </div>
             </div>
             <div class="valeur-item">
-              <div class="valeur-icone v-jaune"><i class="fa-solid fa-magnifying-glass" style="color: #f1c40f;"></i></div>
+              <div class="valeur-icone v-jaune">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #f1c40f"
+                ></i>
+              </div>
               <div class="valeur-corps">
                 <h4>Transparence</h4>
                 <p>
@@ -383,7 +380,9 @@
               </div>
             </div>
             <div class="valeur-item">
-              <div class="valeur-icone v-orange"><i class="fa-solid fa-star" style="color: #dfc12f;"></i></div>
+              <div class="valeur-icone v-orange">
+                <i class="fa-solid fa-star" style="color: #dfc12f"></i>
+              </div>
               <div class="valeur-corps">
                 <h4>Excellence</h4>
                 <p>
@@ -393,7 +392,9 @@
               </div>
             </div>
             <div class="valeur-item">
-              <div class="valeur-icone v-rouge"><i class="fa-solid fa-heart" style="color: #cf274b;"></i></div>
+              <div class="valeur-icone v-rouge">
+                <i class="fa-solid fa-heart" style="color: #cf274b"></i>
+              </div>
               <div class="valeur-corps">
                 <h4>Impact Social</h4>
                 <p>
@@ -403,7 +404,12 @@
               </div>
             </div>
             <div class="valeur-item">
-              <div class="valeur-icone v-violet"><i class="fa-solid fa-handshake-angle" style = "color : #aa43da"></i></div>
+              <div class="valeur-icone v-violet">
+                <i
+                  class="fa-solid fa-handshake-angle"
+                  style="color: #aa43da"
+                ></i>
+              </div>
               <div class="valeur-corps">
                 <h4>Collaboration</h4>
                 <p>
@@ -424,13 +430,18 @@
           <div class="visites-contenu">
             <span class="etiquette">Découvrez nous</span>
             <h2 class="titre-section">
-              Visites ouvertes<br /><em>Inspirez-vous</em>
+              Visites ouvertes<br />
+              <p style="color: #28a83b">Inspirez-vous</p>
             </h2>
             <p class="desc-section">
-              Visitez notre ferme, inspirez-vous. Notre site de production est ouvert aux visites guidées pour producteurs, institutions et partenaires potentiels. Découvrez l'innovation made in Sénégal.
+              Visitez notre ferme, inspirez-vous. Notre site de production est
+              ouvert aux visites guidées pour producteurs, institutions et
+              partenaires potentiels. Découvrez l'innovation made in Sénégal.
             </p>
             <div class="visites-actions">
-              <a href="contact-partenaires.html" class="btn btn-primary">Planifier une visite</a>
+              <a href="contact-partenaires.html" class="btn btn-primary"
+                >Planifier une visite</a
+              >
               <a href="#" class="btn btn-secondary">Télécharger le dossier</a>
             </div>
           </div>
@@ -438,93 +449,14 @@
             <div class="visites-image">
               <img src="images/4.png" alt="Visite guidée de la ferme Fresh'O" />
             </div>
-           
           </div>
         </div>
       </div>
     </section>
 
     <!--FOOTER -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand-col">
-            <img
-              src="images/Fresh'o_logo.svg"
-              alt="Fresh'O Vitroplants"
-              class="footer-logo"
-            />
-            <p>
-              Première ferme zéro carbone de production de vitroplants de banane
-              au Sénégal.
-            </p>
-            <div class="footer-socials">
-              <a href="#" class="social-btn" aria-label="LinkedIn"
-                ><i
-                  class="fa-brands fa-linkedin"
-                  style="color: rgb(241, 242, 243); font-size: 25px"
-                ></i
-              ></a>
-              <a href="#" class="social-btn" aria-label="Facebook"
-                ><i
-                  class="fa-brands fa-facebook"
-                  style="color: rgb(241, 242, 243); font-size: 25px"
-                ></i
-              ></a>
-              <a href="#" class="social-btn" aria-label="Instagram"
-                ><i
-                  class="fa-brands fa-instagram"
-                  style="color: rgb(241, 242, 243); font-size: 25px"
-                ></i
-              ></a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>Navigation</h4>
-            <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="apropos.html">À propos</a></li>
-              <li><a href="ferme-zero-carbone.html">Ferme zéro carbone</a></li>
-              <li><a href="vitroplants.html">Vitroplants</a></li>
-              <li><a href="impact-partenariats.html">Impact</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Ressources</h4>
-            <ul>
-              <li><a href="ressources-medias.html">Médias</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="temoignages.html">Témoignages</a></li>
-              <li><a href="carrieres.html">Carrières</a></li>
-              <li><a href="contact-partenaires.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact</h4>
-            <p>Route de Thiès, KM 25<br />Dakar, Sénégal</p>
-            <p>+221 33 123 45 67</p>
-            <p>contact@fresho-vitroplants.sn</p>
-            <a
-              href="contact-partenaires.html"
-              class="btn btn-primary"
-              style="
-                margin-top: 1rem;
-                font-size: 0.85rem;
-                padding: 0.6rem 1.2rem;
-              "
-              >Nous contacter →</a
-            >
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2026 FRESH'O VITROPLANTS. Tous droits réservés.</p>
-          <div class="footer-legal">
-            <a href="#">Mentions légales</a>
-            <a href="#">Confidentialité</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
+    <script src="components/footer.js"></script>
 
     <script>
       /* nav-mobile.js — Burger menu robuste pour index.html */

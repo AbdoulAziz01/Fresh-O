@@ -1,4 +1,6 @@
-/* Slider vertical témoignages */
+﻿@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Slider vertical tÃ©moignages */
 
 .temo-slider-vertical {
   display: flex;
@@ -50,8 +52,8 @@
   background: var(--vert-mint);
 }
 /* =====================================================
-   styles-index-responsive.css — FRESH'O VITROPLANTS
-   Page d'accueil (index.html) — CSS complet responsive
+   styles-index-responsive.css â€” FRESH'O VITROPLANTS
+   Page d'accueil (index.html) â€” CSS complet responsive
    ===================================================== */
 
 /* ================================================
@@ -66,7 +68,7 @@
 }
 
 :root {
-  --vert-foret: #0d3d1f;
+  --vert-foret: #28A83B;
   --vert-jungle: #1a5c32;
   --vert-feuille: #2e8b4a;
   --vert-clair: #52b86a;
@@ -85,8 +87,8 @@
   --gris-clair: #c8d0c0;
   --blanc: #ffffff;
 
-  --fonte-titre: "Fraunces", Georgia, serif;
-  --fonte-corps: "DM Sans", sans-serif;
+  --fonte-titre: "Bricolage Grotesque", sans-serif;
+  --fonte-corps: "Bricolage Grotesque", sans-serif;
 
   --ombre-sm: 0 2px 12px rgba(10, 30, 13, 0.08);
   --ombre-md: 0 8px 40px rgba(10, 30, 13, 0.12);
@@ -114,6 +116,12 @@ body {
   background: var(--creme);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titre);
 }
 
 img {
@@ -173,15 +181,15 @@ ul {
 }
 
 .btn-banane {
-  background: var(--banane);
+  background: #F2C12E;
   color: var(--encre);
-  border-color: var(--banane);
-  box-shadow: 0 4px 20px rgba(242, 193, 46, 0.45);
+  border-color: #F2C12E;
+  /* box-shadow: 0 4px 20px #F2C12E; */
 }
 .btn-banane:hover {
   background: var(--banane-fonce);
   color: var(--blanc);
-  box-shadow: 0 8px 32px rgba(201, 150, 10, 0.5);
+  box-shadow: 0 8px 32px #28A83B;
 }
 
 .btn-fantome {
@@ -198,11 +206,11 @@ ul {
 .btn-primaire {
   background: var(--vert-foret);
   color: var(--blanc);
-  box-shadow: 0 4px 20px rgba(13, 61, 31, 0.35);
+  box-shadow: 0 4px 20px rgba(40, 168, 59, 0.35);
 }
 .btn-primaire:hover {
   background: var(--vert-jungle);
-  box-shadow: 0 8px 32px rgba(13, 61, 31, 0.45);
+  box-shadow: 0 8px 32px rgba(40, 168, 59, 0.45);
   transform: translateY(-2px);
 }
 
@@ -259,7 +267,7 @@ ul {
   content: "";
   width: 6px;
   height: 6px;
-  background: var(--vert-feuille);
+  background: #28A83B;
   border-radius: 50%;
   display: inline-block;
 }
@@ -390,7 +398,7 @@ img.logo-header {
   border-radius: var(--rayon-full);
   font-size: 0.82rem;
   font-weight: 700;
-  box-shadow: 0 3px 14px rgba(13, 61, 31, 0.3);
+  box-shadow: 0 3px 14px rgba(40, 168, 59, 0.3);
   transition:
     background var(--tr),
     transform var(--tr);
@@ -451,13 +459,6 @@ img.logo-header {
   min-height: 100vh;
   background-color: var(--vert-foret);
   background-image:
-    linear-gradient(
-      150deg,
-      rgba(7, 18, 10, 0.92) 0%,
-      rgba(13, 45, 20, 0.88) 35%,
-      rgba(20, 65, 28, 0.82) 65%,
-      rgba(10, 30, 14, 0.88) 100%
-    ),
     url("images/img1.avif");
   background-size: cover;
   background-position: center top;
@@ -470,7 +471,7 @@ img.logo-header {
   padding-top: 92px;
 }
 
-/* Décorations fond */
+/* DÃ©corations fond */
 .hero-fond {
   position: absolute;
   inset: 0;
@@ -529,7 +530,7 @@ img.logo-header {
   clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-/* Grille hero — directement dans .hero, pas dans .container */
+/* Grille hero â€” directement dans .hero, pas dans .container */
 .hero-grille {
   position: relative;
   z-index: 2;
@@ -575,10 +576,13 @@ img.logo-header {
 
 .hero-sous-titre {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255, 255, 255);
   line-height: 1.8;
   max-width: 480px;
   margin-bottom: 2.5rem;
+  text-shadow:
+    0 2px 4px rgba(6, 6, 6, 0.85),
+    0 0 10px rgb(107, 102, 102);
 }
 
 /* Actions hero */
@@ -660,8 +664,8 @@ img.logo-header {
 
 /* Overlay droite - Production */
 .hero-overlay {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #00e1221a;
+  border: solid 1px #00e12224 ;
   border-radius: var(--rayon-xl);
   padding: 2.5rem;
   backdrop-filter: blur(20px);
@@ -902,7 +906,7 @@ img.logo-header {
 .ruban-col {
   text-align: center;
   padding: 0.5rem 2rem;
-  border-right: 1px solid rgba(13, 61, 31, 0.15);
+  border-right: 1px solid rgba(40, 168, 59, 0.15);
 }
 .ruban-col:last-child {
   border-right: none;
@@ -922,7 +926,7 @@ img.logo-header {
 .ruban-label {
   font-size: 0.78rem;
   font-weight: 600;
-  color: rgba(13, 61, 31, 0.65);
+  color: rgba(40, 168, 59, 0.65);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-top: 0.5rem;
@@ -1044,7 +1048,7 @@ img.logo-header {
    10. SECTION ATOUTS
    ================================================ */
 .section-atouts {
-  background: var(--blanc);
+  background: #effff1f9;
 }
 
 .atouts-layout {
@@ -1067,12 +1071,11 @@ img.logo-header {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
-  padding: 1.4rem 1.6rem;
-    background: var(--creme);
-    border-radius: var(--rayon-lg);
-    padding: 2rem;
-    border: 2px solid var(--vert-pale);
-    transition: none;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: var(--rayon-lg);
+  border: 1px solid var(--vert-pale);
+  transition: none;
 }
 .carte-temo:first-child { grid-column: 1 / -1; }
 /* Suppression du hover sur desktop */
@@ -1096,13 +1099,13 @@ img.logo-header {
   flex-shrink: 0;
   width: 50px;
   letter-spacing: -0.04em;
-  color: var(--vert-foret);
+  color: #28A83B;
 }
 .item-atout:nth-child(2) .atout-num {
-  color: var(--banane-fonce);
+  color: #F2C12E;
 }
 .item-atout:nth-child(4) .atout-num {
-  color: var(--ocre);
+  color: #F2C12E;
 }
 .atout-corps h4 {
   font-size: 0.95rem;
@@ -1143,12 +1146,7 @@ img.logo-header {
 .cibles-motif {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.04) 1px,
-    transparent 1px
-  );
-  background-size: 28px 28px;
+  background-color: #28A83B;
 }
 .section-cibles .entete-section {
   position: relative;
@@ -1161,7 +1159,7 @@ img.logo-header {
   color: var(--banane);
 }
 .section-cibles .desc-section {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgb(255, 255, 255);
 }
 
 .cibles-visuel {
@@ -1239,7 +1237,7 @@ img.logo-header {
   backdrop-filter: blur(8px);
   transition:
     transform var(--tr),
-    background var(--tr),
+    /* background var(--tr), */
     border-color var(--tr);
 }
 .carte-cible:hover {
@@ -1286,14 +1284,14 @@ img.logo-header {
   align-items: flex-start;
   gap: 0.55rem;
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgb(255, 255, 255);
   line-height: 1.5;
 }
 .liste-cible li::before {
   content: "";
   width: 5px;
   height: 5px;
-  background: var(--vert-clair);
+  background: #F2C12E;
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 0.45em;
@@ -1315,7 +1313,7 @@ img.logo-header {
    12. SECTION PROCESSUS
    ================================================ */
 .section-processus {
-  background: var(--creme);
+  background: #effff1f9;
 }
 
 .grille-processus {
@@ -1348,7 +1346,7 @@ img.logo-header {
   height: 64px;
   border-radius: 50%;
   background: var(--blanc);
-  border: 2px solid var(--gris-clair);
+  border: 2px solid #28A83B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1442,7 +1440,7 @@ img.logo-header {
   background: var(--vert-foret);
   color: var(--blanc);
   border-color: var(--vert-foret);
-  box-shadow: 0 4px 20px rgba(13, 61, 31, 0.25);
+  box-shadow: 0 4px 20px rgba(40, 168, 59, 0.25);
 }
 
 /* Contenu des programmes */
@@ -1535,7 +1533,7 @@ img.logo-header {
 }
 
 .programme-benefices li::before {
-  content: "✓";
+  content: "âœ“";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1674,7 +1672,7 @@ img.logo-header {
    14. SECTION IMPACT - DESIGN MODERNE
    ================================================ */
 .section-impact {
-  background: linear-gradient(165deg, var(--vert-foret) 0%, #061b0a 100%);
+  background: linear-gradient(165deg, var(--vert-foret), #086207f5);
   position: relative;
   overflow: hidden;
   padding: 6rem 0;
@@ -1683,17 +1681,6 @@ img.logo-header {
 .impact-fond {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      ellipse at 85% 15%,
-      rgba(242, 193, 46, 0.08) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      ellipse at 10% 85%,
-      rgba(82, 184, 106, 0.07) 0%,
-      transparent 50%
-    );
   z-index: 0;
 }
 .section-impact .titre-section {
@@ -1786,7 +1773,7 @@ img.logo-header {
 }
 
 /* ================================================
-   14. SECTION TÉMOIGNAGES
+   14. SECTION TÃ‰MOIGNAGES
    ================================================ */
 .section-temoignages {
     display: flex;
@@ -1918,8 +1905,8 @@ img.logo-header {
   inset: 0;
   background: repeating-linear-gradient(
     -55deg,
-    rgba(13, 61, 31, 0.04) 0px,
-    rgba(13, 61, 31, 0.04) 2px,
+    rgba(40, 168, 59, 0.04) 0px,
+    rgba(40, 168, 59, 0.04) 2px,
     transparent 2px,
     transparent 44px
   );
@@ -1934,7 +1921,7 @@ img.logo-header {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(13, 61, 31, 0.1) 0%,
+    rgba(40, 168, 59, 0.1) 0%,
     transparent 65%
   );
 }
@@ -1961,7 +1948,7 @@ img.logo-header {
 }
 .cta-texte p {
   font-size: 1rem;
-  color: rgba(13, 61, 31, 0.65);
+  color: rgba(40, 168, 59, 0.65);
   max-width: 400px;
   margin-top: 0.75rem;
   line-height: 1.7;
@@ -1981,7 +1968,7 @@ img.logo-header {
   padding: 4.5rem 0 2rem;
 }
 
-/* Supporte les deux nommages présents dans les pages */
+/* Supporte les deux nommages prÃ©sents dans les pages */
 .footer-grid,
 .footer-grille {
   display: grid;
@@ -2011,7 +1998,7 @@ img.logo-header {
   max-width: 240px;
 }
 
-/* Réseaux — deux nommages */
+/* RÃ©seaux â€” deux nommages */
 .footer-socials,
 .footer-reseaux {
   display: flex;
@@ -2075,7 +2062,7 @@ img.logo-header {
   line-height: 1.6;
 }
 
-/* Bas de footer — deux nommages */
+/* Bas de footer â€” deux nommages */
 .footer-bottom,
 .footer-bas {
   display: flex;
@@ -2144,7 +2131,7 @@ img.logo-header {
 }
 
 /* ================================================
-   18. RESPONSIVE — TABLETTE (≤1024px)
+   18. RESPONSIVE â€” TABLETTE (â‰¤1024px)
    ================================================ */
 @media (max-width: 1024px) {
   /* Hero */
@@ -2172,10 +2159,10 @@ img.logo-header {
     border-right: none;
   }
   .ruban-col:nth-child(3) {
-    border-top: 1px solid rgba(13, 61, 31, 0.1);
+    border-top: 1px solid rgba(40, 168, 59, 0.1);
   }
   .ruban-col:nth-child(4) {
-    border-top: 1px solid rgba(13, 61, 31, 0.1);
+    border-top: 1px solid rgba(40, 168, 59, 0.1);
     border-right: none;
   }
 
@@ -2223,7 +2210,7 @@ img.logo-header {
     gap: 1.25rem;
   }
 
-  /* Témos */
+  /* TÃ©mos */
   .temos-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -2241,7 +2228,7 @@ img.logo-header {
 }
 
 /* ================================================
-   19. RESPONSIVE — MOBILE (≤768px)
+   19. RESPONSIVE â€” MOBILE (â‰¤768px)
    ================================================ */
 @media (max-width: 768px) {
   /* ---- Navbar ---- */
@@ -2252,7 +2239,7 @@ img.logo-header {
     display: none;
   }
 
-  /* Logo plus petit sur mobile pour ne pas être caché par le menu burger */
+  /* Logo plus petit sur mobile pour ne pas Ãªtre cachÃ© par le menu burger */
   img.logo-header {
     height: 48px !important;
     width: auto !important;
@@ -2352,7 +2339,7 @@ img.logo-header {
     display: flex !important;
     margin: 1rem 0;
     padding: 1rem 0;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -2372,7 +2359,7 @@ img.logo-header {
   }
   .ruban-col {
     border-right: none;
-    border-bottom: 1px solid rgba(13, 61, 31, 0.1);
+    border-bottom: 1px solid rgba(40, 168, 59, 0.1);
     padding: 1.25rem 1rem;
   }
   .ruban-col:nth-child(3),
@@ -2454,7 +2441,7 @@ img.logo-header {
     font-size: 2.4rem;
   }
 
-  /* ---- Témos ---- */
+  /* ---- TÃ©mos ---- */
   .temos-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -2508,7 +2495,7 @@ img.logo-header {
 }
 
 /* ================================================
-   20. RESPONSIVE — TRÈS PETIT (≤480px)
+   20. RESPONSIVE â€” TRÃˆS PETIT (â‰¤480px)
    ================================================ */
 @media (max-width: 480px) {
   .container {
@@ -2596,3 +2583,5 @@ img.logo-header {
     padding: 3rem 0 1.5rem;
   }
 }
+
+
