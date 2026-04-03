@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -18,12 +18,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="components/navbar.css" />
   </head>
   <body>
     <!-- NAVBAR -->
     <!-- Appeler le composant navbar -->
     <div id="navbar-container"></div>
-    <script src="components/navbar.js"></script>
+    <script src="components/navbar.js" defer></script>
     <!-- HÉROS -->
     <header class="hero">
       <div class="hero-grille">
@@ -668,57 +669,6 @@
             showSlide(current);
           });
         }
-      });
-
-      // 
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.querySelector(".navbar");
-        const navInner = document.querySelector(".navbar-inner");
-        const navLiens = document.querySelector(".nav-liens");
-
-        if (!navInner || !navLiens) return;
-
-        const toggle = document.createElement("button");
-        toggle.className = "nav-toggle";
-        toggle.setAttribute("aria-label", "Ouvrir le menu");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "<span></span><span></span><span></span>";
-        navInner.appendChild(toggle);
-
-        function openMenu() {
-          navLiens.classList.add("open");
-          toggle.classList.add("active");
-          toggle.setAttribute("aria-expanded", "true");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          navLiens.classList.remove("open");
-          toggle.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          navLiens.classList.contains("open") ? closeMenu() : openMenu();
-        });
-
-        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
-          link.addEventListener("click", closeMenu);
-        });
-
-        document.addEventListener("click", function (e) {
-          if (!navbar.contains(e.target)) closeMenu();
-        });
-
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") closeMenu();
-        });
-
-        window.addEventListener("scroll", function () {
-          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
       });
 
       // Fonctionnalité des tabs de programmes

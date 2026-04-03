@@ -4,7 +4,7 @@ const footerHTML = `    <!--FOOTER -->
         <div class="footer-grid">
           <div class="footer-brand-col">
             <img
-              src="images/Fresh'o_logo.svg"
+              src="images/fresho-logo.svg"
               alt="Fresh'O Vitroplants"
               class="footer-logo"
             />

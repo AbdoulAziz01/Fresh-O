@@ -9,22 +9,33 @@
       content="Découvrez notre ferme zéro carbone : énergie renouvelable, optimisation hydrique et production durable de vitroplants au Sénégal."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles1.css" />
+    <link rel="stylesheet" href="components/navbar.css" />
+    <style>
+      :root {
+        --font-body: "Bricolage Grotesque", sans-serif;
+        --font: "Bricolage Grotesque", sans-serif;
+        --fonte-corps: "Bricolage Grotesque", sans-serif;
+        --font-display: "Bricolage Grotesque", sans-serif;
+        --font-serif: "Bricolage Grotesque", sans-serif;
+      }
+    </style>
   </head>
-  <body>
+  <body>  
     <div class="cursor-glow" id="cursorGlow"></div>
-
+    
     <!-- NAVBAR -->
         <div id="navbar-container"></div>
-    <script src="components/navbar.js"></script>
+    <script src="components/navbar.js" defer></script>
 
     <!-- PAGE HERO -->
-    <header class="page-header">
+    <header class="page-header-ferme">
       <div class="ph-fond">
         <div class="ph-forme-1"></div>
         <div class="ph-texture"></div>
@@ -34,7 +45,7 @@
           <div>
             <h1 class="ph-titre">
               La première ferme<br />
-              <em>zéro carbone</em>
+              <p style="color: #28A83B; text-shadow: 0 0 5px #000000;">zéro carbone</p>
               du Sénégal
             </h1>
             <p class="ph-intro">
@@ -50,15 +61,15 @@
           </div>
           <div class="ph-stats">
             <div class="ph-stat">
-              <div class="ph-stat-num">100%</div>
+              <div class="ph-stat-num">100 <span>%</span></div>
               <div class="ph-stat-label">Énergie renouvelable</div>
             </div>
             <div class="ph-stat">
-              <div class="ph-stat-num">−80%</div>
+              <div class="ph-stat-num">−80 <span>%</span></div>
               <div class="ph-stat-label">Eau économisée</div>
             </div>
             <div class="ph-stat">
-              <div class="ph-stat-num">100%</div>
+              <div class="ph-stat-num">100<span>%</span></div>
               <div class="ph-stat-label">Déchets valorisés</div>
             </div>
             <div class="ph-stat">
@@ -70,115 +81,71 @@
       </div>
       <br />
     </header>
-    <!-- 4 PILIERS -->
-    <section class="section section-piliers" id="piliers">
+    <!-- SECTION 6 variétés adaptées au marché africain -->
+    <section class="section section-varietes" id="varietes">
       <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="section-tag">Nos 4 Piliers</span>
+        <div class="section-header">
+          <span class="section-tag">Nos variétés</span>
           <h2 class="section-title">
-            Comment on atteint<br /><em>le zéro carbone</em>
+            Nous produisons plusieurs <em style="color: #2E7D32;">variétés</em> adaptées aux besoins
           </h2>
-          <p class="section-desc">
-            Quatre systèmes interdépendants qui s'alimentent mutuellement dans
-            une logique d'économie circulaire totale.
-          </p>
         </div>
-        <div class="piliers-grid">
-          <div class="pilier-card" data-reveal data-delay="0">
-            <div class="pc-header pc-solar">
-              <div class="pc-icon-wrap"><i class="fa-solid fa-sun" style="color: rgb(251, 255, 0);"></i></div>
-              <div class="pc-num">01</div>
+
+        <div class="varietes-grid">
+          <div class="variete-card">    
+            <div class="variete-header vh-blue">
+              <picture>                
+                <img
+                  src="images/img22.avif"
+                  class="variete-image"
+                />
+              </picture>
             </div>
-            <div class="pc-body">
-              <h3>Énergie Renouvelable</h3>
+
+            <div class="variete-body">
+              <h3 style="color: #28A83B;">Énergie Renouvelable</h3>
               <p>
-                500 kWc de panneaux solaires et stockage batteries de 1 MWh
-                couvrent 100% des besoins du laboratoire, des serres et des
-                pépinières.
+500 kWc de panneaux solaires et stockage batteries de 1 MWh couvrent 100% des besoins du laboratoire, des serres et des pépinières.
+
               </p>
-              <ul class="pc-list">
-                <li>Panneaux photovoltaïques haute efficacité</li>
-                <li>Stockage lithium-ion pour continuité nocturne</li>
-                <li>Unité biogaz issue des résidus organiques</li>
-                <li>−95% d'émissions énergétiques</li>
-              </ul>
-              <div class="pc-stat">
-                <div class="pcs-bar" style="--w: 95%"></div>
-                <span>95% réduction émissions</span>
-              </div>
             </div>
           </div>
-          <div class="pilier-card" data-reveal data-delay="100">
-            <div class="pc-header pc-water">
-              <div class="pc-icon-wrap"><i class="fa-solid fa-hand-holding-droplet" style="color: rgb(2, 213, 250);"></i></div>
-              <div class="pc-num">02</div>
+
+          <div class="variete-card">
+            <div class="variete-header vh-yellow">
+              <picture>
+                <img
+                  src="images/img19.avif"
+                  alt="Variété Pisang Awak"
+                  class="variete-image"
+                />
+              </picture>
             </div>
-            <div class="pc-body">
-              <h3>Optimisation Hydrique</h3>
+            <div class="variete-body">
+              <h3 style="color: #28A83B;">Optimisation Hydrique</h3>
               <p>
-                Un système intégré de récupération, recyclage et irrigation
-                intelligente réduit la consommation d'eau de 80% par rapport aux
-                méthodes conventionnelles.
+                Un système intégré de récupération, recyclage et irrigation intelligente réduit la consommation d'eau de 80% par rapport aux méthodes conventionnelles.
               </p>
-              <ul class="pc-list">
-                <li>Récupération de 200 000 L d'eau de pluie</li>
-                <li>Irrigation goutte-à-goutte pilotée par IA</li>
-                <li>Recyclage des eaux grises en circuit fermé</li>
-                <li>Capteurs humidité sol en temps réel</li>
-              </ul>
-              <div class="pc-stat">
-                <div class="pcs-bar pcs-blue" style="--w: 80%"></div>
-                <span>80% économie d'eau</span>
-              </div>
             </div>
           </div>
-          <div class="pilier-card" data-reveal data-delay="200">
-            <div class="pc-header pc-waste">
-              <div class="pc-icon-wrap">♻️</div>
-              <div class="pc-num">03</div>
+
+          <div class="variete-card">
+            <div class="variete-header vh-green">
+              <picture>
+                <img
+                  src="images/img23.avif"
+                  alt="Variété Fougamou"
+                  class="variete-image"
+                />
+              </picture>
             </div>
-            <div class="pc-body">
-              <h3>Valorisation des Déchets</h3>
+            <div class="variete-body">
+              <h3 style="color: #28A83B;">Valorisation des Déchets</h3>
               <p>
-                Zéro déchet exporté hors site. Tout est transformé localement en
-                énergie, compost ou substrat de culture dans une boucle fermée
-                parfaite.
+  Zéro déchet exporté hors site. Tout est transformé localement en énergie, compost ou substrat de culture dans une boucle fermée parfaite.
               </p>
-              <ul class="pc-list">
-                <li>Compostage des résidus végétaux</li>
-                <li>Méthanisation pour production biogaz</li>
-                <li>Réutilisation des substrats in vitro</li>
-                <li>100% déchets valorisés sur site</li>
-              </ul>
-              <div class="pc-stat">
-                <div class="pcs-bar pcs-yellow" style="--w: 100%"></div>
-                <span>100% déchets valorisés</span>
-              </div>
             </div>
           </div>
-          <div class="pilier-card" data-reveal data-delay="300">
-            <div class="pc-header pc-monitor">
-              <div class="pc-icon-wrap"><i class="fa-brands fa-watchman-monitoring" style="color: rgb(209, 192, 224);"></i></div>
-              <div class="pc-num">04</div>
-            </div>
-            <div class="pc-body">
-              <h3>Monitoring Environnemental</h3>
-              <p>
-                Un réseau de capteurs IoT surveille en temps réel toutes les
-                émissions et performances environnementales avec rapports
-                trimestriels certifiés.
-              </p>
-              <ul class="pc-list">
-                <li>Capteurs CO₂, température, humidité</li>
-                <li>Tableau de bord environnemental live</li>
-                <li>Bilan carbone trimestriel certifié</li>
-                <li>Certification ISO 14001 maintenue</li>
-              </ul>
-              <div class="pc-stat">
-                <div class="pcs-bar" style="--w: 100%"></div>
-                <span>Monitoring 24/7</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -187,76 +154,99 @@
     <!-- CARTE FERME -->
     <section class="section section-carte">
       <div class="container">
-        <div class="section-header" data-reveal>
+        <div class="section-header section-carte-header" data-reveal>
           <span class="section-tag">Plan du Site</span>
-          <h2 class="section-title">Explorez<br /><em>notre ferme</em></h2>
+          <h2 class="section-title">Explorez <em>notre ferme</em></h2>
+          <p class="section-desc">
+            Une lecture plus visuelle des espaces clés, organisée comme un
+            parcours de visite à travers les zones de production.
+          </p>
         </div>
-          <div class="carte-infra" data-reveal data-delay="100">
-            <div class="infra-item ii-active">
+        <div class="carte-layout carte-journey" data-reveal data-delay="100">
+          <div class="map-placeholder map-journey">
+            <div class="map-journey-path"></div>
+            <div class="map-zone mz-lab">
+              <i class="fa-solid fa-flask-vial" aria-hidden="true"></i>
+              <strong>Laboratoire</strong>
+              <small>1 200 m²</small>
+            </div>
+            <div class="map-zone mz-serres">
+              <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+              <strong>Serres</strong>
+              <small>3 000 m²</small>
+            </div>
+            <div class="map-zone mz-pepiniere">
+              <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+              <strong>Pépinières</strong>
+              <small>2 ha ombragés</small>
+            </div>
+            <div class="map-zone mz-energie">
+              <i class="fa-solid fa-sun" aria-hidden="true"></i>
+              <strong>Énergie propre</strong>
+              <small>500 kWc</small>
+            </div>
+            <div class="map-zone mz-demo">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <strong>Parcelle test</strong>
+              <small>1 ha</small>
+            </div>
+            <div class="map-zone mz-formation">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              <strong>Formation</strong>
+              <small>Ouverture 2026</small>
+            </div>
+          </div>
+
+          <div class="carte-infra carte-journey-list">
+            <article class="infra-item ii-active">
               <div class="ii-dot id-green"></div>
               <div class="ii-body">
                 <h4>Laboratoire In Vitro</h4>
-                <p>
-                  1 200 m² — flux laminaire, stérilisation autonome, incubateurs
-                  haute précision.
-                </p>
+                <p>Flux laminaire, stérilisation autonome, incubateurs haute précision.</p>
                 <span class="ii-tag">Opérationnel</span>
               </div>
-            </div>
-            <div class="infra-item">
+            </article>
+            <article class="infra-item">
               <div class="ii-dot id-green"></div>
               <div class="ii-body">
                 <h4>Serres d'Acclimatation</h4>
-                <p>
-                  3 000 m² — contrôle climatique, irrigation automatisée,
-                  éclairage LED optimisé.
-                </p>
+                <p>Contrôle climatique, irrigation automatisée, éclairage LED optimisé.</p>
                 <span class="ii-tag">Opérationnel</span>
               </div>
-            </div>
-            <div class="infra-item">
+            </article>
+            <article class="infra-item">
               <div class="ii-dot id-green"></div>
               <div class="ii-body">
                 <h4>Pépinières Extérieures</h4>
-                <p>
-                  2 ha ombragés — renforcement racinaire, récupération d'eau
-                  intégrée.
-                </p>
+                <p>Renforcement racinaire, récupération d'eau intégrée, zones ombragées.</p>
                 <span class="ii-tag">Opérationnel</span>
               </div>
-            </div>
-            <div class="infra-item">
+            </article>
+            <article class="infra-item">
               <div class="ii-dot id-yellow"></div>
               <div class="ii-body">
                 <h4>Centrale Énergie Propre</h4>
-                <p>
-                  500 kWc solaires + 1 MWh batteries + unité biogaz intégrée.
-                </p>
+                <p>500 kWc solaires, 1 MWh batteries et unité biogaz intégrée.</p>
                 <span class="ii-tag it-yellow">Phase 2 en cours</span>
               </div>
-            </div>
-            <div class="infra-item">
+            </article>
+            <article class="infra-item">
               <div class="ii-dot id-green"></div>
               <div class="ii-body">
                 <h4>Parcelle de Démonstration</h4>
-                <p>
-                  1 ha — monitoring continu, tests variétaux, résultats ouverts
-                  partenaires.
-                </p>
+                <p>Monitoring continu, tests variétaux et résultats ouverts aux partenaires.</p>
                 <span class="ii-tag">Opérationnel</span>
               </div>
-            </div>
-            <div class="infra-item">
+            </article>
+            <article class="infra-item">
               <div class="ii-dot id-blue"></div>
               <div class="ii-body">
                 <h4>Centre de Formation</h4>
-                <p>
-                  Salle de cours + zone pratique — transfert de compétences
-                  producteurs.
-                </p>
+                <p>Salle de cours et zone pratique pour le transfert de compétences.</p>
                 <span class="ii-tag it-blue">Ouverture 2026</span>
               </div>
-            </div>
+            </article>
+          </div>
           </div>
         </div>
       </div>
@@ -349,66 +339,11 @@
         });
       });
     </script>
-    <script>
-      /* nav-mobile.js — Burger menu robuste pour index.html */
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.querySelector(".navbar");
-        const navInner = document.querySelector(".navbar-inner");
-        const navLiens = document.querySelector(".nav-liens");
-
-        if (!navInner || !navLiens) return;
-
-        /* ---- Créer le bouton burger ---- */
-        const toggle = document.createElement("button");
-        toggle.className = "nav-toggle";
-        toggle.setAttribute("aria-label", "Ouvrir le menu");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "<span></span><span></span><span></span>";
-        navInner.appendChild(toggle);
-
-        /* ---- Ouvrir / fermer ---- */
-        function openMenu() {
-          navLiens.classList.add("open");
-          toggle.classList.add("active");
-          toggle.setAttribute("aria-expanded", "true");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          navLiens.classList.remove("open");
-          toggle.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          navLiens.classList.contains("open") ? closeMenu() : openMenu();
-        });
-
-        /* ---- Fermer au clic sur un lien ---- */
-        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
-          link.addEventListener("click", closeMenu);
-        });
-
-        /* ---- Fermer au clic en dehors ---- */
-        document.addEventListener("click", function (e) {
-          if (!navbar.contains(e.target)) closeMenu();
-        });
-
-        /* ---- Fermer avec Escape ---- */
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") closeMenu();
-        });
-
-        /* ---- Effet scroll navbar ---- */
-        window.addEventListener("scroll", function () {
-          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
-      });
-    </script>
   </body>
 </html>
+
+
+
 
 
 

@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact et Devenir Partenaire — FRESH'O VITROPLANTS</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles1.css" />
+    <link rel="stylesheet" href="components/navbar.css" />
     <meta
       name="description"
-      content="Contactez FRESH'O VITROPLANTS pour commander des vitroplants, devenir partenaire ou demander notre dossier complet."/>
-          <!-- NAVBAR -->
-        <div id="navbar-container"></div>
-    <script src="components/navbar.js"></script>
-      
+      content="Contactez FRESH'O VITROPLANTS pour commander des vitroplants, devenir partenaire ou demander notre dossier complet."
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div id="navbar-container"></div>
+    <script src="components/navbar.js" defer></script>
+
     <header class="page-header">
       <div class="ph-fond">
         <div class="ph-forme-1"></div>
@@ -392,63 +396,6 @@
 
     <!-- RESPONSIVE -->
     <script>
-      /* nav-mobile.js — Burger menu robuste pour index.html */
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.querySelector(".navbar");
-        const navInner = document.querySelector(".navbar-inner");
-        const navLiens = document.querySelector(".nav-liens");
-
-        if (!navInner || !navLiens) return;
-
-        /* ---- Créer le bouton burger ---- */
-        const toggle = document.createElement("button");
-        toggle.className = "nav-toggle";
-        toggle.setAttribute("aria-label", "Ouvrir le menu");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "<span></span><span></span><span></span>";
-        navInner.appendChild(toggle);
-
-        /* ---- Ouvrir / fermer ---- */
-        function openMenu() {
-          navLiens.classList.add("open");
-          toggle.classList.add("active");
-          toggle.setAttribute("aria-expanded", "true");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          navLiens.classList.remove("open");
-          toggle.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          navLiens.classList.contains("open") ? closeMenu() : openMenu();
-        });
-
-        /* ---- Fermer au clic sur un lien ---- */
-        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
-          link.addEventListener("click", closeMenu);
-        });
-
-        /* ---- Fermer au clic en dehors ---- */
-        document.addEventListener("click", function (e) {
-          if (!navbar.contains(e.target)) closeMenu();
-        });
-
-        /* ---- Fermer avec Escape ---- */
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") closeMenu();
-        });
-
-        /* ---- Effet scroll navbar ---- */
-        window.addEventListener("scroll", function () {
-          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
-      });
-
       /* Formulaire validation */
       const contactForm = document.getElementById('contact-form');
       if (contactForm) {
@@ -549,9 +496,6 @@
           });
         });
       }
-    </script>
-  </body>
-</html>
     </script>
   </body>
 </html>

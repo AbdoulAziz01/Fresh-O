@@ -37,14 +37,15 @@
         }
       }
     </style>
+      <link rel="stylesheet" href="components/navbar.css" />
   </head>
   <body>
     <!-- NAVBAR -->
         <div id="navbar-container"></div>
-    <script src="components/navbar.js"></script>
+    <script src="components/navbar.js" defer></script>
 
     <!-- PAGE HEADER -->
-    <header class="page-header">
+    <header class="page-header-vitroplant">
       <div class="ph-fond">
         <div class="ph-forme-1"></div>
         <div class="ph-texture"></div>
@@ -445,39 +446,11 @@
     <script src="components/footer.js"></script>
 
 
-    <script>
-      // Burger menu functionality
-      document.addEventListener("DOMContentLoaded", function () {
-        const navToggle = document.querySelector(".nav-toggle");
-        const navLiens = document.querySelector(".nav-liens");
-
-        if (navToggle && navLiens) {
-          navToggle.addEventListener("click", function () {
-            navToggle.classList.toggle("active");
-            navLiens.classList.toggle("open");
-          });
-
-          // Close menu when clicking on a link
-          const navLinks = document.querySelectorAll(".nav-lien");
-          navLinks.forEach((link) => {
-            link.addEventListener("click", function () {
-              navToggle.classList.remove("active");
-              navLiens.classList.remove("open");
-            });
-          });
-
-          // Close menu when clicking outside
-          document.addEventListener("click", function (e) {
-            if (!navToggle.contains(e.target) && !navLiens.contains(e.target)) {
-              navToggle.classList.remove("active");
-              navLiens.classList.remove("open");
-            }
-          });
-        }
-      });
-    </script>
   </body>
 </html>
+
+
+
 
 
 

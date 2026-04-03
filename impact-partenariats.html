@@ -4,244 +4,239 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impact et Partenariats — FRESH'O VITROPLANTS</title>
+    <meta
+      name="description"
+      content="Notre impact social, economique et environnemental avec nos partenariats strategiques dans la filiere banane."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles1.css" />
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vitroplants de Banane — FRESH'O VITROPLANTS</title>
-        <meta
-          name="description"
-          content="Vitroplants de banane certifiés : homogénéité génétique, qualité sanitaire, +30% de rendement. 6 variétés adaptées au Sénégal."
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link   
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
-          rel="stylesheet" />
-                  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-        <link rel="stylesheet" href="styles1.css" />
-        <style>
-            /* ===========================================
+    <link rel="stylesheet" href="components/navbar.css" />
+    <style>
+      /* ===========================================
                     STATS — blanc partout + hover vert
                =========================================== */
-          .section-stats,
-          .section-stats .stat-number,
-          .section-stats .stat-sup,
-          .section-stats .stat-label,
-          .stat-number,
-          .stat-sup,
-          .stat-label {
-            color: #ffffff !important;
-          }
+      .section-stats,
+      .section-stats .stat-number,
+      .section-stats .stat-sup,
+      .section-stats .stat-label,
+      .stat-number,
+      .stat-sup,
+      .stat-label {
+        color: #ffffff !important;
+      }
 
-          .section-stats .stat-item:hover .stat-number,
-          .section-stats .stat-item:hover .stat-sup,
-          .section-stats .stat-item:hover .stat-label {
-            color: var(--green-light) !important;
-            transition: color 0.3s ease;
-          }
+      .section-stats .stat-item:hover .stat-number,
+      .section-stats .stat-item:hover .stat-sup,
+      .section-stats .stat-item:hover .stat-label {
+        color: var(--green-light) !important;
+        transition: color 0.3s ease;
+      }
 
-          /* ================================================
+      /* ================================================
    RESPONSIVE VITROPLANTS
    ================================================ */
-          @media (max-width: 1024px) {
-            .vp-header-grid {
-              grid-template-columns: 1fr !important;
-              gap: 2.5rem !important;
-            }
-            .vp-kpi-row {
-              grid-template-columns: 1fr 1fr !important;
-            }
-            .vp-science-grid {
-              grid-template-columns: 1fr 1fr !important;
-            }
-            .varietes-grid {
-              grid-template-columns: repeat(2, 1fr) !important;
-            }
-            .variete-featured {
-              transform: none !important;
-            }
-            .qualite-grid {
-              grid-template-columns: 1fr 1fr !important;
-            }
-            .qualite-featured {
-              grid-column: span 1 !important;
-            }
-            .vp-process-steps {
-              flex-direction: column !important;
-              align-items: center !important;
-              gap: 2rem !important;
-            }
-            .vp-step-arrow {
-              transform: rotate(90deg) !important;
-            }
-            .temoignages-grid {
-              grid-template-columns: 1fr 1fr !important;
-            }
-            .temoignage-featured {
-              transform: none !important;
-            }
+      @media (max-width: 1024px) {
+        .vp-header-grid {
+          grid-template-columns: 1fr !important;
+          gap: 2.5rem !important;
+        }
+        .vp-kpi-row {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .vp-science-grid {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .varietes-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .variete-featured {
+          transform: none !important;
+        }
+        .qualite-grid {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .qualite-featured {
+          grid-column: span 1 !important;
+        }
+        .vp-process-steps {
+          flex-direction: column !important;
+          align-items: center !important;
+          gap: 2rem !important;
+        }
+        .vp-step-arrow {
+          transform: rotate(90deg) !important;
+        }
+        .temoignages-grid {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .temoignage-featured {
+          transform: none !important;
+        }
 
-            /* Stats tablette */
-            .stat-number,
-            .stat-sup,
-            .stat-label {
-              color: #ffffff !important;
-            }
-          }
+        /* Stats tablette */
+        .stat-number,
+        .stat-sup,
+        .stat-label {
+          color: #ffffff !important;
+        }
+      }
 
-          @media (max-width: 768px) {
-            /* Header */
-            .vp-header {
-              min-height: auto !important;
-              padding-top: 80px !important;
-              padding-bottom: 3rem !important;
-            }
-            .vp-header-grid {
-              grid-template-columns: 1fr !important;
-              padding: 2rem 0 !important;
-              gap: 2rem !important;
-            }
-            .vp-header-right {
-              display: none !important;
-            }
-            .vp-title {
-              font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
-            }
-            .vp-header-actions {
-              flex-direction: column !important;
-            }
-            .vp-header-actions .btn {
-              width: 100% !important;
-              justify-content: center !important;
-            }
+      @media (max-width: 768px) {
+        /* Header */
+        .vp-header {
+          min-height: auto !important;
+          padding-top: 80px !important;
+          padding-bottom: 3rem !important;
+        }
+        .vp-header-grid {
+          grid-template-columns: 1fr !important;
+          padding: 2rem 0 !important;
+          gap: 2rem !important;
+        }
+        .vp-header-right {
+          display: none !important;
+        }
+        .vp-title {
+          font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
+        }
+        .vp-header-actions {
+          flex-direction: column !important;
+        }
+        .vp-header-actions .btn {
+          width: 100% !important;
+          justify-content: center !important;
+        }
 
-            /* Ribbon */
-            .vp-ribbon {
-              overflow-x: auto !important;
-            }
-            .vp-ribbon-inner {
-              justify-content: flex-start !important;
-              padding: 0 1rem !important;
-            }
+        /* Ribbon */
+        .vp-ribbon {
+          overflow-x: auto !important;
+        }
+        .vp-ribbon-inner {
+          justify-content: flex-start !important;
+          padding: 0 1rem !important;
+        }
 
-            /* Grilles */
-            .vp-science-grid {
-              grid-template-columns: 1fr !important;
-            }
-            .varietes-grid {
-              grid-template-columns: 1fr !important;
-            }
-            .variete-header {
-              height: 180px !important;
-            }
-            .qualite-grid {
-              grid-template-columns: 1fr !important;
-            }
-            .qualite-featured {
-              grid-column: span 1 !important;
-            }
-            .temoignages-grid {
-              grid-template-columns: 1fr !important;
-            }
+        /* Grilles */
+        .vp-science-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .varietes-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .variete-header {
+          height: 180px !important;
+        }
+        .qualite-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .qualite-featured {
+          grid-column: span 1 !important;
+        }
+        .temoignages-grid {
+          grid-template-columns: 1fr !important;
+        }
 
-            /* Processus */
-            .vp-process-steps {
-              flex-direction: column !important;
-              gap: 1.5rem !important;
-              overflow-x: visible !important;
-              padding: 0 !important;
-            }
-            .vp-step {
-              min-width: unset !important;
-              width: 100% !important;
-              flex-direction: row !important;
-              align-items: flex-start !important;
-              text-align: left !important;
-              gap: 1rem !important;
-            }
-            .vp-step-visual {
-              width: 70px !important;
-              height: 70px !important;
-              flex-shrink: 0 !important;
-              margin-bottom: 0 !important;
-            }
-            .vp-step-arrow {
-              display: none !important;
-            }
+        /* Processus */
+        .vp-process-steps {
+          flex-direction: column !important;
+          gap: 1.5rem !important;
+          overflow-x: visible !important;
+          padding: 0 !important;
+        }
+        .vp-step {
+          min-width: unset !important;
+          width: 100% !important;
+          flex-direction: row !important;
+          align-items: flex-start !important;
+          text-align: left !important;
+          gap: 1rem !important;
+        }
+        .vp-step-visual {
+          width: 70px !important;
+          height: 70px !important;
+          flex-shrink: 0 !important;
+          margin-bottom: 0 !important;
+        }
+        .vp-step-arrow {
+          display: none !important;
+        }
 
-            /* Stats mobile */
-            .stats-grid {
-              flex-direction: column !important;
-              align-items: center !important;
-            }
-            .stat-sep {
-              width: 40px !important;
-              height: 1px !important;
-            }
-            .stat-number,
-            .stat-sup,
-            .stat-label {
-              color: #ffffff !important;
-            }
-            .section-stats .stat-item:hover .stat-number,
-            .section-stats .stat-item:hover .stat-sup,
-            .section-stats .stat-item:hover .stat-label {
-              color: var(--green-light) !important;
-            }
+        /* Stats mobile */
+        .stats-grid {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+        .stat-sep {
+          width: 40px !important;
+          height: 1px !important;
+        }
+        .stat-number,
+        .stat-sup,
+        .stat-label {
+          color: #ffffff !important;
+        }
+        .section-stats .stat-item:hover .stat-number,
+        .section-stats .stat-item:hover .stat-sup,
+        .section-stats .stat-item:hover .stat-label {
+          color: var(--green-light) !important;
+        }
 
-            /* CTA */
-            .cta-inner {
-              flex-direction: column !important;
-            }
-            .cta-actions {
-              flex-direction: column !important;
-              width: 100% !important;
-            }
-            .cta-actions .btn {
-              width: 100% !important;
-              justify-content: center !important;
-            }
+        /* CTA */
+        .cta-inner {
+          flex-direction: column !important;
+        }
+        .cta-actions {
+          flex-direction: column !important;
+          width: 100% !important;
+        }
+        .cta-actions .btn {
+          width: 100% !important;
+          justify-content: center !important;
+        }
 
-            /* Footer */
-            .footer-grid {
-              grid-template-columns: 1fr !important;
-              gap: 2rem !important;
-            }
-            .footer-bottom {
-              flex-direction: column !important;
-              gap: 0.75rem !important;
-            }
-          }
+        /* Footer */
+        .footer-grid {
+          grid-template-columns: 1fr !important;
+          gap: 2rem !important;
+        }
+        .footer-bottom {
+          flex-direction: column !important;
+          gap: 0.75rem !important;
+        }
+      }
 
-          @media (max-width: 480px) {
-            .section-title {
-              font-size: 1.7rem !important;
-            }
-            .vp-title {
-              font-size: 1.8rem !important;
-            }
-            .variete-header {
-              height: 160px !important;
-            }
-            .stat-number,
-            .stat-sup,
-            .stat-label {
-              color: #ffffff !important;
-            }
-          }
-        </style>
-      </head>
-      <body>
-      </body>
-    </html>
+      @media (max-width: 480px) {
+        .section-title {
+          font-size: 1.7rem !important;
+        }
+        .vp-title {
+          font-size: 1.8rem !important;
+        }
+        .variete-header {
+          height: 160px !important;
+        }
+        .stat-number,
+        .stat-sup,
+        .stat-label {
+          color: #ffffff !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- ===== NAVBAR ===== -->
-        <div id="navbar-container"></div>
-    <script src="components/navbar.js"></script>
+    <div id="navbar-container"></div>
+    <script src="components/navbar.js" defer></script>
     <!-- PAGE HEADER -->
-    <header class="page-header">
+    <header class="page-header-impact">
       <div class="ph-fond">
         <div class="ph-forme-1"></div>
         <div class="ph-texture"></div>
@@ -259,8 +254,12 @@
               triple impact positif et mesurable à chaque étape de la filière.
             </p>
             <div class="ph-actions">
-              <a href="#impact-eco" class="btn btn-yellow">Voir notre impact ↓</a>
-              <a href="#partenaires" class="btn btn-glass">Devenir partenaire</a>
+              <a href="#impact-eco" class="btn btn-yellow"
+                >Voir notre impact ↓</a
+              >
+              <a href="#partenaires" class="btn btn-glass"
+                >Devenir partenaire</a
+              >
             </div>
           </div>
           <div class="ph-stats">
@@ -284,58 +283,6 @@
         </div>
       </div>
     </header>
-    <!-- Responsive Burger Menu Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.querySelector(".navbar");
-        const navLiens = document.querySelector(".nav-liens");
-        const toggle = document.querySelector(".nav-toggle");
-
-        if (!navLiens || !toggle) return;
-
-        function openMenu() {
-          navLiens.classList.add("open");
-          toggle.classList.add("active");
-          toggle.setAttribute("aria-expanded", "true");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          navLiens.classList.remove("open");
-          toggle.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          navLiens.classList.contains("open") ? closeMenu() : openMenu();
-        });
-
-        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
-          link.addEventListener("click", closeMenu);
-        });
-
-        document.addEventListener("click", function (e) {
-          if (!navbar.contains(e.target)) closeMenu();
-        });
-
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") closeMenu();
-        });
-
-        window.addEventListener("scroll", function () {
-          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
-      });
-    </script>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-
 
     <!-- ===== PARTENAIRES ===== -->
     <section class="section section-partenaires" id="partenaires">
@@ -352,7 +299,12 @@
         </div>
         <div class="partenaires-grid">
           <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-research"><i class="fa-solid fa-flask" style="color: #037927; font-size: 32px;"></i></div>
+            <div class="partenaire-icon-wrap pc-research">
+              <i
+                class="fa-solid fa-flask"
+                style="color: #037927; font-size: 32px"
+              ></i>
+            </div>
             <div class="partenaire-body">
               <div class="partenaire-type">Recherche & Innovation</div>
               <h3>Institutions de Recherche</h3>
@@ -369,7 +321,12 @@
           </div>
 
           <div class="partenaire-card partenaire-featured">
-            <div class="partenaire-icon-wrap pc-intl"><i class="fa-solid fa-globe-africa" style="color: #00c3ff; font-size: 32px;"></i></div>
+            <div class="partenaire-icon-wrap pc-intl">
+              <i
+                class="fa-solid fa-globe-africa"
+                style="color: #00c3ff; font-size: 32px"
+              ></i>
+            </div>
             <div class="partenaire-body">
               <div class="partenaire-type">International</div>
               <h3>Organisations Internationales</h3>
@@ -387,7 +344,12 @@
           </div>
 
           <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-coop"><i class="fa-solid fa-people-group" style="color: #a3990c; font-size: 32px;"></i></div>
+            <div class="partenaire-icon-wrap pc-coop">
+              <i
+                class="fa-solid fa-people-group"
+                style="color: #a3990c; font-size: 32px"
+              ></i>
+            </div>
             <div class="partenaire-body">
               <div class="partenaire-type">Terrain</div>
               <h3>Coopératives Agricoles</h3>
@@ -403,7 +365,12 @@
           </div>
 
           <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-priv"><i class="fa-solid fa-industry" style="color: #cf9a06; font-size: 32px;"></i></div>
+            <div class="partenaire-icon-wrap pc-priv">
+              <i
+                class="fa-solid fa-industry"
+                style="color: #cf9a06; font-size: 32px"
+              ></i>
+            </div>
             <div class="partenaire-body">
               <div class="partenaire-type">Secteur Privé</div>
               <h3>Exportateurs & Transformateurs</h3>
@@ -420,7 +387,12 @@
           </div>
 
           <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-gov"><i class="fa-solid fa-landmark" style="color: #e417c2; font-size: 32px;"></i></div>
+            <div class="partenaire-icon-wrap pc-gov">
+              <i
+                class="fa-solid fa-landmark"
+                style="color: #e417c2; font-size: 32px"
+              ></i>
+            </div>
             <div class="partenaire-body">
               <div class="partenaire-type">Gouvernement</div>
               <h3>Ministères & Collectivités</h3>
@@ -437,7 +409,12 @@
           </div>
 
           <div class="partenaire-card partenaire-join">
-            <div class="partenaire-join-icon"><i class="fa-solid fa-plus-circle" style="color: #fff; font-size: 32px;"></i></div>
+            <div class="partenaire-join-icon">
+              <i
+                class="fa-solid fa-plus-circle"
+                style="color: #fff; font-size: 32px"
+              ></i>
+            </div>
             <h3>Rejoindre l'écosystème</h3>
             <p>
               Votre organisation partage notre vision ? Construisons ensemble
@@ -467,72 +444,13 @@
           <a href="contact-partenaires.html" class="btn btn-white"
             >Devenir partenaire →</a
           >
-          <a href="#" class="btn btn-outline-white"
-            >Notre dossier d'impact</a
-          >
+          <a href="#" class="btn btn-outline-white">Notre dossier d'impact</a>
         </div>
       </div>
     </section>
 
     <!--FOOTER -->
-        <div id="footer-container"></div>
+    <div id="footer-container"></div>
     <script src="components/footer.js"></script>
-
-    <!-- rESPNSIVE -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.querySelector(".navbar");
-        const navInner = document.querySelector(".navbar-container"); // ← corrigé
-        const navLiens = document.querySelector(".nav-liens"); // ← corrigé
-
-        if (!navInner || !navLiens) return;
-
-        const toggle = document.createElement("button");
-        toggle.className = "nav-toggle";
-        toggle.setAttribute("aria-label", "Ouvrir le menu");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "<span></span><span></span><span></span>";
-        navInner.appendChild(toggle);
-
-        function openMenu() {
-          navLiens.classList.add("open");
-          toggle.classList.add("active");
-          toggle.setAttribute("aria-expanded", "true");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          navLiens.classList.remove("open");
-          toggle.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          navLiens.classList.contains("open") ? closeMenu() : openMenu();
-        });
-
-        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
-          link.addEventListener("click", closeMenu);
-        });
-
-        document.addEventListener("click", function (e) {
-          if (!navbar.contains(e.target)) closeMenu();
-        });
-
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") closeMenu();
-        });
-
-        window.addEventListener("scroll", function () {
-          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
-      });
-    </script>
   </body>
 </html>
-
-
-
-

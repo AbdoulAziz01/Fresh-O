@@ -11,41 +11,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <style>
+      html,
+      body,
+      * {
+        font-family: "Bricolage Grotesque", sans-serif !important;
+      }
+
+      .fa-solid,
+      .fa-regular,
+      .fa-brands,
+      .fa {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+
+      .fa-solid,
+      .fas {
+        font-weight: 900 !important;
+      }
+
+      .fa-regular,
+      .far {
+        font-weight: 400 !important;
+      }
+
+      .fa-brands,
+      .fab {
+        font-family: "Font Awesome 6 Brands" !important;
+        font-weight: 400 !important;
+      }
+    </style>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles1.css" />
-    <style>
-      *,
-      *::before,
-      *::after {
-        font-family: "Bricolage Grotesque", sans-serif !important;
-      }
-    </style>
+
+    <link rel="stylesheet" href="components/navbar.css" />
   </head>
   <body>
-    <div id="navbar-container">
-      <script src="components/navbar.js"></script>
-    </div>
+    <!-- Appeler le composant navbar -->
+    <div id="navbar-container"></div>
+    <script src="components/navbar.js" defer></script>
     <!-- PAGE HEADER -->
-    <header class="page-header">
+    <header class="page-header-apropos">
       <div class="container page-header-inner">
         <div class="ph-grille">
           <div>
             <h1 class="ph-titre">
               Une ferme née d'une<br />
-              <em>conviction profonde</em>
+              <p style="color: #28a83b; text-shadow: 0 0 5px #000000;">
+                conviction profonde
+              </p>
             </h1>
-            <p class="ph-intro">
-              Fondée par des scientifiques et entrepreneurs sénégalais, FRESH'O
-              VITROPLANTS est née d'une certitude : l'agriculture africaine
-              mérite des outils de classe mondiale, produits localement,
-              durablement.
-            </p>
           </div>
           <div class="ph-stats">
             <div class="ph-stat">
@@ -326,7 +347,7 @@
               Ce qui guide<br />
               <p style="color: #dfc12f">chacun de nos actes</p>
             </h2>
-            <p class="desc-section">
+            <p class="desc-section" style="color: #fff">
               Chez FRESH'O, les valeurs ne sont pas des mots sur un mur. Ce sont
               les critères qui guident chaque décision, chaque protocole, chaque
               partenariat.
@@ -457,64 +478,5 @@
     <!--FOOTER -->
     <div id="footer-container"></div>
     <script src="components/footer.js"></script>
-
-    <script>
-      /* nav-mobile.js — Burger menu robuste pour index.html */
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.querySelector(".navbar");
-        const navInner = document.querySelector(".navbar-inner");
-        const navLiens = document.querySelector(".nav-liens");
-
-        if (!navInner || !navLiens) return;
-
-        /* ---- Créer le bouton burger ---- */
-        const toggle = document.createElement("button");
-        toggle.className = "nav-toggle";
-        toggle.setAttribute("aria-label", "Ouvrir le menu");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "<span></span><span></span><span></span>";
-        navInner.appendChild(toggle);
-
-        /* ---- Ouvrir / fermer ---- */
-        function openMenu() {
-          navLiens.classList.add("open");
-          toggle.classList.add("active");
-          toggle.setAttribute("aria-expanded", "true");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          navLiens.classList.remove("open");
-          toggle.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", function (e) {
-          e.stopPropagation();
-          navLiens.classList.contains("open") ? closeMenu() : openMenu();
-        });
-
-        /* ---- Fermer au clic sur un lien ---- */
-        navLiens.querySelectorAll(".nav-lien").forEach(function (link) {
-          link.addEventListener("click", closeMenu);
-        });
-
-        /* ---- Fermer au clic en dehors ---- */
-        document.addEventListener("click", function (e) {
-          if (!navbar.contains(e.target)) closeMenu();
-        });
-
-        /* ---- Fermer avec Escape ---- */
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") closeMenu();
-        });
-
-        /* ---- Effet scroll navbar ---- */
-        window.addEventListener("scroll", function () {
-          if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
-      });
-    </script>
   </body>
 </html>
