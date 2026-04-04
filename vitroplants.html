@@ -9,13 +9,53 @@
       content="Vitroplants de banane certifiés : homogénéité génétique, qualité sanitaire, +30% de rendement. 6 variétés adaptées au Sénégal."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles1.css" />
     <style>
+      :root {
+        --official-green: #28A83B;
+        --font-body: "Bricolage Grotesque", sans-serif;
+        --font: "Bricolage Grotesque", sans-serif;
+        --fonte-corps: "Bricolage Grotesque", sans-serif;
+        --font-display: "Bricolage Grotesque", sans-serif;
+        --font-serif: "Bricolage Grotesque", sans-serif;
+      }
+
+      .official-green {
+        color: var(--official-green);
+      }
+
+      body {
+        font-family: "Bricolage Grotesque", sans-serif !important;
+      }
+
+      .fa,
+      .fa-solid,
+      .fa-regular,
+      .fa-brands,
+      .fas,
+      .far,
+      .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+
+      /* Force un CTA propre sur cette page (supprime la bande verte héritée) */
+      .section-cta {
+        background: var(--banane) !important;
+        margin-top: 0 !important;
+      }
+
+      .section-cta::before,
+      .section-cta::after {
+        content: none !important;
+        display: none !important;
+      }
+
       /* Responsive fix for mobile cards */
       @media (max-width: 600px) {
         .vp-science-grid {
@@ -54,17 +94,13 @@
         <div class="ph-grille">
           <div>
             <h1 class="ph-titre">
-              Qualité supérieure<em> pour vos récoltes</em>
+              Qualité supérieure<p style="color: #ecba16; text-shadow: 0 0 5px #fffb03ce"> pour vos récoltes</p>
             </h1>
-            <p class="ph-intro">
+            <!-- <p class="ph-intro">
               Des vitroplants de banane sains, homogènes et performants — issus
               de notre laboratoire in vitro certifié, adaptés aux conditions du
               Sénégal.
-            </p>
-            <div class="ph-actions">
-              <a href="#varietes" class="btn btn-yellow">Voir nos variétés ↓</a>
-              <a href="contact-partenaires.html" class="btn btn-glass">Commander maintenant</a>
-            </div>
+            </p> -->
           </div>
           <div class="ph-stats">
             <div class="ph-stat">
@@ -87,13 +123,13 @@
         </div>
       </div>
     </header>
-    <!-- ===== QU'EST-CE QU'UN VITROPLANT ? ===== -->
+    <!-- ===== QU'EST-CE QU'UN VITROPLANT ? =====
     <section class="section section-vp-science">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Science</span>
           <h2 class="section-title">
-            Qu'est-ce qu'un<br /><em>vitroplant</em> ?
+            Qu'est-ce qu'un<br /><p style="color: #19d85c;">vitroplant</p> ?
           </h2>
           <p class="section-desc">
             4 avantages scientifiquement prouvés qui expliquent pourquoi nos
@@ -147,14 +183,14 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
                     <!-- SECTION 6 variétés adaptées au marché africain -->
     <section class="section section-varietes" id="varietes">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Nos variétés</span>
+          <span class="section-tag official-green">Nos variétés</span>
           <h2 class="section-title">
-            Nous produisons plusieurs <em style="color: #2E7D32;">variétés</em> adaptées aux besoins
+            Nous produisons plusieurs <span class="official-green">variétés</span> adaptées aux besoins
           </h2>
         </div>
         <div class="varietes-grid">
@@ -234,9 +270,9 @@
     <section class="section section-clients">
       <div class="container">
         <div class="clients-header">
-          <span class="section-tag">Nos Clients</span>
+          <span class="section-tagsection-tag">Nos Clients</span>
           <h2 class="section-title">
-            À qui s'adressent<br /><em>nos vitroplants</em> ?
+            À qui s'adressent<br /><span class="official-green">nos vitroplants</span> ?
           </h2>
           <p class="section-desc">
             Des solutions adaptées à chaque acteur de la filière bananière — du producteur individuel au partenaire institutionnel international.
@@ -295,7 +331,7 @@
         <div class="section-header">
           <span class="section-tag">Notre Processus</span>
           <h2 class="section-title">
-            De la sélection<br /><em>à votre champ</em>
+            De la sélection<br /><span class="official-green">à votre champ</span>
           </h2>
           <p class="section-desc">
             5 étapes rigoureuses garantissent qu'à chaque livraison, vos plants
@@ -375,51 +411,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ===== QUALITÉ & GARANTIES ===== -->
-    <section class="section section-vp-qualite">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Garantie Qualité</span>
-          <h2 class="section-title">
-            Protocoles, traçabilité<br /><em>et certifications</em>
-          </h2>
-        </div>
-        <div class="qualite-grid">
-          <div class="qualite-card">
-            <div class="qualite-icon qc-green"><i class="fa-solid fa-vials" style="color: rgb(15, 187, 72);"></i></div>
-            <h3>Protocoles Stricts</h3>
-            <ul class="qualite-list">
-              <li>ISO 9001 — gestion qualité totale</li>
-              <li>Stérilité contrôlée à chaque étape</li>
-              <li>Tests sanitaires systématiques par lot</li>
-              <li>Contrôle visuel expert avant expédition</li>
-            </ul>
-          </div>
-          <div class="qualite-card">
-            <div class="qualite-icon qc-blue"><i class="fa-solid fa-barcode" style="color: rgb(19, 99, 179);"></i></div>
-            <h3>Traçabilité Complète</h3>
-            <ul class="qualite-list">
-              <li>Numéro de lot unique par commande</li>
-              <li>Historique pied-mère → produit final</li>
-              <li>Suivi temps réel via plateforme digitale</li>
-              <li>Certificat sanitaire joint à chaque livraison</li>
-            </ul>
-          </div>
-          <div class="qualite-card">
-            <div class="qualite-icon qc-yellow"><i class="fa-solid fa-certificate" style="color: rgba(238, 198, 19, 0.575);"></i></div>
-            <h3>Standards Internationaux</h3>
-            <ul class="qualite-list">
-              <li>Conformité CIPV (Convention Internationale)</li>
-              <li>Normes phytosanitaires Sénégal + export</li>
-              <li>Certification biologique sur demande</li>
-              <li>Audit externe annuel par bureau certifié</li>
-            </ul>
-          </div>
-          
-      </div>
-    </section>
-   
     <!-- ===== CTA ===== -->
     <section class="section-cta">
       <div class="container cta-inner">

@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="styles1.css" />
     <link rel="stylesheet" href="components/navbar.css" />
     <style>
+      :root {
+        --official-green: #28a83b;
+      }
+
       /* ===========================================
                     STATS — blanc partout + hover vert
                =========================================== */
@@ -36,8 +40,20 @@
       .section-stats .stat-item:hover .stat-number,
       .section-stats .stat-item:hover .stat-sup,
       .section-stats .stat-item:hover .stat-label {
-        color: var(--green-light) !important;
+        color: var(--official-green) !important;
         transition: color 0.3s ease;
+      }
+
+      /* CTA impact: retire la bande verte parasite */
+      .section-cta {
+        background: var(--banane) !important;
+        margin-top: 0 !important;
+      }
+
+      .section-cta::before,
+      .section-cta::after {
+        content: none !important;
+        display: none !important;
       }
 
       /* ================================================
@@ -186,7 +202,7 @@
         .section-stats .stat-item:hover .stat-number,
         .section-stats .stat-item:hover .stat-sup,
         .section-stats .stat-item:hover .stat-label {
-          color: var(--green-light) !important;
+          color: var(--official-green) !important;
         }
 
         /* CTA */
@@ -246,21 +262,20 @@
           <div>
             <h1 class="ph-titre">
               Créer de la valeur<br />
-              <em>pour chaque</em>
+              <p
+                style="
+                  color: var(--official-green);
+                  text-shadow: 0 2px 4px rgba(99, 171, 69, 0.45);
+                "
+              >
+                pour chaque
+              </p>
               acteur
             </h1>
             <p class="ph-intro">
               Économique, environnemental, social — notre modèle génère un
               triple impact positif et mesurable à chaque étape de la filière.
             </p>
-            <div class="ph-actions">
-              <a href="#impact-eco" class="btn btn-yellow"
-                >Voir notre impact ↓</a
-              >
-              <a href="#partenaires" class="btn btn-glass"
-                >Devenir partenaire</a
-              >
-            </div>
           </div>
           <div class="ph-stats">
             <div class="ph-stat">
@@ -290,7 +305,8 @@
         <div class="section-header">
           <span class="section-tag">Partenaires Stratégiques</span>
           <h2 class="section-title">
-            Notre écosystème<br /><em>de partenaires</em>
+            Notre écosystème<br />
+            <p style="color: var(--official-green)">de partenaires</p>
           </h2>
           <p class="section-desc">
             Un réseau d'acteurs complémentaires qui amplifient notre impact à
@@ -302,7 +318,7 @@
             <div class="partenaire-icon-wrap pc-research">
               <i
                 class="fa-solid fa-flask"
-                style="color: #037927; font-size: 32px"
+                style="color: var(--official-green); font-size: 32px"
               ></i>
             </div>
             <div class="partenaire-body">

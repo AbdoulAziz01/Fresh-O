@@ -82,7 +82,7 @@
   display: block;
   font-size: 0.86rem;
   font-weight: 500;
-  color: var(--navbar-text);
+  /* color: #0000; */
   padding: 0.45rem 0.85rem;
   border-radius: var(--navbar-radius-sm);
   transition:
@@ -93,7 +93,7 @@
 
 .nav-lien:hover,
 .nav-lien.actif {
-  color: var(--navbar-text-active);
+  color: #28A83B;
   background: var(--navbar-active-bg);
 }
 
@@ -109,7 +109,7 @@
   border-radius: var(--navbar-radius-full);
   font-size: 0.82rem;
   font-weight: 600;
-  box-shadow: 0 3px 14px rgba(40, 168, 59, 0.28);
+  box-shadow: 0 3px 14px #28A83B;
   transition:
     background var(--navbar-transition),
     transform var(--navbar-transition);

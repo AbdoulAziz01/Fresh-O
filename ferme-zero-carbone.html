@@ -19,11 +19,26 @@
     <link rel="stylesheet" href="components/navbar.css" />
     <style>
       :root {
+        --official-green: #28A83B;
         --font-body: "Bricolage Grotesque", sans-serif;
         --font: "Bricolage Grotesque", sans-serif;
         --fonte-corps: "Bricolage Grotesque", sans-serif;
         --font-display: "Bricolage Grotesque", sans-serif;
         --font-serif: "Bricolage Grotesque", sans-serif;
+      }
+
+      .official-green {
+        color: var(--official-green);
+      }
+
+      .fa,
+      .fa-solid,
+      .fa-regular,
+      .fa-brands,
+      .fas,
+      .far,
+      .fab {
+        color: #19d85c !important;
       }
     </style>
   </head>
@@ -45,7 +60,7 @@
           <div>
             <h1 class="ph-titre">
               La première ferme<br />
-              <p style="color: #28A83B; text-shadow: 0 0 5px #000000;">zéro carbone</p>
+              <p style="color: #19d85c; text-shadow: 0 0 5px #000000;">zéro carbone</p>
               du Sénégal
             </h1>
             <p class="ph-intro">
@@ -53,11 +68,6 @@
               de l'eau et de l'énergie renouvelable.
             </p>
             <br />
-            <div class="ph-actions">
-              <a href="#piliers" class="btn btn-yellow">Découvrir le modèle ↓</a>
-              <a href="contact-partenaires.html" class="btn btn-glass">Visiter la ferme</a>
-              <br />
-            </div>
           </div>
           <div class="ph-stats">
             <div class="ph-stat">
@@ -85,9 +95,9 @@
     <section class="section section-varietes" id="varietes">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Nos variétés</span>
+          <span class="section-tag official-green">Nos variétés</span>
           <h2 class="section-title">
-            Nous produisons plusieurs <em style="color: #2E7D32;">variétés</em> adaptées aux besoins
+            Nous produisons plusieurs <span class="official-green">variétés</span> adaptées aux besoins
           </h2>
         </div>
 
@@ -156,7 +166,7 @@
       <div class="container">
         <div class="section-header section-carte-header" data-reveal>
           <span class="section-tag">Plan du Site</span>
-          <h2 class="section-title">Explorez <em>notre ferme</em></h2>
+          <h2 class="section-title">Explorez <span class="official-green">notre ferme</span></h2>
           <p class="section-desc">
             Une lecture plus visuelle des espaces clés, organisée comme un
             parcours de visite à travers les zones de production.
