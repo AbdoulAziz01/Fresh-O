@@ -11651,6 +11651,73 @@ ul {
 /* ================================================
    7. PAGE HEADER
    ================================================ */
+.page-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-contact .page-header {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  padding-top: 110px;
+  background: linear-gradient(
+    140deg,
+    #1a5c32 0%,
+    #28A83B 52%,
+    #52b86a 100%
+  );
+}
+
+.page-contact .page-header::after {
+  background: rgba(26, 92, 50, 0.16);
+  z-index: 1;
+}
+
+.page-contact .ph-fond {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-contact .ph-forme-1 {
+  position: absolute;
+  top: -220px;
+  right: -140px;
+  width: 700px;
+  height: 700px;
+  border-radius: 56% 44% 62% 38% / 48% 52% 46% 54%;
+  background: radial-gradient(
+    circle at 35% 40%,
+    rgba(82, 184, 106, 0.32),
+    transparent 68%
+  );
+}
+
+.page-contact .ph-texture {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.45;
+}
+
+.page-contact .page-header-inner {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.page-contact .section-contact-form {
+  position: relative;
+  z-index: 2;
+}
+
+.page-contact .contact-layout {
+  padding-top: 0;
+}
+
 .page-header-apropos {
   background-color: #061b0a;
   background-image: url("images/img13.avif");
@@ -12768,6 +12835,10 @@ ul {
   /* ---- Header ---- */
   .page-header {
     min-height: auto;
+  }
+  .page-contact .page-header {
+    min-height: 64vh;
+    padding-top: 95px;
   }
   .page-header-inner {
     padding: 1.5rem 1.25rem 4rem;
