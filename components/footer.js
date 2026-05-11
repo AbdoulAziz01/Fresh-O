@@ -5,12 +5,12 @@ const footerHTML = `    <!--FOOTER -->
           <div class="footer-brand-col">
             <img
               src="images/fresho-logo.svg"
-              alt="Fresh'O Vitroplants"
+              alt="FRESH'O — ferme zéro carbone de vitroplants"
               class="footer-logo"
             />
             <p>
-              Première ferme zéro carbone de production de vitroplants de banane
-              au Sénégal.
+              FRESH'O — Ferme zéro carbone de production de vitroplants au
+              Sénégal.
             </p>
             <div class="footer-socials">
               <a href="#" class="social-btn" aria-label="LinkedIn"
@@ -71,10 +71,11 @@ const footerHTML = `    <!--FOOTER -->
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2026 FRESH'O VITROPLANTS. Tous droits réservés.</p>
+          <p>© FRESH'O — Ferme zéro carbone. Tous droits réservés.</p>
           <div class="footer-legal">
             <a href="#">Mentions légales</a>
-            <a href="#">Confidentialité</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="impact-partenariats.html#partenaires">Partenaires</a>
           </div>
         </div>
       </div>

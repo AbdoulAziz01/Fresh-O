@@ -25,7 +25,7 @@
           <img
             src="${logoSrc}"
             class="logo-header"
-            alt="Fresh'O Vitroplants"
+            alt="Fresh'O — ferme de vitroplants zéro carbone"
             width="187"
             height="80"
             decoding="async"
@@ -40,7 +40,7 @@
 
         <ul id="main-nav-links" class="nav-liens">
           <li><a href="index.html" class="nav-lien">Accueil</a></li>
-          <li><a href="apropos.html" class="nav-lien">A propos</a></li>
+          <li><a href="apropos.html" class="nav-lien">À propos</a></li>
           <li><a href="ferme-zero-carbone.html" class="nav-lien">Ferme</a></li>
           <li><a href="vitroplants.html" class="nav-lien">Vitroplants</a></li>
           <li><a href="impact-partenariats.html" class="nav-lien">Impact</a></li>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Impact et Partenariats — FRESH'O VITROPLANTS</title>
+    <title>Impact & partenariats — FRESH'O</title>
     <meta
       name="description"
-      content="Notre impact social, economique et environnemental avec nos partenariats strategiques dans la filiere banane."
+      content="Impact économique et environnemental de FRESH'O : emplois, filières horticoles, réduction d'émissions et partenariats avec ISRA, ITA et la Direction de l'Horticulture."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +23,8 @@
     <style>
       :root {
         --official-green: #28a83b;
+        --ip-ink: #0f172a;
+        --ip-muted: #475569;
         --font-body: "Bricolage Grotesque", sans-serif;
         --font: "Bricolage Grotesque", sans-serif;
         --fonte-corps: "Bricolage Grotesque", sans-serif;
@@ -30,248 +32,370 @@
         --font-serif: "Bricolage Grotesque", sans-serif;
       }
 
-      body {
-        font-family: "Bricolage Grotesque", sans-serif !important;
+      .page-impact {
+        font-family: "Bricolage Grotesque", sans-serif;
       }
 
-      .fa,
-      .fa-solid,
-      .fa-regular,
-      .fa-brands,
-      .fas,
-      .far,
-      .fab {
+      .page-impact .fa,
+      .page-impact .fa-solid,
+      .page-impact .fa-regular,
+      .page-impact .fa-brands,
+      .page-impact .fas,
+      .page-impact .far,
+      .page-impact .fab {
         font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
       }
 
-      /* ===========================================
-                    STATS — blanc partout + hover vert
-               =========================================== */
-      .section-stats,
-      .section-stats .stat-number,
-      .section-stats .stat-sup,
-      .section-stats .stat-label,
-      .stat-number,
-      .stat-sup,
-      .stat-label {
-        color: #ffffff !important;
+      .official-green {
+        color: var(--official-green);
       }
 
-      .section-stats .stat-item:hover .stat-number,
-      .section-stats .stat-item:hover .stat-sup,
-      .section-stats .stat-item:hover .stat-label {
-        color: var(--official-green) !important;
-        transition: color 0.3s ease;
+      /* Hero — lisibilité + intro */
+      .page-impact .page-header-impact {
+        position: relative;
+        isolation: isolate;
       }
 
-      /* CTA impact: retire la bande verte parasite */
-      .section-cta {
+      .page-impact .page-header-impact::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(
+          125deg,
+          rgba(6, 27, 10, 0.88) 0%,
+          rgba(6, 27, 10, 0.72) 42%,
+          rgba(40, 168, 59, 0.35) 100%
+        );
+      }
+
+      .page-impact .page-header-inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .page-impact .ph-titre-line-accent {
+        display: block;
+        margin-top: 0.08em;
+      }
+
+      .page-impact .ph-intro-impact {
+        margin: 1.25rem 0 0;
+        max-width: 34rem;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .page-impact .ph-grille {
+        align-items: start;
+      }
+
+      @media (max-width: 900px) {
+        .page-impact .ph-grille {
+          gap: 2.5rem !important;
+        }
+      }
+
+      /* Section impact — cartes “pilliers” */
+      .section-ip {
+        position: relative;
+        background: linear-gradient(180deg, #f4f7f5 0%, #ffffff 28%);
+        padding-top: 4.75rem;
+        padding-bottom: 4.75rem;
+      }
+
+      .section-ip .section-header {
+        margin-bottom: 2.5rem;
+      }
+
+      .ip-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.75rem;
+      }
+
+      .ip-card {
+        position: relative;
+        background: #fff;
+        border-radius: 1.25rem;
+        padding: 2rem 2rem 2.2rem;
+        border: 1px solid rgba(15, 23, 42, 0.07);
+        box-shadow:
+          0 1px 2px rgba(6, 27, 10, 0.04),
+          0 18px 44px rgba(6, 27, 10, 0.07);
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease;
+      }
+
+      .ip-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 1.25rem 1.25rem 0 0;
+        background: linear-gradient(
+          90deg,
+          var(--official-green),
+          #5ecf6e
+        );
+      }
+
+      .ip-card--env::before {
+        background: linear-gradient(90deg, #166534, var(--official-green));
+      }
+
+      .ip-card:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 2px 4px rgba(6, 27, 10, 0.05),
+          0 26px 56px rgba(6, 27, 10, 0.11);
+      }
+
+      .ip-card-icon {
+        width: 3.1rem;
+        height: 3.1rem;
+        border-radius: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+        background: rgba(40, 168, 59, 0.12);
+        color: var(--official-green);
+      }
+
+      .ip-card--env .ip-card-icon {
+        background: rgba(22, 101, 52, 0.12);
+        color: #166534;
+      }
+
+      .ip-card h3 {
+        margin: 0 0 1.15rem;
+        font-size: 1.35rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: var(--ip-ink);
+      }
+
+      .ip-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ip-list li {
+        position: relative;
+        padding-left: 1.65rem;
+        margin-bottom: 0.9rem;
+        font-size: 0.98rem;
+        line-height: 1.58;
+        color: var(--ip-muted);
+      }
+
+      .ip-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      .ip-list li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        font-size: 0.78rem;
+        color: var(--official-green);
+      }
+
+      @media (max-width: 768px) {
+        .ip-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-ip {
+          padding-top: 3.25rem;
+          padding-bottom: 3.25rem;
+        }
+      }
+
+      /* Bandeau partenaires */
+      .section-partenaires.partenaires-showcase {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: var(--off-white, #f6f7f4);
+      }
+
+      .partenaires-showcase-band {
+        background: linear-gradient(
+          180deg,
+          #e8ece9 0%,
+          #f1f4f2 40%,
+          #f8faf8 100%
+        );
+        border-top: 1px solid rgba(15, 23, 42, 0.06);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+        padding: 3rem 0 3rem;
+      }
+
+      .partenaires-strip-head {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .partenaires-strip-head .section-tag {
+        display: inline-block;
+        margin-bottom: 0.65rem;
+      }
+
+      .partenaires-showcase-kicker {
+        margin: 0 auto;
+        max-width: 40rem;
+        text-align: center;
+        font-size: 0.95rem;
+        font-weight: 500;
+        line-height: 1.55;
+        color: var(--ip-muted);
+      }
+
+      .partenaires-showcase-row {
+        list-style: none;
+        margin: 2rem 0 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 1rem 1.25rem;
+      }
+
+      .partenaires-showcase-row > li {
+        flex: 0 1 auto;
+      }
+
+      .partenaires-showcase-item {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        min-height: 4.25rem;
+        padding: 0.65rem 1.15rem;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(15, 23, 42, 0.07);
+        border-radius: 0.875rem;
+        box-shadow: 0 4px 18px rgba(6, 27, 10, 0.05);
+        transition:
+          background 0.22s ease,
+          border-color 0.22s ease,
+          box-shadow 0.22s ease,
+          transform 0.22s ease;
+      }
+
+      .partenaires-showcase-item:hover {
+        background: #fff;
+        border-color: rgba(40, 168, 59, 0.28);
+        box-shadow: 0 10px 32px rgba(40, 168, 59, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .partenaires-showcase-item img {
+        height: 2.65rem;
+        width: auto;
+        max-width: 5rem;
+        object-fit: contain;
+        flex-shrink: 0;
+        filter: grayscale(0.85);
+        opacity: 0.82;
+        transition:
+          filter 0.25s ease,
+          opacity 0.25s ease;
+      }
+
+      .partenaires-showcase-item:hover img {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+
+      .partenaires-showcase-item span {
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--ip-ink);
+        white-space: nowrap;
+      }
+
+      .partenaires-showcase-item--long span {
+        white-space: normal;
+        max-width: 13rem;
+        line-height: 1.3;
+      }
+
+      .partenaires-showcase-bottom {
+        padding-top: 2.75rem;
+        padding-bottom: 3.25rem;
+      }
+
+      .partenaires-showcase-bottom .partenaire-join {
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1.25rem;
+        box-shadow: 0 16px 48px rgba(40, 168, 59, 0.22);
+      }
+
+      @media (max-width: 768px) {
+        .partenaires-showcase-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .partenaires-showcase-item {
+          width: 100%;
+          max-width: none;
+        }
+
+        .partenaires-showcase-item--long span {
+          max-width: none;
+        }
+      }
+
+      /* CTA page impact */
+      .page-impact .section-cta {
         background: var(--banane) !important;
         margin-top: 0 !important;
       }
 
-      .section-cta::before,
-      .section-cta::after {
+      .page-impact .section-cta::before,
+      .page-impact .section-cta::after {
         content: none !important;
         display: none !important;
       }
 
-      /* ================================================
-   RESPONSIVE VITROPLANTS
-   ================================================ */
-      @media (max-width: 1024px) {
-        .vp-header-grid {
-          grid-template-columns: 1fr !important;
-          gap: 2.5rem !important;
-        }
-        .vp-kpi-row {
-          grid-template-columns: 1fr 1fr !important;
-        }
-        .vp-science-grid {
-          grid-template-columns: 1fr 1fr !important;
-        }
-        .varietes-grid {
-          grid-template-columns: repeat(2, 1fr) !important;
-        }
-        .variete-featured {
-          transform: none !important;
-        }
-        .qualite-grid {
-          grid-template-columns: 1fr 1fr !important;
-        }
-        .qualite-featured {
-          grid-column: span 1 !important;
-        }
-        .vp-process-steps {
-          flex-direction: column !important;
-          align-items: center !important;
-          gap: 2rem !important;
-        }
-        .vp-step-arrow {
-          transform: rotate(90deg) !important;
-        }
-        .temoignages-grid {
-          grid-template-columns: 1fr 1fr !important;
-        }
-        .temoignage-featured {
-          transform: none !important;
-        }
-
-        /* Stats tablette */
-        .stat-number,
-        .stat-sup,
-        .stat-label {
-          color: #ffffff !important;
-        }
-      }
-
       @media (max-width: 768px) {
-        /* Header */
-        .vp-header {
-          min-height: auto !important;
-          padding-top: 80px !important;
-          padding-bottom: 3rem !important;
-        }
-        .vp-header-grid {
-          grid-template-columns: 1fr !important;
-          padding: 2rem 0 !important;
-          gap: 2rem !important;
-        }
-        .vp-header-right {
-          display: none !important;
-        }
-        .vp-title {
-          font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
-        }
-        .vp-header-actions {
-          flex-direction: column !important;
-        }
-        .vp-header-actions .btn {
-          width: 100% !important;
-          justify-content: center !important;
+        .page-impact .cta-inner {
+          flex-direction: column;
+          text-align: center;
         }
 
-        /* Ribbon */
-        .vp-ribbon {
-          overflow-x: auto !important;
-        }
-        .vp-ribbon-inner {
-          justify-content: flex-start !important;
-          padding: 0 1rem !important;
+        .page-impact .cta-actions {
+          flex-direction: column;
+          width: 100%;
         }
 
-        /* Grilles */
-        .vp-science-grid {
-          grid-template-columns: 1fr !important;
-        }
-        .varietes-grid {
-          grid-template-columns: 1fr !important;
-        }
-        .variete-header {
-          height: 180px !important;
-        }
-        .qualite-grid {
-          grid-template-columns: 1fr !important;
-        }
-        .qualite-featured {
-          grid-column: span 1 !important;
-        }
-        .temoignages-grid {
-          grid-template-columns: 1fr !important;
-        }
-
-        /* Processus */
-        .vp-process-steps {
-          flex-direction: column !important;
-          gap: 1.5rem !important;
-          overflow-x: visible !important;
-          padding: 0 !important;
-        }
-        .vp-step {
-          min-width: unset !important;
-          width: 100% !important;
-          flex-direction: row !important;
-          align-items: flex-start !important;
-          text-align: left !important;
-          gap: 1rem !important;
-        }
-        .vp-step-visual {
-          width: 70px !important;
-          height: 70px !important;
-          flex-shrink: 0 !important;
-          margin-bottom: 0 !important;
-        }
-        .vp-step-arrow {
-          display: none !important;
-        }
-
-        /* Stats mobile */
-        .stats-grid {
-          flex-direction: column !important;
-          align-items: center !important;
-        }
-        .stat-sep {
-          width: 40px !important;
-          height: 1px !important;
-        }
-        .stat-number,
-        .stat-sup,
-        .stat-label {
-          color: #ffffff !important;
-        }
-        .section-stats .stat-item:hover .stat-number,
-        .section-stats .stat-item:hover .stat-sup,
-        .section-stats .stat-item:hover .stat-label {
-          color: var(--official-green) !important;
-        }
-
-        /* CTA */
-        .cta-inner {
-          flex-direction: column !important;
-        }
-        .cta-actions {
-          flex-direction: column !important;
-          width: 100% !important;
-        }
-        .cta-actions .btn {
-          width: 100% !important;
-          justify-content: center !important;
-        }
-
-        /* Footer */
-        .footer-grid {
-          grid-template-columns: 1fr !important;
-          gap: 2rem !important;
-        }
-        .footer-bottom {
-          flex-direction: column !important;
-          gap: 0.75rem !important;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .section-title {
-          font-size: 1.7rem !important;
-        }
-        .vp-title {
-          font-size: 1.8rem !important;
-        }
-        .variete-header {
-          height: 160px !important;
-        }
-        .stat-number,
-        .stat-sup,
-        .stat-label {
-          color: #ffffff !important;
+        .page-impact .cta-actions .btn {
+          width: 100%;
+          justify-content: center;
         }
       }
     </style>
   </head>
-  <body>
-    <!-- ===== NAVBAR ===== -->
+  <body class="page-impact">
     <div id="navbar-container"></div>
     <script src="components/navbar.js" defer></script>
-    <!-- PAGE HEADER -->
+
     <header class="page-header-impact">
       <div class="ph-fond">
         <div class="ph-forme-1"></div>
@@ -281,188 +405,153 @@
         <div class="ph-grille">
           <div>
             <h1 class="ph-titre">
-              Créer de la valeur<br />
-              <p
+              Impact &amp;<br />
+              <span
+                class="ph-titre-line-accent"
                 style="
-                  color: var(--official-green);
-                  text-shadow: 0 2px 4px rgba(99, 171, 69, 0.45);
+                  color: #7ee787;
+                  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
                 "
-              >
-                pour chaque
-              </p>
-              acteur
+                >partenariats</span>
             </h1>
+            <p class="ph-intro ph-intro-impact">
+              Emplois locaux, filières horticoles renforcées et production plus
+              sobre en ressources : découvrez comment FRESH&apos;O conjugue
+              performance économique et exigence environnementale, avec le
+              soutien d&apos;institutions de référence.
+            </p>
           </div>
           <div class="ph-stats">
             <div class="ph-stat">
-              <div class="ph-stat-num">+35<span>%</span></div>
-              <div class="ph-stat-label">Revenus producteurs</div>
+              <div class="ph-stat-num">80–120</div>
+              <div class="ph-stat-label">Emplois directs</div>
             </div>
             <div class="ph-stat">
-              <div class="ph-stat-num">5 000<span> t</span></div>
-              <div class="ph-stat-label">CO₂ évitées / an</div>
+              <div class="ph-stat-num">300</div>
+              <div class="ph-stat-label">Emplois indirects</div>
             </div>
             <div class="ph-stat">
-              <div class="ph-stat-num">500<span>+</span></div>
-              <div class="ph-stat-label">Producteurs formés</div>
+              <div class="ph-stat-num">500<span>K</span></div>
+              <div class="ph-stat-label">Vitroplants / an (cible)</div>
             </div>
             <div class="ph-stat">
-              <div class="ph-stat-num">250<span>+</span></div>
-              <div class="ph-stat-label">Emplois créés</div>
+              <div class="ph-stat-num">&gt;90<span>%</span></div>
+              <div class="ph-stat-label">Survie plants</div>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- ===== PARTENAIRES ===== -->
-    <section class="section section-partenaires" id="partenaires">
+    <section class="section section-ip" id="impact">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Partenaires Stratégiques</span>
+          <span class="section-tag official-green">Notre impact</span>
           <h2 class="section-title">
-            Notre écosystème<br />
-            <p style="color: var(--official-green)">de partenaires</p>
+            <span class="official-green">Économique</span>
+            &amp; environnemental
           </h2>
           <p class="section-desc">
-            Un réseau d'acteurs complémentaires qui amplifient notre impact à
-            chaque niveau de la filière.
+            Un modèle de vitroproduction qui crée de la valeur sur le territoire
+            et réduit l&apos;empreinte des filières, sans compromis sur la
+            qualité des plants.
           </p>
         </div>
-        <div class="partenaires-grid">
-          <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-research">
-              <i
-                class="fa-solid fa-flask"
-                style="color: var(--official-green); font-size: 32px"
-              ></i>
+        <div class="ip-grid">
+          <article class="ip-card ip-card--eco">
+            <div class="ip-card-icon" aria-hidden="true">
+              <i class="fa-solid fa-chart-line"></i>
             </div>
-            <div class="partenaire-body">
-              <div class="partenaire-type">Recherche & Innovation</div>
-              <h3>Institutions de Recherche</h3>
-              <p>
-                Collaboration avec l'ISRA et l'Université Cheikh Anta Diop pour
-                le développement variétal et l'amélioration des protocoles de
-                production.
-              </p>
-              <div class="partenaire-logos">
-                <span class="plogo">ISRA</span>
-                <span class="plogo">UCAD</span>
-              </div>
+            <h3>Impact économique</h3>
+            <ul class="ip-list">
+              <li>Rendements améliorés et approvisionnements sécurisés</li>
+              <li>80 à 120 emplois directs, 300 emplois indirects</li>
+              <li>Développement de nouvelles filières à valeur ajoutée</li>
+            </ul>
+          </article>
+          <article class="ip-card ip-card--env">
+            <div class="ip-card-icon" aria-hidden="true">
+              <i class="fa-solid fa-seedling"></i>
             </div>
-          </div>
-
-          <div class="partenaire-card partenaire-featured">
-            <div class="partenaire-icon-wrap pc-intl">
-              <i
-                class="fa-solid fa-globe-africa"
-                style="color: #00c3ff; font-size: 32px"
-              ></i>
-            </div>
-            <div class="partenaire-body">
-              <div class="partenaire-type">International</div>
-              <h3>Organisations Internationales</h3>
-              <p>
-                Partenariats avec la FAO et la Banque Mondiale pour le
-                financement, le développement durable et le rayonnement du
-                modèle en Afrique de l'Ouest.
-              </p>
-              <div class="partenaire-logos">
-                <span class="plogo">FAO</span>
-                <span class="plogo">BM</span>
-                <span class="plogo">UEMOA</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-coop">
-              <i
-                class="fa-solid fa-people-group"
-                style="color: #a3990c; font-size: 32px"
-              ></i>
-            </div>
-            <div class="partenaire-body">
-              <div class="partenaire-type">Terrain</div>
-              <h3>Coopératives Agricoles</h3>
-              <p>
-                Réseau de 25 coopératives partenaires assurant la distribution
-                des plants, l'accompagnement technique et le retour d'expérience
-                terrain.
-              </p>
-              <div class="partenaire-logos">
-                <span class="plogo">25 coop.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-priv">
-              <i
-                class="fa-solid fa-industry"
-                style="color: #cf9a06; font-size: 32px"
-              ></i>
-            </div>
-            <div class="partenaire-body">
-              <div class="partenaire-type">Secteur Privé</div>
-              <h3>Exportateurs & Transformateurs</h3>
-              <p>
-                Collaborations avec des opérateurs privés pour la valorisation
-                commerciale, l'accès aux marchés export et le développement de
-                nouveaux débouchés.
-              </p>
-              <div class="partenaire-logos">
-                <span class="plogo">Export EU</span>
-                <span class="plogo">Transformation</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="partenaire-card">
-            <div class="partenaire-icon-wrap pc-gov">
-              <i
-                class="fa-solid fa-landmark"
-                style="color: #e417c2; font-size: 32px"
-              ></i>
-            </div>
-            <div class="partenaire-body">
-              <div class="partenaire-type">Gouvernement</div>
-              <h3>Ministères & Collectivités</h3>
-              <p>
-                Appui institutionnel du Ministère de l'Agriculture et des
-                collectivités locales pour l'intégration dans les politiques
-                publiques agricoles.
-              </p>
-              <div class="partenaire-logos">
-                <span class="plogo">MAER</span>
-                <span class="plogo">ANCAR</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="partenaire-card partenaire-join">
-            <div class="partenaire-join-icon">
-              <i
-                class="fa-solid fa-plus-circle"
-                style="color: #fff; font-size: 32px"
-              ></i>
-            </div>
-            <h3>Rejoindre l'écosystème</h3>
-            <p>
-              Votre organisation partage notre vision ? Construisons ensemble
-              l'agriculture africaine de demain.
-            </p>
-            <a
-              href="contact-partenaires.html"
-              class="btn btn-white"
-              style="margin-top: 1rem"
-              >Nous contacter →</a
-            >
-          </div>
+            <h3>Impact environnemental</h3>
+            <ul class="ip-list">
+              <li>
+                Réduction des émissions et optimisation de l&apos;eau et de
+                l&apos;énergie
+              </li>
+              <li>Contribution aux objectifs zéro carbone</li>
+              <li>Promotion d&apos;une agriculture durable</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
-    <!-- ===== CTA ===== -->
+
+    <section class="section section-partenaires partenaires-showcase" id="partenaires">
+      <div class="partenaires-showcase-band">
+        <div class="container">
+          <div class="partenaires-strip-head">
+            <span class="section-tag official-green">Partenaires</span>
+            <p class="partenaires-showcase-kicker">
+              <strong style="color: var(--ip-ink); font-weight: 700"
+                >Institutions publiques et recherche</strong
+              >
+              — ISRA, ITA et la Direction de l&apos;Horticulture nous
+              accompagnent sur la R&amp;D, le transfert et les politiques de
+              filière.
+            </p>
+          </div>
+          <ul class="partenaires-showcase-row">
+            <li>
+              <div class="partenaires-showcase-item">
+                <img src="images/ISRA.png" alt="ISRA" width="72" height="72" decoding="async" />
+                <span>ISRA</span>
+              </div>
+            </li>
+            <li>
+              <div class="partenaires-showcase-item">
+                <img src="images/ITA.png" alt="ITA" width="72" height="72" decoding="async" />
+                <span>ITA</span>
+              </div>
+            </li>
+            <li>
+              <div
+                class="partenaires-showcase-item partenaires-showcase-item--long"
+              >
+                <img
+                  src="images/Directiondel%E2%80%99Horticulture.jpg"
+                  alt="Direction de l'Horticulture"
+                  width="72"
+                  height="72"
+                  decoding="async"
+                />
+                <span>Direction de l'Horticulture</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container partenaires-showcase-bottom">
+        <div class="partenaire-card partenaire-join">
+          <div class="partenaire-join-icon">
+            <i class="fa-solid fa-handshake" style="color: #fff; font-size: 32px"></i>
+          </div>
+          <h3>Rejoindre l&apos;écosystème</h3>
+          <p>
+            Votre organisation partage notre vision ? Coopératives, financeurs,
+            universités : construisons ensemble l&apos;agriculture africaine de
+            demain.
+          </p>
+          <a
+            href="contact-partenaires.html"
+            class="btn btn-white"
+            style="margin-top: 1rem"
+            >Nous contacter →</a
+          >
+        </div>
+      </div>
+    </section>
+
     <section class="section-cta">
       <div class="container cta-inner">
         <div class="cta-text">
@@ -481,8 +570,7 @@
       </div>
     </section>
 
-    <!--FOOTER -->
     <div id="footer-container"></div>
-    <script src="components/footer.js"></script>
+    <script src="components/footer.js" defer></script>
   </body>
 </html>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vitroplants de Banane — FRESH'O VITROPLANTS</title>
+    <title>Vitroplants — FRESH'O, ferme zéro carbone</title>
     <meta
       name="description"
-      content="Vitroplants de banane certifiés : homogénéité génétique, qualité sanitaire, +30% de rendement. 6 variétés adaptées au Sénégal."
+      content="Qu'est-ce qu'un vitroplant ? Qualité sanitaire, homogénéité et filières nouvelles au Sénégal : fraise, petits fruits, ananas, aromatiques et horticulture premium."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,6 +76,66 @@
           padding: 0 4vw;
         }
       }
+
+      .section-conseils {
+        padding: 4.5rem 0;
+        background: #ffffff;
+      }
+
+      .section-conseils .section-header {
+        margin-bottom: 2.75rem;
+        text-align: center;
+      }
+
+      .conseils-grille {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+
+      .conseils-carte {
+        background: #fff;
+        border-radius: 18px;
+        padding: 1.75rem 1.85rem;
+        border: 1px solid rgba(40, 168, 59, 0.18);
+        box-shadow: 0 10px 40px rgba(27, 94, 32, 0.07);
+      }
+
+      .conseils-carte h3 {
+        color: var(--official-green);
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin: 0 0 1rem;
+      }
+
+      .conseils-carte ul {
+        margin: 0;
+        padding-left: 1.2rem;
+        line-height: 1.55;
+      }
+
+      .conseils-carte li {
+        margin-bottom: 0.45rem;
+      }
+
+      .conseils-carte .conseils-suite {
+        margin: 1rem 0 0;
+        font-size: 0.98rem;
+        color: rgba(0, 0, 0, 0.78);
+        line-height: 1.55;
+      }
+
+      @media (max-width: 768px) {
+        .conseils-grille {
+          grid-template-columns: 1fr;
+        }
+
+        .section-conseils {
+          padding: 3rem 0;
+        }
+      }
     </style>
       <link rel="stylesheet" href="components/navbar.css" />
   </head>
@@ -94,30 +154,25 @@
         <div class="ph-grille">
           <div>
             <h1 class="ph-titre">
-              Qualité supérieure<p style="color: #ecba16; text-shadow: 0 0 5px #fffb03ce"> pour vos récoltes</p>
+              Qu'est-ce qu'un<br />
+              <p style="color: #ecba16; text-shadow: 0 0 5px #fffb03ce">vitroplant ?</p>
             </h1>
-            <!-- <p class="ph-intro">
-              Des vitroplants de banane sains, homogènes et performants — issus
-              de notre laboratoire in vitro certifié, adaptés aux conditions du
-              Sénégal.
-            </p> -->
+            <p class="ph-intro">
+              Les vitroplants sont des plants produits en laboratoire à partir de tissus végétaux sélectionnés.
+            </p>
           </div>
           <div class="ph-stats">
             <div class="ph-stat">
-              <div class="ph-stat-num">99<span>%</span></div>
-              <div class="ph-stat-label">Conformité</div>
+              <div class="ph-stat-num">&gt;90<span>%</span></div>
+              <div class="ph-stat-label">Taux de survie cible</div>
             </div>
             <div class="ph-stat">
-              <div class="ph-stat-num">95<span>%</span></div>
-              <div class="ph-stat-label">Taux de reprise</div>
+              <div class="ph-stat-num">500<span>K</span></div>
+              <div class="ph-stat-label">Capacité annuelle</div>
             </div>
             <div class="ph-stat">
-              <div class="ph-stat-num">+30<span>%</span></div>
-              <div class="ph-stat-label">Rendement</div>
-            </div>
-            <div class="ph-stat">
-              <div class="ph-stat-num">6</div>
-              <div class="ph-stat-label">Variétés certifiées</div>
+              <div class="ph-stat-num">7<span>+</span></div>
+              <div class="ph-stat-label">Filières ciblées</div>
             </div>
           </div>
         </div>
@@ -184,83 +239,147 @@
         </div>
       </div>
     </section> -->
-                    <!-- SECTION 6 variétés adaptées au marché africain -->
-    <section class="section section-varietes" id="varietes">
+
+    <section class="section section-varietes" id="filieres">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag official-green">Nos variétés</span>
+          <span class="section-tag official-green">Filières nouvelles</span>
           <h2 class="section-title">
-            Nous produisons plusieurs <span class="official-green">variétés</span> adaptées aux besoins
+            Filières stratégiques pour le <span class="official-green">Sénégal</span>
           </h2>
+          <p class="section-desc">
+            FRESH'O contribue à l'émergence de cultures à fort potentiel : emplois ruraux, dynamisation des territoires et renforcement de la souveraineté alimentaire.
+          </p>
         </div>
         <div class="varietes-grid">
-          <div class="variete-card">    
+          <div class="variete-card">
             <div class="variete-header vh-blue">
               <picture>                
                 <img
-                  src="images/4 (1).png"
+                  src="images/Fraise.avif"
                   class="variete-image"
+                  alt="Fraise — filière vitroplants"
                 />
               </picture>
-              <div class="variete-type-badge badge-white">Dessert Export</div>
             </div>
-            <div class="bodyvariete-">
-              <h3>Dessert</h3>
-              <p>
-                Variété dessert exceptionnelle reconnue pour sa saveur sucrée et sa texture fondante. Idéale pour l'exportation grâce à sa longue durée de conservation et son rendement élevé par hectare.
-              </p>
-              <div class="variete-tags">
-                <span> Goût supérieur</span>
-                <span> Productivité</span>
-              </div>
+            <div class="variete-body">
+              <h3 style="color: #28A83B;">Fraise</h3>
+              <p>Développement de la filière et accès à des plants homogènes pour des calendriers de production maîtrisés.</p>
             </div>
           </div>
-
           <div class="variete-card">
             <div class="variete-header vh-yellow">
               <picture>
                 <img
-                  src="images/img15.avif"
-                  alt="Variété Pisang Awak"
+                  src="images/framboise.avif"
+                  alt="Framboise et petits fruits rouges"
                   class="variete-image"
                 />
               </picture>
-              <div class="variete-type-badge badge-dark">Plantain</div>
             </div>
             <div class="variete-body">
-              <h3>Plantain</h3>
-              <p>
-                Variété plantain très appréciée sur les marchés locaux africains. Résistante aux maladies et adaptée aux conditions climatiques difficiles, elle assure une production stable tout au long de l'année.
-              </p>
-              <div class="variete-tags">
-                <span> Marché local</span>
-                <span> Résistance</span>
-              </div>
+              <h3 style="color: #28A83B;">Framboise &amp; petits fruits</h3>
+              <p>Diversification des revenus et des débouchés locaux et export.</p>
             </div>
           </div>
-
           <div class="variete-card">
             <div class="variete-header vh-green">
               <picture>
                 <img
-                  src="images/img16.avif"
-                  alt="Variété Fougamou"
+                  src="images/brocoli.avif"
+                  alt="Brocoli et crucifères"
                   class="variete-image"
                 />
               </picture>
-              <div class="variete-type-badge">Variété export</div>
             </div>
             <div class="variete-body">
-              <h3>Variétés export</h3>
-              <p>
-                Sélectionnée pour répondre aux exigences des marchés internationaux. Calibre uniforme, cycle de production rapide et excellente résistance aux maladies pour une exportation de qualité supérieure.
-              </p>
-              <div class="variete-tags">
-                <span> Calibre optimal</span>
-                <span> Cycle rapide</span>
-              </div>
+              <h3 style="color: #28A83B;">Brocoli &amp; crucifères</h3>
+              <p>Filière légumière à forte demande sur les marchés urbains et pour la transformation.</p>
             </div>
           </div>
+          <div class="variete-card">
+            <div class="variete-header vh-blue">
+              <picture>
+                <img
+                  src="images/ananas.avif"
+                  alt="Ananas — filière vitroplants"
+                  class="variete-image"
+                />
+              </picture>
+            </div>
+            <div class="variete-body">
+              <h3 style="color: #28A83B;">Ananas</h3>
+              <p>Renforcement de la filière avec du matériel sain et performant.</p>
+            </div>
+          </div>
+          <div class="variete-card">
+            <div class="variete-header vh-yellow">
+              <picture>
+                <img
+                  src="images/Ail%20%26%20aromatiques.webp"
+                  alt="Ail et plantes aromatiques"
+                  class="variete-image"
+                />
+              </picture>
+            </div>
+            <div class="variete-body">
+              <h3 style="color: #28A83B;">Ail &amp; aromatiques</h3>
+              <p>Cultures à valeur ajoutée pour l'agroalimentaire et les circuits courts.</p>
+            </div>
+          </div>
+          <div class="variete-card">
+            <div class="variete-header vh-green">
+              <picture>
+                <img
+                  src="images/Horticulture%20premium.avif"
+                  alt="Horticulture premium en serre"
+                  class="variete-image"
+                />
+              </picture>
+            </div>
+            <div class="variete-body">
+              <h3 style="color: #28A83B;">Horticulture premium</h3>
+              <p>Production orientée transformation et export, avec exigence de qualité constante.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-conseils" id="conseils">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Conseils &amp; expertise</span>
+          <h2 class="section-title">
+            Réussir vos <span class="official-green">plantations</span>
+          </h2>
+        </div>
+        <div class="conseils-grille">
+          <div class="conseils-carte">
+            <h3>Nos conseils</h3>
+            <ul>
+              <li>Sol léger et bien drainé</li>
+              <li>Plantation tôt le matin ou en fin d'après-midi</li>
+              <li>Irrigation maîtrisée</li>
+              <li>Fertilisation progressive</li>
+              <li>Surveillance précoce des ravageurs</li>
+              <li>Paillage organique pour préserver l'humidité</li>
+            </ul>
+          </div>
+          <div class="conseils-carte">
+            <h3>Notre expérience au service des producteurs</h3>
+            <ul>
+              <li>Formations pratiques et visites de terrain</li>
+              <li>Conseils personnalisés</li>
+              <li>
+                Innovations issues de nos partenariats scientifiques (ISRA, ITA,
+                Direction de l'Horticulture)
+              </li>
+            </ul>
+            <p class="conseils-suite">
+              Nous accompagnons chaque producteur vers une agriculture moderne,
+              performante et durable.
+            </p>
           </div>
         </div>
       </div>
@@ -270,12 +389,12 @@
     <section class="section section-clients">
       <div class="container">
         <div class="clients-header">
-          <span class="section-tagsection-tag">Nos Clients</span>
+          <span class="section-tag">Pour qui ?</span>
           <h2 class="section-title">
-            À qui s'adressent<br /><span class="official-green">nos vitroplants</span> ?
+            Producteurs, coopératives<br /><span class="official-green">&amp; partenaires institutionnels</span>
           </h2>
           <p class="section-desc">
-            Des solutions adaptées à chaque acteur de la filière bananière — du producteur individuel au partenaire institutionnel international.
+            Producteurs, coopératives, industriels et institutions : nos vitroplants et notre accompagnement s'adaptent à votre filière et à vos volumes.
           </p>
         </div>
         <div class="clients-content">
@@ -411,6 +530,7 @@
         </div>
       </div>
     </section>
+
     <!-- ===== CTA ===== -->
     <section class="section-cta">
       <div class="container cta-inner">

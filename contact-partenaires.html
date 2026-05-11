@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact et Devenir Partenaire - FRESH'O VITROPLANTS</title>
+    <title>Contact &amp; devenir partenaire — FRESH'O</title>
     <meta
       name="description"
-      content="Contactez FRESH'O VITROPLANTS pour commander des vitroplants, devenir partenaire ou demander notre dossier complet."
+      content="Contactez FRESH'O : producteurs, coopératives, institutions et investisseurs. Formulaire de demande et visite de la ferme."
     />
     <link rel="stylesheet" href="styles1.css" />
     <link rel="stylesheet" href="components/navbar.css" />
@@ -74,32 +74,24 @@
                 novalidate
               >
                 <div class="form-type-selector">
-                  <p class="form-type-label">Je suis...</p>
+                  <p class="form-type-label">Vous êtes</p>
                   <div
                     class="form-type-btns"
                     role="radiogroup"
-                    aria-label="Type de profil"
+                    aria-label="Profil"
                   >
                     <label class="form-type-btn">
                       <input
                         type="radio"
                         name="profil"
-                        value="Producteur"
+                        value="Producteur ou coopérative"
                         checked
                       />
-                      <span>Producteur</span>
+                      <span>Producteur / coopérative</span>
                     </label>
                     <label class="form-type-btn">
-                      <input type="radio" name="profil" value="Institution" />
-                      <span>Institution</span>
-                    </label>
-                    <label class="form-type-btn">
-                      <input type="radio" name="profil" value="Investisseur" />
-                      <span>Investisseur</span>
-                    </label>
-                    <label class="form-type-btn">
-                      <input type="radio" name="profil" value="Autre" />
-                      <span>Autre</span>
+                      <input type="radio" name="profil" value="Institution ou investisseur" />
+                      <span>Institution / investisseur</span>
                     </label>
                   </div>
                 </div>
@@ -155,7 +147,38 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="volume" class="form-label">Volume estime</label>
+                  <label for="telephone" class="form-label"
+                    >Téléphone <span class="form-required">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    class="form-control"
+                    placeholder="+221 77 000 00 00"
+                    autocomplete="tel"
+                    required
+                  />
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="type_demande" class="form-label"
+                    >Type de demande <span class="form-required">*</span></label
+                  >
+                  <select id="type_demande" name="type_demande" class="form-select" required>
+                    <option value="">Sélectionnez</option>
+                    <option value="Commande de plants">Commande de plants</option>
+                    <option value="Partenariat / projet">Partenariat / projet</option>
+                    <option value="Visite de la ferme">Visite de la ferme</option>
+                    <option value="Information générale">Information générale</option>
+                    <option value="Autre">Autre</option>
+                  </select>
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="volume" class="form-label">Volume estimé (facultatif)</label>
                   <select id="volume" name="volume" class="form-select">
                     <option value="">Selectionnez un volume</option>
                     <option value="Moins de 1 000 plants">
@@ -218,8 +241,7 @@
                       required
                     />
                     <span
-                      >J'accepte de recevoir des communications de FRESH'O
-                      VITROPLANTS. Pas de spam, desabonnement en 1 clic.</span
+                      >J'accepte la politique de confidentialité et les communications de FRESH'O liées à ma demande.</span
                     >
                   </label>
                   <span class="form-error" aria-live="polite"></span>
@@ -261,9 +283,10 @@
                 Visitez notre ferme,<br /><em>inspirez-vous</em>
               </h2>
               <p class="desc-section">
-                Notre site de production est ouvert aux visites guidees pour
-                producteurs, institutions et partenaires potentiels. Decouvrez
-                l'innovation made in Senegal.
+                Découvrez FRESH'O — une ferme de vitroplants zéro carbone au
+                Sénégal. Votre visite peut inclure le laboratoire in vitro, les
+                serres d'acclimatation, les infrastructures bas carbone, la
+                parcelle de démonstration et les filières horticoles émergentes.
               </p>
               <div class="visites-cta-actions">
                 <a href="#formulaire" class="btn btn-primary"

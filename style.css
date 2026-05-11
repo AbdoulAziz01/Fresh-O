@@ -913,19 +913,28 @@ ul {
    ================================================ */
 .section-atouts {
   background: #effff1f9;
+  padding: 4rem 0;
 }
 
 .atouts-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: 6rem;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2.25rem;
+}
+.atouts-gauche {
+  flex: 0 1 auto;
+  width: min(100%, 380px);
+  max-width: 420px;
+  min-width: 240px;
 }
 .atouts-gauche .desc-section {
   margin-bottom: 2rem;
 }
 
 .liste-atouts {
+  flex: 1 1 320px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -2038,8 +2047,17 @@ ul {
 
   /* Atouts */
   .atouts-layout {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+  .atouts-gauche {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+  .liste-atouts {
+    flex: none;
+    width: 100%;
   }
 
   /* Cibles */
@@ -2181,8 +2199,16 @@ ul {
 
   /* ---- Atouts ---- */
   .atouts-layout {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .atouts-gauche {
+    width: 100%;
+    max-width: none;
+  }
+  .liste-atouts {
+    flex: none;
+    width: 100%;
   }
   .item-atout {
     padding: 1.25rem;
