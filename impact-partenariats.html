@@ -98,88 +98,349 @@
         }
       }
 
-      /* Section impact — cartes “pilliers” */
+      /* Section impact — filières (bimedia) */
       .section-ip {
         position: relative;
-        background: linear-gradient(180deg, #f4f7f5 0%, #ffffff 28%);
+        background:
+          radial-gradient(ellipse 80% 60% at 10% 0%, rgba(40, 168, 59, 0.09), transparent 55%),
+          radial-gradient(ellipse 70% 50% at 92% 30%, rgba(22, 101, 52, 0.07), transparent 50%),
+          linear-gradient(180deg, #eef4ef 0%, #fbfcfb 22%, #ffffff 100%);
         padding-top: 4.75rem;
         padding-bottom: 4.75rem;
+        overflow: hidden;
       }
 
       .section-ip .section-header {
         margin-bottom: 2.5rem;
+        max-width: 46rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .section-ip .section-title {
+        letter-spacing: -0.035em;
+      }
+
+      .section-ip .section-desc {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-ip .section-desc strong {
+        color: var(--ip-ink);
+        font-weight: 700;
+      }
+
+      /* Bloc filières : 3 cartes + environnement */
+      .ip-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .ip-trio {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        align-items: stretch;
+      }
+
+      .ip-filiere-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid rgba(15, 23, 42, 0.07);
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.9) inset,
+          0 18px 48px rgba(6, 27, 10, 0.09);
+        transition:
+          transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.32s ease;
+      }
+
+      .ip-filiere-card:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.9) inset,
+          0 26px 64px rgba(40, 168, 59, 0.12);
+      }
+
+      .ip-filiere-card-top {
+        position: relative;
+        height: 132px;
+        flex-shrink: 0;
+      }
+
+      .ip-filiere-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .ip-filiere-card-top::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 30%,
+          rgba(6, 27, 10, 0.72) 100%
+        );
+        pointer-events: none;
+      }
+
+      .ip-filiere-card-icon {
+        position: absolute;
+        left: 1rem;
+        bottom: 0.85rem;
+        z-index: 1;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.65rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.05rem;
+        color: #fff;
+        background: rgba(40, 168, 59, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .ip-filiere-card:nth-child(2) .ip-filiere-card-icon {
+        background: rgba(22, 101, 52, 0.92);
+      }
+
+      .ip-filiere-card:nth-child(3) .ip-filiere-card-icon {
+        background: rgba(180, 130, 20, 0.95);
+      }
+
+      .ip-filiere-card-body {
+        padding: 1.35rem 1.35rem 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ip-filiere-card-body h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.12rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: var(--ip-ink);
+        line-height: 1.2;
+      }
+
+      .ip-filiere-card-body > p {
+        margin: 0 0 0.85rem;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        color: var(--ip-muted);
+        flex: 1;
+      }
+
+      .ip-filiere-mini {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ip-filiere-mini li {
+        position: relative;
+        padding-left: 1.05rem;
+        margin-bottom: 0.45rem;
+        font-size: 0.82rem;
+        line-height: 1.45;
+        color: var(--ip-muted);
+      }
+
+      .ip-filiere-mini li:last-child {
+        margin-bottom: 0;
+      }
+
+      .ip-filiere-mini li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--official-green);
       }
 
       .ip-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.75rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
 
-      .ip-card {
-        position: relative;
-        background: #fff;
-        border-radius: 1.25rem;
-        padding: 2rem 2rem 2.2rem;
-        border: 1px solid rgba(15, 23, 42, 0.07);
+      .ip-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.1fr);
+        border-radius: 1.35rem;
+        overflow: hidden;
+        min-height: 300px;
+        background: #0d1f14;
         box-shadow:
-          0 1px 2px rgba(6, 27, 10, 0.04),
-          0 18px 44px rgba(6, 27, 10, 0.07);
+          0 4px 6px rgba(6, 27, 10, 0.04),
+          0 28px 70px rgba(6, 27, 10, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.07);
         transition:
-          transform 0.28s ease,
-          box-shadow 0.28s ease;
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
       }
 
-      .ip-card::before {
+      .ip-panel:hover {
+        transform: translateY(-6px);
+        box-shadow:
+          0 8px 12px rgba(6, 27, 10, 0.06),
+          0 40px 88px rgba(40, 168, 59, 0.14);
+      }
+
+      .ip-panel-visual {
+        position: relative;
+        min-height: 260px;
+      }
+
+      .ip-panel-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: scale(1.02);
+        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .ip-panel:hover .ip-panel-visual img {
+        transform: scale(1.07);
+      }
+
+      .ip-panel-visual::after {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        border-radius: 1.25rem 1.25rem 0 0;
+        inset: 0;
         background: linear-gradient(
-          90deg,
-          var(--official-green),
-          #5ecf6e
+          105deg,
+          rgba(6, 27, 10, 0.1) 0%,
+          rgba(6, 27, 10, 0.55) 75%,
+          rgba(6, 27, 10, 0.72) 100%
+        );
+        pointer-events: none;
+      }
+
+      .ip-panel--env .ip-panel-visual::after {
+        background: linear-gradient(
+          105deg,
+          rgba(6, 40, 28, 0.15) 0%,
+          rgba(6, 35, 25, 0.55) 70%,
+          rgba(10, 45, 32, 0.78) 100%
         );
       }
 
-      .ip-card--env::before {
-        background: linear-gradient(90deg, #166534, var(--official-green));
-      }
-
-      .ip-card:hover {
-        transform: translateY(-5px);
-        box-shadow:
-          0 2px 4px rgba(6, 27, 10, 0.05),
-          0 26px 56px rgba(6, 27, 10, 0.11);
-      }
-
-      .ip-card-icon {
-        width: 3.1rem;
-        height: 3.1rem;
-        border-radius: 0.9rem;
-        display: flex;
+      .ip-panel-badge {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        z-index: 2;
+        display: inline-flex;
         align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.85rem 0.45rem;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .ip-panel-badge i {
+        font-size: 0.75rem;
+        opacity: 0.95;
+      }
+
+      .ip-panel-body {
+        padding: 1.85rem 1.9rem 2rem;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        font-size: 1.3rem;
-        margin-bottom: 1.2rem;
-        background: rgba(40, 168, 59, 0.12);
+        background: linear-gradient(
+          155deg,
+          #fafdfb 0%,
+          #ffffff 45%,
+          #f2f8f3 100%
+        );
+      }
+
+      .ip-panel--env .ip-panel-body {
+        background: linear-gradient(
+          155deg,
+          #f3faf7 0%,
+          #ffffff 42%,
+          #eaf6ef 100%
+        );
+      }
+
+      .ip-panel-eyebrow {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
         color: var(--official-green);
+        margin-bottom: 0.5rem;
       }
 
-      .ip-card--env .ip-card-icon {
-        background: rgba(22, 101, 52, 0.12);
-        color: #166534;
-      }
-
-      .ip-card h3 {
-        margin: 0 0 1.15rem;
-        font-size: 1.35rem;
+      .ip-panel h3 {
+        margin: 0 0 0.65rem;
+        font-size: 1.42rem;
         font-weight: 800;
-        letter-spacing: -0.03em;
+        letter-spacing: -0.035em;
+        line-height: 1.15;
         color: var(--ip-ink);
+      }
+
+      .ip-panel-lead {
+        margin: 0 0 1.1rem;
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: var(--ip-muted);
+      }
+
+      .ip-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+      }
+
+      .ip-chip {
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 0.28rem 0.6rem;
+        border-radius: 999px;
+        background: rgba(40, 168, 59, 0.11);
+        color: #166534;
+        border: 1px solid rgba(40, 168, 59, 0.22);
+        letter-spacing: 0.02em;
+      }
+
+      .ip-panel--env .ip-chip {
+        background: rgba(22, 101, 52, 0.1);
+        color: #14532d;
+        border-color: rgba(22, 101, 52, 0.22);
       }
 
       .ip-list {
@@ -190,11 +451,18 @@
 
       .ip-list li {
         position: relative;
-        padding-left: 1.65rem;
-        margin-bottom: 0.9rem;
-        font-size: 0.98rem;
-        line-height: 1.58;
+        padding-left: 1.45rem;
+        margin-bottom: 0.72rem;
+        font-size: 0.92rem;
+        line-height: 1.52;
         color: var(--ip-muted);
+        border-left: 2px solid rgba(40, 168, 59, 0.35);
+        padding-left: 0.85rem;
+        margin-left: 0.15rem;
+      }
+
+      .ip-panel--env .ip-list li {
+        border-left-color: rgba(22, 101, 52, 0.35);
       }
 
       .ip-list li:last-child {
@@ -202,14 +470,25 @@
       }
 
       .ip-list li::before {
-        content: "\f00c";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        position: absolute;
-        left: 0;
-        top: 0.2em;
-        font-size: 0.78rem;
-        color: var(--official-green);
+        display: none;
+      }
+
+      @media (max-width: 900px) {
+        .ip-panel {
+          grid-template-columns: 1fr;
+          min-height: unset;
+        }
+
+        .ip-panel-visual {
+          min-height: 200px;
+          max-height: 220px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .ip-trio {
+          grid-template-columns: 1fr;
+        }
       }
 
       @media (max-width: 768px) {
@@ -220,6 +499,14 @@
         .section-ip {
           padding-top: 3.25rem;
           padding-bottom: 3.25rem;
+        }
+
+        .ip-panel-body {
+          padding: 1.5rem 1.35rem 1.65rem;
+        }
+
+        .ip-panel h3 {
+          font-size: 1.28rem;
         }
       }
 
@@ -446,43 +733,137 @@
     <section class="section section-ip" id="impact">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag official-green">Notre impact</span>
+          <span class="section-tag official-green">Priorités nationales</span>
           <h2 class="section-title">
-            <span class="official-green">Économique</span>
-            &amp; environnemental
+            Filières stratégiques pour le
+            <span class="official-green">Sénégal</span>
           </h2>
           <p class="section-desc">
-            Un modèle de vitroproduction qui crée de la valeur sur le territoire
-            et réduit l&apos;empreinte des filières, sans compromis sur la
-            qualité des plants.
+            <strong>FRESH&apos;O</strong> contribue à l&apos;émergence de cultures
+            à fort potentiel : emplois ruraux, dynamisation des territoires et
+            renforcement de la souveraineté alimentaire.
           </p>
         </div>
-        <div class="ip-grid">
-          <article class="ip-card ip-card--eco">
-            <div class="ip-card-icon" aria-hidden="true">
-              <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <h3>Impact économique</h3>
-            <ul class="ip-list">
-              <li>Rendements améliorés et approvisionnements sécurisés</li>
-              <li>80 à 120 emplois directs, 300 emplois indirects</li>
-              <li>Développement de nouvelles filières à valeur ajoutée</li>
-            </ul>
-          </article>
-          <article class="ip-card ip-card--env">
-            <div class="ip-card-icon" aria-hidden="true">
-              <i class="fa-solid fa-seedling"></i>
-            </div>
-            <h3>Impact environnemental</h3>
-            <ul class="ip-list">
-              <li>
-                Réduction des émissions et optimisation de l&apos;eau et de
-                l&apos;énergie
-              </li>
-              <li>Contribution aux objectifs zéro carbone</li>
-              <li>Promotion d&apos;une agriculture durable</li>
-            </ul>
-          </article>
+        <div class="ip-stack">
+          <div class="ip-trio">
+            <article class="ip-filiere-card">
+              <div class="ip-filiere-card-top">
+                <img
+                  src="images/ananas.avif"
+                  alt=""
+                  width="400"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="ip-filiere-card-icon" aria-hidden="true">
+                  <i class="fa-solid fa-people-group"></i>
+                </span>
+              </div>
+              <div class="ip-filiere-card-body">
+                <h3>Emplois ruraux</h3>
+                <p>
+                  Création et maintien de métiers sur les bassins de production,
+                  au plus près des coopératives et des exploitations.
+                </p>
+                <ul class="ip-filiere-mini">
+                  <li>80 à 120 emplois directs, 300 emplois indirects visés</li>
+                  <li>Stabilité et compétences en zones horticoles et fruitières</li>
+                </ul>
+              </div>
+            </article>
+            <article class="ip-filiere-card">
+              <div class="ip-filiere-card-top">
+                <img
+                  src="images/Horticulture%20premium.avif"
+                  alt=""
+                  width="400"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="ip-filiere-card-icon" aria-hidden="true">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </span>
+              </div>
+              <div class="ip-filiere-card-body">
+                <h3>Dynamisation des territoires</h3>
+                <p>
+                  Structuration des filières et des débouchés pour faire vivre
+                  l&apos;économie locale autour des cultures à fort potentiel.
+                </p>
+                <ul class="ip-filiere-mini">
+                  <li>Développement de filières à valeur ajoutée</li>
+                  <li>Partenariats avec producteurs, coopératives et distributeurs</li>
+                </ul>
+              </div>
+            </article>
+            <article class="ip-filiere-card">
+              <div class="ip-filiere-card-top">
+                <img
+                  src="images/Fraise.avif"
+                  alt=""
+                  width="400"
+                  height="280"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="ip-filiere-card-icon" aria-hidden="true">
+                  <i class="fa-solid fa-bowl-food"></i>
+                </span>
+              </div>
+              <div class="ip-filiere-card-body">
+                <h3>Souveraineté alimentaire</h3>
+                <p>
+                  Plants sains et productifs pour sécuriser les volumes et la
+                  qualité au service du marché national.
+                </p>
+                <ul class="ip-filiere-mini">
+                  <li>Approvisionnements plus sécurisés et rendements améliorés</li>
+                  <li>Valorisation des productions adaptées au Sénégal</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="ip-grid">
+            <article class="ip-panel ip-panel--env">
+              <div class="ip-panel-visual">
+                <img
+                  src="images/Indicateursdeperformanceenvironnementale.avif"
+                  alt=""
+                  width="600"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="ip-panel-badge">
+                  <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                  Climat &amp; ressources
+                </span>
+              </div>
+              <div class="ip-panel-body">
+                <span class="ip-panel-eyebrow">Durabilité</span>
+                <h3>Impact environnemental</h3>
+                <p class="ip-panel-lead">
+                  La même ambition de performance, avec moins de pression sur
+                  l&apos;eau, l&apos;énergie et le climat.
+                </p>
+                <div class="ip-chips" aria-hidden="true">
+                  <span class="ip-chip">Eau</span>
+                  <span class="ip-chip">Énergie</span>
+                  <span class="ip-chip">GES</span>
+                </div>
+                <ul class="ip-list">
+                  <li>
+                    Réduction des émissions et optimisation de l&apos;eau et de
+                    l&apos;énergie
+                  </li>
+                  <li>Contribution aux objectifs zéro carbone</li>
+                  <li>Promotion d&apos;une agriculture durable</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>

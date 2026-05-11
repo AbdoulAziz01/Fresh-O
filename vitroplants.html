@@ -136,10 +136,202 @@
           padding: 3rem 0;
         }
       }
+
+      /* ===== Cartes page Vitroplants (scoped) ===== */
+      .page-vitroplants .section-varietes {
+        background: linear-gradient(
+          185deg,
+          #eef4ef 0%,
+          #f6faf6 38%,
+          #fafcfa 100%
+        );
+        padding: 4.75rem 0;
+      }
+
+      .page-vitroplants .varietes-grid {
+        gap: 1.75rem;
+      }
+
+      .page-vitroplants .variete-card {
+        position: relative;
+        border: none;
+        border-radius: 1.35rem;
+        box-shadow:
+          0 1px 2px rgba(15, 23, 42, 0.04),
+          0 18px 48px rgba(6, 27, 10, 0.08);
+        overflow: hidden;
+        background: #fff;
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
+      }
+
+      .page-vitroplants .variete-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        z-index: 4;
+        border-radius: 1.35rem 1.35rem 0 0;
+        background: linear-gradient(
+          90deg,
+          var(--official-green),
+          #7fdc8c
+        );
+      }
+
+      .page-vitroplants .variete-card:hover {
+        transform: translateY(-8px);
+        box-shadow:
+          0 4px 12px rgba(40, 168, 59, 0.08),
+          0 28px 64px rgba(6, 27, 10, 0.12);
+      }
+
+      .page-vitroplants .variete-header {
+        height: 232px;
+      }
+
+      .page-vitroplants .variete-header::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        background: linear-gradient(
+          180deg,
+          transparent 40%,
+          rgba(15, 23, 42, 0.22) 100%
+        );
+      }
+
+      .page-vitroplants .variete-image {
+        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .page-vitroplants .variete-card:hover .variete-image {
+        transform: scale(1.07);
+      }
+
+      .page-vitroplants .variete-body {
+        padding: 1.45rem 1.6rem 1.65rem;
+        border-top: 1px solid rgba(15, 23, 42, 0.05);
+        background: linear-gradient(180deg, #ffffff 0%, #fbfcfb 100%);
+      }
+
+      .page-vitroplants .variete-body h3 {
+        font-size: 1.22rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: var(--official-green) !important;
+        margin-bottom: 0.55rem;
+      }
+
+      .page-vitroplants .variete-body p {
+        font-size: 0.93rem;
+        line-height: 1.62;
+        color: #475569;
+        margin-bottom: 0;
+      }
+
+      .page-vitroplants .conseils-carte {
+        border-radius: 1.25rem;
+        border: 1px solid rgba(40, 168, 59, 0.14);
+        box-shadow:
+          0 2px 8px rgba(6, 27, 10, 0.04),
+          0 20px 50px rgba(27, 94, 32, 0.07);
+        padding: 1.85rem 1.95rem;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .page-vitroplants .conseils-carte::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #28a83b, #c8f0ad);
+      }
+
+      .page-vitroplants .conseils-carte:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 8px 24px rgba(40, 168, 59, 0.1),
+          0 26px 60px rgba(6, 27, 10, 0.1);
+      }
+
+      .page-vitroplants .client-type {
+        padding: 1.65rem 1.55rem;
+        border-radius: 1.25rem;
+        background: linear-gradient(155deg, #ffffff 0%, #f7fbf8 100%);
+        border: 1px solid rgba(40, 168, 59, 0.13);
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.8) inset,
+          0 14px 40px rgba(6, 27, 10, 0.07);
+        transition:
+          transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .page-vitroplants .client-type:hover {
+        transform: translateY(-6px);
+        border-color: rgba(40, 168, 59, 0.35);
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.9) inset,
+          0 22px 56px rgba(40, 168, 59, 0.12);
+      }
+
+      .page-vitroplants .client-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        background: rgba(40, 168, 59, 0.1);
+        border: 1px solid rgba(40, 168, 59, 0.12);
+        margin-bottom: 1.1rem;
+      }
+
+      .page-vitroplants .client-type h4 {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: #0f172a;
+      }
+
+      .page-vitroplants .vp-step {
+        background: #fff;
+        border-radius: 1.25rem;
+        padding: 1.5rem 1.2rem 1.75rem;
+        border: 1px solid rgba(15, 23, 42, 0.07);
+        box-shadow: 0 12px 40px rgba(6, 27, 10, 0.07);
+        transition:
+          transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.32s ease;
+      }
+
+      .page-vitroplants .vp-step:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 52px rgba(40, 168, 59, 0.12);
+      }
+
+      .page-vitroplants .vp-step-visual {
+        margin-bottom: 1.25rem;
+      }
+
+      @media (max-width: 600px) {
+        .page-vitroplants .variete-header {
+          height: 200px;
+        }
+      }
     </style>
       <link rel="stylesheet" href="components/navbar.css" />
   </head>
-  <body>
+  <body class="page-vitroplants">
     <!-- NAVBAR -->
         <div id="navbar-container"></div>
     <script src="components/navbar.js" defer></script>
@@ -263,7 +455,7 @@
               </picture>
             </div>
             <div class="variete-body">
-              <h3 style="color: #28A83B;">Fraise</h3>
+              <h3>Fraise</h3>
               <p>Développement de la filière et accès à des plants homogènes pour des calendriers de production maîtrisés.</p>
             </div>
           </div>
@@ -278,7 +470,7 @@
               </picture>
             </div>
             <div class="variete-body">
-              <h3 style="color: #28A83B;">Framboise &amp; petits fruits</h3>
+              <h3>Framboise &amp; petits fruits</h3>
               <p>Diversification des revenus et des débouchés locaux et export.</p>
             </div>
           </div>
@@ -293,7 +485,7 @@
               </picture>
             </div>
             <div class="variete-body">
-              <h3 style="color: #28A83B;">Brocoli &amp; crucifères</h3>
+              <h3>Brocoli &amp; crucifères</h3>
               <p>Filière légumière à forte demande sur les marchés urbains et pour la transformation.</p>
             </div>
           </div>
@@ -308,7 +500,7 @@
               </picture>
             </div>
             <div class="variete-body">
-              <h3 style="color: #28A83B;">Ananas</h3>
+              <h3>Ananas</h3>
               <p>Renforcement de la filière avec du matériel sain et performant.</p>
             </div>
           </div>
@@ -323,7 +515,7 @@
               </picture>
             </div>
             <div class="variete-body">
-              <h3 style="color: #28A83B;">Ail &amp; aromatiques</h3>
+              <h3>Ail &amp; aromatiques</h3>
               <p>Cultures à valeur ajoutée pour l'agroalimentaire et les circuits courts.</p>
             </div>
           </div>
@@ -338,7 +530,7 @@
               </picture>
             </div>
             <div class="variete-body">
-              <h3 style="color: #28A83B;">Horticulture premium</h3>
+              <h3>Horticulture premium</h3>
               <p>Production orientée transformation et export, avec exigence de qualité constante.</p>
             </div>
           </div>
